@@ -37,7 +37,7 @@ const PORT = process.env.PORT || 3001;
 const INDEX = '/index.html';
 
 const server = express()
-  .use(express.static('www'))
+  .use(express.static('build'))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 const wss = new Server({ server });
