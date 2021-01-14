@@ -79,6 +79,13 @@ function sendHand(ws, player) {
 }
 
 function sendCard(card,player) {
+  wss.clients.forEach((client) => {
+    client.send(JSON.stringify({
+      type: 'card',
+      player: player,
+      card: card
+    }));
+  });
 }
 
 function sendKnock(player) {
