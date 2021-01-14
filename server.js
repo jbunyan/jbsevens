@@ -50,7 +50,10 @@ wss.on('connection', (ws) => {
     let m = JSON.parse(message)
     switch(m.type) {
       case 'card':
-        sendCard(m.card);
+        sendCard(m.card,m.player);
+        break;
+      case 'knock':
+        sendKnock(m.player);
         break;
       case 'hand':
         sendHand(ws, m.player);
@@ -68,11 +71,21 @@ function sendHand(ws, player) {
   }));
 }
 
-function sendCard(card) {
+function sendCard(card,player) {
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({
       type: 'card',
+      player: player,
       card: card
+    }));
+  });
+}
+
+function sendKnock(player) {
+  wss.clients.forEach((client) => {
+    client.send(JSON.stringify({
+      type: 'knock',
+      player: player
     }));
   });
 }
