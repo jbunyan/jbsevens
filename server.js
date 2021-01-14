@@ -69,16 +69,16 @@ function sendHand(ws, player) {
     type: 'hand',
     cards: hands[index] 
   }));
+  wss.clients.forEach((client) => {
+    client.send(JSON.stringify({
+      type: 'message',
+      message: `${player} joined`
+    }));
+  });
+
 }
 
 function sendCard(card,player) {
-  wss.clients.forEach((client) => {
-    client.send(JSON.stringify({
-      type: 'card',
-      player: player,
-      card: card
-    }));
-  });
 }
 
 function sendKnock(player) {
