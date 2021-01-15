@@ -67,14 +67,14 @@ function newGame() {
 
   console.log(JSON.stringify(hands))
 
-  wss.clients.forEach((client) => {
-    client.send(JSON.stringify({
-      type: 'message',
-      message: `New game!.... please rejoin to get new hand`
-    }));
-  });
-
-
+  if (wss) {
+    wss.clients.forEach((client) => {
+      client.send(JSON.stringify({
+        type: 'message',
+        message: `New game!.... please rejoin to get new hand`
+      }));
+    });
+  }
 }
 
 function sendHand(ws, player) {
