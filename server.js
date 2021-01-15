@@ -11,7 +11,6 @@ const cards = [
 ]
 
 let hands = [];
-newGame();
 
 
 const PORT = process.env.PORT || 3001;
@@ -22,6 +21,8 @@ const server = express()
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 const wss = new Server({ server });
+
+newGame();
 
 wss.on('connection', (ws) => {
   console.log('Client connected');
