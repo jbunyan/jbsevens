@@ -10,28 +10,9 @@ const cards = [
   "AS","2S","3S","4S","5S","6S","7S","8S","9S","10S","JS","QS","KS"
 ]
 
-// set has the property that entries must be unique...
-var randoms = new Set();
-while(randoms.size<52){
-  randoms.add(Math.floor(Math.random() * 52));
-}
+let hands = [];
+newGame();
 
-let shuffle = []
-randoms.forEach(x => shuffle.push(x))
-
-console.log(shuffle)
-
-let hands = []
-
-for (let i=0; i<4; i++) {
-  let hand = [];
-  for (let j=0; j<13; j++) {
-    hand.push(cards[shuffle[i*13+j]])
-  }
-  hands.push(hand)
-}
-
-console.log(JSON.stringify(hands))
 
 const PORT = process.env.PORT || 3001;
 const INDEX = '/index.html';
@@ -58,9 +39,35 @@ wss.on('connection', (ws) => {
       case 'hand':
         sendHand(ws, m.player);
         break;
+      case 'newgame':
+        newGame();
     }
   });
 });
+
+function newGame() {
+  // set has the property that entries must be unique...
+  var randoms = new Set();
+  while(randoms.size<52){
+    randoms.add(Math.floor(Math.random() * 52));
+  }
+
+  let shuffle = []
+  randoms.forEach(x => shuffle.push(x))
+
+  hands = [];
+  
+  for (let i=0; i<4; i++) {
+    let hand = [];
+    for (let j=0; j<13; j++) {
+      hand.push(cards[shuffle[i*13+j]])
+    }
+    hands.push(hand)
+  }
+
+  console.log(JSON.stringify(hands))
+
+}
 
 function sendHand(ws, player) {
   let players = [ "Nancy", "John", "Allen", "Gavin"]
