@@ -56,7 +56,7 @@ function newGame() {
   randoms.forEach(x => shuffle.push(x))
 
   hands = [];
-  
+
   for (let i=0; i<4; i++) {
     let hand = [];
     for (let j=0; j<13; j++) {
@@ -66,6 +66,14 @@ function newGame() {
   }
 
   console.log(JSON.stringify(hands))
+
+  wss.clients.forEach((client) => {
+    client.send(JSON.stringify({
+      type: 'message',
+      message: `New game!.... please rejoin to get new hand`
+    }));
+  });
+
 
 }
 
