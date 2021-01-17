@@ -34,6 +34,9 @@ wss.on('connection', (ws) => {
       case 'card':
         sendCard(m.card,m.left,m.player);
         break;
+      case 'retractCard':
+        sendRetractCard(m.card,m.player);
+        break;
       case 'knock':
         sendKnock(m.player);
         break;
@@ -100,6 +103,16 @@ function sendCard(card,cardsLeft,player) {
       type: 'card',
       player: player,
       left: cardsLeft,
+      card: card
+    }));
+  });
+}
+
+function sendRetractCard(card,player) {
+  wss.clients.forEach((client) => {
+    client.send(JSON.stringify({
+      type: 'retractCard',
+      player: player,
       card: card
     }));
   });
