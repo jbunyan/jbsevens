@@ -74,8 +74,7 @@ function newGame() {
   if (wss) {
     wss.clients.forEach((client) => {
       client.send(JSON.stringify({
-        type: 'message',
-        message: `New game!.... please rejoin to get new hand`
+        type: 'newgame'
       }));
     });
   }
