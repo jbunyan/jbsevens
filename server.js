@@ -12,6 +12,8 @@ const cards = [
 
 let hands = [];
 
+let players = {};
+
 
 const PORT = process.env.PORT || 3001;
 const INDEX = '/index.html';
@@ -44,6 +46,7 @@ wss.on('connection', (ws) => {
         sendHand(ws, m.player);
         break;
       case 'players':
+        players = m.players;
         sendPlayers(m.players);
         break;
       case 'newgame':
@@ -83,18 +86,18 @@ function newGame() {
   }
 }
 
-function sendPlayers(players) {
+function sendPlayers(ps) {
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({
       type: 'players',
-      players: players
+      players: ps
     }));
   });
 }
 
 function sendHand(ws, player) {
-  let players = [ "Nancy", "John", "Allen", "Gavin"]
-  let index = players.indexOf(player)
+  let ps = [ "player1", "player2", "player3", "player4"]
+  let index = ps.indexOf(player)
   ws.send(JSON.stringify({
     type: 'hand',
     cards: hands[index] 
@@ -102,7 +105,7 @@ function sendHand(ws, player) {
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({
       type: 'message',
-      message: `${player} joined`
+      message: `${players[player]} joined`
     }));
   });
 
