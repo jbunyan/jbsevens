@@ -84,12 +84,12 @@ function newGame() {
 }
 
 function sendPlayers(players) {
-  wss.clients.forEach((client) => {
-    client.send(JSON.stringify({
-      type: 'players',
-      players: players
-    }));
-  });
+  // wss.clients.forEach((client) => {
+  //   client.send(JSON.stringify({
+  //     type: 'players',
+  //     players: players
+  //   }));
+  // });
 }
 
 function sendHand(ws, player) {
