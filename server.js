@@ -96,6 +96,8 @@ function sendPlayers(ps) {
 }
 
 function sendHand(ws, player) {
+  console.log(`players: ${JSON.stringify(players)}`)
+  console.log(`player: ${JSON.stringify(player)}`)
   let ps = [ "player1", "player2", "player3", "player4"]
   let index = ps.indexOf(player)
   ws.send(JSON.stringify({
