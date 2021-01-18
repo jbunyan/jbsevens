@@ -43,6 +43,9 @@ wss.on('connection', (ws) => {
       case 'hand':
         sendHand(ws, m.player);
         break;
+      case 'players':
+        sendPlayers(m.players);
+        break;
       case 'newgame':
         newGame();
     }
@@ -78,6 +81,15 @@ function newGame() {
       }));
     });
   }
+}
+
+function sendPlayers(players) {
+  wss.clients.forEach((client) => {
+    client.send(JSON.stringify({
+      type: 'players',
+      players: players
+    }));
+  });
 }
 
 function sendHand(ws, player) {
