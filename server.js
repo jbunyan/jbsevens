@@ -96,10 +96,7 @@ function sendPlayers(ps) {
 }
 
 function sendHand(ws, player) {
-  console.log(`players: ${JSON.stringify(players)}`)
-  console.log(`player: ${JSON.stringify(player)}`)
-  let ps = [ "player1", "player2", "player3", "player4"]
-  let index = ps.indexOf(player)
+  let index = players.findIndex(p => p === player)
   ws.send(JSON.stringify({
     type: 'hand',
     cards: hands[index] 
@@ -107,20 +104,17 @@ function sendHand(ws, player) {
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({
       type: 'message',
-      message: `${players[player]} joined`
+      message: `${player} joined`
     }));
   });
 
 }
 
 function sendCard(card,cardsLeft,player) {
-  let ps = [ "player1", "player2", "player3", "player4"]
-  let index = ps.indexOf(player)
-
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({
       type: 'card',
-      player: players[index],
+      player: player,
       left: cardsLeft,
       card: card
     }));
@@ -128,26 +122,20 @@ function sendCard(card,cardsLeft,player) {
 }
 
 function sendRetractCard(card,player) {
-  let ps = [ "player1", "player2", "player3", "player4"]
-  let index = ps.indexOf(player)
-
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({
       type: 'retractCard',
-      player: players[index],
+      player: player,
       card: card
     }));
   });
 }
 
 function sendKnock(player) {
-  let ps = [ "player1", "player2", "player3", "player4"]
-  let index = ps.indexOf(player)
-
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({
       type: 'knock',
-      player: players[index]
+      player: player
     }));
   });
 }
