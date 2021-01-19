@@ -110,11 +110,19 @@ function sendHand(ws, player) {
 
 }
 
+function getNextPlayer(p) {
+  let index = players.findIndex(p => p === player) + 1
+  index = (index >= players.length) ? 0 : index
+  return players[index]
+}
+
 function sendCard(card,cardsLeft,player) {
+  let nextplayer = getNextPlayer(player)
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({
       type: 'card',
       player: player,
+      nextplayer: nextplayer,
       left: cardsLeft,
       card: card
     }));
@@ -132,9 +140,11 @@ function sendRetractCard(card,player) {
 }
 
 function sendKnock(player) {
+  let nextplayer = getNextPlayer(player)
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({
       type: 'knock',
+      nextplayer: nextplayer,
       player: player
     }));
   });
