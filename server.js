@@ -111,7 +111,7 @@ function sendHand(ws, player) {
 }
 
 function getNextPlayer(p) {
-  let index = players.findIndex(p => p === player) + 1
+  let index = players.findIndex(pl => p === pl) + 1
   index = (index >= players.length) ? 0 : index
   return players[index]
 }
