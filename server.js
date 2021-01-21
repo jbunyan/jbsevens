@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const { Server } = require('ws');
+const WebSocket = require('ws');
 
 const cards = [
   "AH","2H","3H","4H","5H","6H","7H","8H","9H","10H","JH","QH","KH",
@@ -22,7 +22,7 @@ const server = express()
   .use(express.static('build'))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
-const wss = new Server({ server });
+const wss = new WebSocket.Server({ server });
 
 newGame();
 
@@ -56,7 +56,7 @@ wss.on('connection', (ws) => {
 
 function broadcast(payload) {
   wss.clients.forEach((client) => {
-    if (client.readyState === Server.OPEN) {
+    if (client.readyState === WebSocket.OPEN) {
       client.send(JSON.stringify({
         payload
       }));
