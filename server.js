@@ -54,14 +54,24 @@ wss.on('connection', (ws) => {
   });
 });
 
+function broadcast(payload) {
+  wss.clients.forEach((client) => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(JSON.stringify({
+        payload
+      }));
+    }
+  });
+}
+
 function register(p) {
   players.push(p);
-  wss.clients.forEach((client) => {
-    client.send(JSON.stringify({
+  broadcast(
+    {
       type: 'message',
       message: `${p} joined!`
-    }));
-  });
+    }
+  )
 
   if (players.length == 4) {
     sendPlayers(players)
@@ -91,21 +101,21 @@ function newGame() {
   console.log(JSON.stringify(hands))
 
   if (wss) {
-    wss.clients.forEach((client) => {
-      client.send(JSON.stringify({
+    broadcast(
+      {
         type: 'newgame'
-      }));
-    });
-  }
+      }
+    )
+  };
 }
 
 function sendPlayers(ps) {
-  wss.clients.forEach((client) => {
-    client.send(JSON.stringify({
+  broadcast(
+    {
       type: 'players',
       players: ps
-    }));
-  });
+    }
+  )
 }
 
 function sendHand(ws, player) {
@@ -114,13 +124,12 @@ function sendHand(ws, player) {
     type: 'hand',
     cards: hands[index] 
   }));
-  wss.clients.forEach((client) => {
-    client.send(JSON.stringify({
+  broadcast(
+    {
       type: 'message',
       message: `${player} joined`
-    }));
-  });
-
+    }
+  )
 }
 
 function getNextPlayer(p) {
@@ -131,34 +140,34 @@ function getNextPlayer(p) {
 
 function sendCard(card,cardsLeft,player) {
   let nextplayer = getNextPlayer(player)
-  wss.clients.forEach((client) => {
-    client.send(JSON.stringify({
+  broadcast(
+    {
       type: 'card',
       player: player,
       nextplayer: nextplayer,
       left: cardsLeft,
       card: card
-    }));
-  });
+    }
+  )
 }
 
 function sendRetractCard(card,player) {
-  wss.clients.forEach((client) => {
-    client.send(JSON.stringify({
+  broadcast(
+    {
       type: 'retractCard',
       player: player,
       card: card
-    }));
-  });
+    }
+  )
 }
 
 function sendKnock(player) {
   let nextplayer = getNextPlayer(player)
-  wss.clients.forEach((client) => {
-    client.send(JSON.stringify({
+  broadcast(
+    {
       type: 'knock',
       nextplayer: nextplayer,
       player: player
-    }));
-  });
+    }
+  )
 }
