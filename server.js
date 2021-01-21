@@ -45,15 +45,28 @@ wss.on('connection', (ws) => {
       case 'hand':
         sendHand(ws, m.player);
         break;
-      case 'players':
-        players = m.players;
-        sendPlayers(m.players);
+      case 'register':
+        register(m.player);
         break;
       case 'newgame':
         newGame();
     }
   });
 });
+
+function register(p) {
+  players.push(p);
+  wss.clients.forEach((client) => {
+    client.send(JSON.stringify({
+      type: 'message',
+      message: `${p} joined!`
+    }));
+  });
+
+  if (players.length == 4) {
+    sendPlayers()
+  }
+}
 
 function newGame() {
   // set has the property that entries must be unique...
