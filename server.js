@@ -12,7 +12,7 @@ const cards = [
 
 let hands = [];
 
-let players = {};
+let players = [];
 
 
 const PORT = process.env.PORT || 3001;
@@ -64,7 +64,7 @@ function register(p) {
   });
 
   if (players.length == 4) {
-    sendPlayers()
+    sendPlayers(players)
   }
 }
 
