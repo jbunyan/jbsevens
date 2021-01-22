@@ -47,6 +47,9 @@ wss.on('connection', (ws) => {
     console.log(message)
     let m = JSON.parse(message)
     switch(m.type) {
+      case 'reset':
+        reset();
+        break;
       case 'card':
         sendCard(m.card,m.left,m.player);
         break;
@@ -67,6 +70,13 @@ wss.on('connection', (ws) => {
     }
   });
 });
+
+function reset() {
+  players = [];
+  broadcast({
+    type: "reset"
+  })
+}
 
 function broadcast(payload) {
   connections.forEach((client) => {
