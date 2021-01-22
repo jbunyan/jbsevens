@@ -70,7 +70,6 @@ wss.on('connection', (ws) => {
 
 function broadcast(payload) {
   connections.forEach((client) => {
-    console.log(`Client: ${JSON.stringify(client)}`)
     if (client.readyState === WebSocket.OPEN) {
       client.send(JSON.stringify({
         ...payload
