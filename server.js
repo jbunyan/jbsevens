@@ -99,9 +99,9 @@ function register(p) {
     }
   )
 
-  if (players.length == 4) {
-    sendPlayers(players)
-  }
+  // if (players.length == 4) {
+  //   sendPlayers(players)
+  // }
 }
 
 function newGame() {
