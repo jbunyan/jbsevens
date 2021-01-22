@@ -150,12 +150,6 @@ function sendHand(ws, player) {
     type: 'hand',
     cards: hands[index] 
   }));
-  broadcast(
-    {
-      type: 'message',
-      message: `${player} joined`
-    }
-  )
 }
 
 function getNextPlayer(p) {
