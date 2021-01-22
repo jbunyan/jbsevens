@@ -73,7 +73,7 @@ function broadcast(payload) {
     console.log(`Client: ${JSON.stringify(client)}`)
     if (client.readyState === WebSocket.OPEN) {
       client.send(JSON.stringify({
-        payload
+        ...payload
       }));
     }
   });
