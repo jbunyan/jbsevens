@@ -24,12 +24,26 @@ const server = express()
 
 const wss = new WebSocket.Server({ server });
 
+let connections = []
+
+function storeConnection(c) {
+  let index = connections.findIndex(existingConnection => {
+    return existingConnection == c
+  })
+
+  if (index === -1) {
+    console.log("storing connection")
+    connections.push(c)
+  }
+}
+
 newGame();
 
 wss.on('connection', (ws) => {
   console.log('Client connected');
   ws.on('close', () => console.log('Client disconnected'));
   ws.on('message', function incoming(message) {
+    storeConnection(ws)
     console.log(message)
     let m = JSON.parse(message)
     switch(m.type) {
@@ -55,7 +69,7 @@ wss.on('connection', (ws) => {
 });
 
 function broadcast(payload) {
-  wss.clients.forEach((client) => {
+  connections.forEach((client) => {
     console.log(`Client: ${JSON.stringify(client)}`)
     if (client.readyState === WebSocket.OPEN) {
       client.send(JSON.stringify({
