@@ -80,10 +80,12 @@ function broadcast(payload) {
 
 function register(p) {
   players.push(p);
+  let messagePart = players.length < 4 ? ` - ${players.length} waiting` : ` 4 players registered! - wait for new game`
+
   broadcast(
     {
       type: 'message',
-      message: `${p} joined!`
+      message: `${p} joined!` + messagePart
     }
   )
 
