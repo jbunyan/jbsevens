@@ -110,7 +110,7 @@ function register(p) {
   // }
 }
 
-function updateKitty(p) {
+function updateKitty(player) {
   kitty++
   let index = players.findIndex(p => p === player)
   knocks[index]++
