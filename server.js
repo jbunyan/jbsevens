@@ -14,6 +14,8 @@ let hands = [];
 
 let players = [];
 
+let kitty = 0;
+let knocks = [];
 
 const PORT = process.env.PORT || 3001;
 const INDEX = '/index.html';
@@ -57,7 +59,11 @@ wss.on('connection', (ws) => {
         sendRetractCard(m.card,m.player);
         break;
       case 'knock':
+        updateKitty(m.player)
         sendKnock(m.player);
+        break;
+      case 'kitty':
+        sendKitty();
         break;
       case 'hand':
         sendHand(ws, m.player);
@@ -104,6 +110,12 @@ function register(p) {
   // }
 }
 
+function updateKitty(p) {
+  kitty++
+  let index = players.findIndex(p => p === player)
+  knocks[index]++
+}
+
 function newGame() {
   // set has the property that entries must be unique...
   var randoms = new Set();
@@ -123,6 +135,9 @@ function newGame() {
     }
     hands.push(hand)
   }
+
+  kitty = players.length * 2
+  knocks = [0,0,0,0]
 
   console.log(JSON.stringify(hands))
 
@@ -177,6 +192,16 @@ function sendRetractCard(card,player) {
       type: 'retractCard',
       player: player,
       card: card
+    }
+  )
+}
+
+function sendKitty() {
+  broadcast(
+    {
+      type: 'kitty',
+      kitty: kitty,
+      knocks: knocks
     }
   )
 }
