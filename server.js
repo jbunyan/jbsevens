@@ -73,7 +73,7 @@ wss.on('connection', (ws) => {
         break;
       case 'newgame':
         newGame();
-        sendKnock();
+        sendKitty();
     }
   });
 });
