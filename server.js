@@ -201,7 +201,10 @@ function sendKitty() {
     {
       type: 'kitty',
       kitty: kitty,
-      knocks: knocks
+      knocks: {
+        "players": players,
+        "knocks": knocks
+      }
     }
   )
 }
