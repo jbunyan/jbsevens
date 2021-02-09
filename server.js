@@ -71,6 +71,9 @@ wss.on('connection', (ws) => {
       case 'register':
         register(m.player);
         break;
+      case 'ping':
+        echo(ws);
+        break;
       case 'newgame':
         newGame();
         sendKitty();
@@ -158,6 +161,12 @@ function sendPlayers(ps) {
       players: ps
     }
   )
+}
+
+function echo(ws) {
+  ws.send(JSON.stringify({
+    type: 'echo' 
+  }));
 }
 
 function sendHand(ws, player) {
