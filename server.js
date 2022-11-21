@@ -28,7 +28,7 @@ app.get('/api/poll', function(req, res){
 app.use(express.static('build'))
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
-const wss = new WebSocket.Server({ server });
+const wss = new WebSocket.Server({ app });
 
 let connections = []
 
