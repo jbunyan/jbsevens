@@ -20,9 +20,13 @@ let knocks = [];
 const PORT = process.env.PORT || 3001;
 const INDEX = '/index.html';
 
-const server = express()
-  .use(express.static('build'))
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+var app = express()
+
+app.get('/api/poll', function(req, res){
+  res.send(`Hello World at ${Date.now()}`);
+});
+app.use(express.static('build'))
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 const wss = new WebSocket.Server({ server });
 
