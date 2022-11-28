@@ -17,6 +17,8 @@ let players = [];
 let kitty = 0;
 let knocks = [];
 
+let sequenceNumber = 0;
+
 const PORT = process.env.PORT || 3001;
 const INDEX = '/index.html';
 
@@ -84,9 +86,19 @@ wss.on('connection', (ws) => {
   });
 });
 
+function getSequenceNumber() {
+  const wrapValue = 10000
+
+  sequenceNumber++;
+  if ( sequenceNumber > wrapValue ) sequenceNumber = 1
+
+  return sequenceNumber;
+}
+
 function reset() {
   players = [];
   broadcast({
+    "sequenceNumber": getSequenceNumber(),
     type: "reset"
   })
 }
@@ -107,7 +119,7 @@ function register(p) {
 
   broadcast(
     {
-      type: 'message',
+      "sequenceNumber": getSequenceNumber(),type: 'message',
       message: `${p} joined!` + messagePart
     }
   )
@@ -151,6 +163,7 @@ function newGame() {
   if (wss) {
     broadcast(
       {
+        "sequenceNumber": getSequenceNumber(),
         type: 'newgame'
       }
     )
@@ -160,6 +173,7 @@ function newGame() {
 function sendPlayers(ps) {
   broadcast(
     {
+      "sequenceNumber": getSequenceNumber(),
       type: 'players',
       players: ps
     }
@@ -168,6 +182,7 @@ function sendPlayers(ps) {
 
 function echo(ws) {
   ws.send(JSON.stringify({
+    "sequenceNumber": getSequenceNumber(),
     type: 'echo' 
   }));
 }
@@ -175,6 +190,7 @@ function echo(ws) {
 function sendHand(ws, player) {
   let index = players.findIndex(p => p === player)
   ws.send(JSON.stringify({
+    "sequenceNumber": getSequenceNumber(),
     type: 'hand',
     cards: hands[index] 
   }));
@@ -190,6 +206,7 @@ function sendCard(card,cardsLeft,player) {
   let nextplayer = getNextPlayer(player)
   broadcast(
     {
+      "sequenceNumber": getSequenceNumber(),
       type: 'card',
       player: player,
       nextplayer: nextplayer,
@@ -202,6 +219,7 @@ function sendCard(card,cardsLeft,player) {
 function sendRetractCard(card,player) {
   broadcast(
     {
+      "sequenceNumber": getSequenceNumber(),
       type: 'retractCard',
       player: player,
       card: card
@@ -212,6 +230,7 @@ function sendRetractCard(card,player) {
 function sendKitty() {
   broadcast(
     {
+      "sequenceNumber": getSequenceNumber(),
       type: 'kitty',
       kitty: kitty,
       knocks: {
@@ -226,6 +245,7 @@ function sendKnock(player) {
   let nextplayer = getNextPlayer(player)
   broadcast(
     {
+      "sequenceNumber": getSequenceNumber(),
       type: 'knock',
       nextplayer: nextplayer,
       player: player
