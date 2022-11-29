@@ -252,3 +252,10 @@ function sendKnock(player) {
     }
   )
 }
+
+function handle(signal) {
+  console.log(`Received ${signal}`);
+  process.exit();
+}
+
+process.on('SIGTERM', handle);
