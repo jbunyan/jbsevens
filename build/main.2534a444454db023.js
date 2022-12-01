@@ -17,17 +17,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [];
-class AppRoutingModule {
-  static #_ = this.ɵfac = function AppRoutingModule_Factory(t) {
-    return new (t || AppRoutingModule)();
-  };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
-    type: AppRoutingModule
-  });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
-    imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule.forRoot(routes), _angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule]
-  });
-}
+class AppRoutingModule {}
+AppRoutingModule.ɵfac = function AppRoutingModule_Factory(t) {
+  return new (t || AppRoutingModule)();
+};
+AppRoutingModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+  type: AppRoutingModule
+});
+AppRoutingModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+  imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule.forRoot(routes), _angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule]
+});
 (function () {
   (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppRoutingModule, {
     imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule],
@@ -57,25 +56,25 @@ class AppComponent {
   constructor() {
     this.title = 'ng-sevens';
   }
-  static #_ = this.ɵfac = function AppComponent_Factory(t) {
-    return new (t || AppComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
-    type: AppComponent,
-    selectors: [["app-root"]],
-    decls: 3,
-    vars: 0,
-    template: function AppComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "TopLevel");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "router-outlet");
-      }
-    },
-    dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterOutlet, src_components_top_level_top_level_top_level_component__WEBPACK_IMPORTED_MODULE_0__.TopLevelComponent]
-  });
 }
+AppComponent.ɵfac = function AppComponent_Factory(t) {
+  return new (t || AppComponent)();
+};
+AppComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+  type: AppComponent,
+  selectors: [["app-root"]],
+  decls: 3,
+  vars: 0,
+  template: function AppComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "TopLevel");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "router-outlet");
+    }
+  },
+  dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterOutlet, src_components_top_level_top_level_top_level_component__WEBPACK_IMPORTED_MODULE_0__.TopLevelComponent]
+});
 
 /***/ }),
 
@@ -111,19 +110,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class AppModule {
-  static #_ = this.ɵfac = function AppModule_Factory(t) {
-    return new (t || AppModule)();
-  };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({
-    type: AppModule,
-    bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__.AppComponent]
-  });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({
-    providers: [src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_5__.WebConnectorService],
-    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_6__.AppRoutingModule]
-  });
-}
+class AppModule {}
+AppModule.ɵfac = function AppModule_Factory(t) {
+  return new (t || AppModule)();
+};
+AppModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({
+  type: AppModule,
+  bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__.AppComponent]
+});
+AppModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({
+  providers: [src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_5__.WebConnectorService],
+  imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_6__.AppRoutingModule]
+});
 (function () {
   (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵsetNgModuleScope"](AppModule, {
     declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__.AppComponent, src_components_top_level_top_level_top_level_component__WEBPACK_IMPORTED_MODULE_4__.TopLevelComponent, src_components_home_home_home_component__WEBPACK_IMPORTED_MODULE_2__.HomeComponent, src_components_card_table_card_table_card_table_component__WEBPACK_IMPORTED_MODULE_0__.CardTableComponent, src_components_card_card_component__WEBPACK_IMPORTED_MODULE_1__.CardComponent, src_components_myhand_my_hand_my_hand_component__WEBPACK_IMPORTED_MODULE_3__.MyHandComponent, src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_8__.CardLocDirective],
@@ -190,40 +188,40 @@ class CardTableComponent {
       element.style.top = top;
     })(), 100);
   }
-  static #_ = this.ɵfac = function CardTableComponent_Factory(t) {
-    return new (t || CardTableComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
-    type: CardTableComponent,
-    selectors: [["CardTable"]],
-    viewQuery: function CardTableComponent_Query(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵviewQuery"](src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_1__.CardLocDirective, 7);
-      }
-      if (rf & 2) {
-        let _t;
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.cardloc = _t.first);
-      }
-    },
-    inputs: {
-      playCard: "playCard",
-      remove: "remove"
-    },
-    features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
-    decls: 3,
-    vars: 0,
-    consts: [[1, "cardtable-panel"], [1, "cardtable-container"], ["cardloc", ""]],
-    template: function CardTableComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, CardTableComponent_ng_template_2_Template, 0, 0, "ng-template", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-      }
-    },
-    dependencies: [src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_1__.CardLocDirective],
-    styles: [".cardtable-panel[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n\n.cardtable-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.cardtable-card[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 100px;\n  height: 200px;\n  transition: top 2s;\n}\n\n.cardtable-notplayed[_ngcontent-%COMP%] {\n  top: -100px !important;\n  pointer-events: none;\n}"]
-  });
 }
+CardTableComponent.ɵfac = function CardTableComponent_Factory(t) {
+  return new (t || CardTableComponent)();
+};
+CardTableComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+  type: CardTableComponent,
+  selectors: [["CardTable"]],
+  viewQuery: function CardTableComponent_Query(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵviewQuery"](src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_1__.CardLocDirective, 7);
+    }
+    if (rf & 2) {
+      let _t;
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.cardloc = _t.first);
+    }
+  },
+  inputs: {
+    playCard: "playCard",
+    remove: "remove"
+  },
+  features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
+  decls: 3,
+  vars: 0,
+  consts: [[1, "cardtable-panel"], [1, "cardtable-container"], ["cardloc", ""]],
+  template: function CardTableComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, CardTableComponent_ng_template_2_Template, 0, 0, "ng-template", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+    }
+  },
+  dependencies: [src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_1__.CardLocDirective],
+  styles: [".cardtable-panel[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n\n.cardtable-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.cardtable-card[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 100px;\n  height: 200px;\n  transition: top 2s;\n}\n\n.cardtable-notplayed[_ngcontent-%COMP%] {\n  top: -100px !important;\n  pointer-events: none;\n}"]
+});
 
 /***/ }),
 
@@ -275,38 +273,38 @@ class CardComponent {
     this.cardValue = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getCardValue(this.value);
     this.cardString = this.cardValue + this.suitSymbol;
   }
-  static #_ = this.ɵfac = function CardComponent_Factory(t) {
-    return new (t || CardComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
-    type: CardComponent,
-    selectors: [["Card"]],
-    inputs: {
-      selected: "selected",
-      playable: "playable",
-      value: "value",
-      hidden: "hidden"
-    },
-    features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]],
-    decls: 3,
-    vars: 5,
-    template: function CardComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div")(1, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-      }
-      if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.cardClasses);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.valueClasses);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.cardString, " ");
-      }
-    },
-    styles: [".card-card[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  width: 6vw;\n  height: 10vw;\n  background-color: white;\n  border-radius: 0.6vw;\n  border: solid 0.1vw black;\n  padding: 0.2vw;\n  display: flex;\n  align-items: flex-start;\n  transition: top 0.5s;\n}\n\n.card-selected[_ngcontent-%COMP%] {\n  top: -2vw;\n}\n\n.card-hidden[_ngcontent-%COMP%] {\n  display: none;\n  pointer-events: none;\n}\n\n.card-not-playable[_ngcontent-%COMP%] {\n  opacity: 0.6;\n}\n\n.card-not-playable-grey[_ngcontent-%COMP%] {\n  background-color: #e0e0e0 !important;\n}\n\n.card-selected-not-playable[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n.card-value[_ngcontent-%COMP%] {\n  font-size: 1.2rem;\n}\n\n.card-red[_ngcontent-%COMP%] {\n  color: red;\n}\n\n.card-black[_ngcontent-%COMP%] {\n  color: black;\n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-2vw);} \n  60% {transform: translateY(-1vw);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}"]
-  });
 }
+CardComponent.ɵfac = function CardComponent_Factory(t) {
+  return new (t || CardComponent)();
+};
+CardComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+  type: CardComponent,
+  selectors: [["Card"]],
+  inputs: {
+    selected: "selected",
+    playable: "playable",
+    value: "value",
+    hidden: "hidden"
+  },
+  features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]],
+  decls: 3,
+  vars: 5,
+  template: function CardComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div")(1, "div");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.cardClasses);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.valueClasses);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.cardString, " ");
+    }
+  },
+  styles: [".card-card[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  width: 6vw;\n  height: 10vw;\n  background-color: white;\n  border-radius: 0.6vw;\n  border: solid 0.1vw black;\n  padding: 0.2vw;\n  display: flex;\n  align-items: flex-start;\n  transition: top 0.5s;\n}\n\n.card-selected[_ngcontent-%COMP%] {\n  top: -2vw;\n}\n\n.card-hidden[_ngcontent-%COMP%] {\n  display: none;\n  pointer-events: none;\n}\n\n.card-not-playable[_ngcontent-%COMP%] {\n  opacity: 0.6;\n}\n\n.card-not-playable-grey[_ngcontent-%COMP%] {\n  background-color: #e0e0e0 !important;\n}\n\n.card-selected-not-playable[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n.card-value[_ngcontent-%COMP%] {\n  font-size: 1.2rem;\n}\n\n.card-red[_ngcontent-%COMP%] {\n  color: red;\n}\n\n.card-black[_ngcontent-%COMP%] {\n  color: black;\n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-2vw);} \n  60% {transform: translateY(-1vw);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}"]
+});
 
 /***/ }),
 
@@ -855,42 +853,42 @@ class HomeComponent {
       }]
     };
   }
-  static #_ = this.ɵfac = function HomeComponent_Factory(t) {
-    return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_1__.WebConnectorService));
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
-    type: HomeComponent,
-    selectors: [["Home"]],
-    decls: 6,
-    vars: 5,
-    consts: [[1, "App"], ["class", "app-register", 4, "ngIf"], ["class", "left-hand-side", 4, "ngIf"], ["class", "right-hand-side", 4, "ngIf"], ["class", "app-winner", 4, "ngIf"], ["class", "app-controls", 4, "ngIf"], [1, "app-register"], [1, "app-register-panel"], ["name", "players", "id", "players", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "text", "onChange", "updatePlayerText"], ["type", "button", "value", "Register new name", "onClick", "registerNewName"], [3, "value"], [1, "left-hand-side"], [1, "app-dashboard"], [1, "app-log"], [1, "hand"], [3, "yourGo", "playable", "playcard", "knock", "restoreCard"], [1, "right-hand-side"], [1, "gameboard"], [3, "playCard", "remove", 4, "ngIf"], [3, "playCard", "remove"], [1, "app-winner"], [4, "ngFor", "ngForOf"], [1, "app-controls"], [1, "gametime"], ["type", "button", "value", "New Game", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "value", "Kitty", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "onClick", "sendReset", "value", "Reset Session", 1, "control-buttons", "control-button"]],
-    template: function HomeComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, HomeComponent_div_1_Template, 13, 1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, HomeComponent_div_2_Template, 11, 5, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](3, HomeComponent_div_3_Template, 3, 1, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](4, HomeComponent_div_4_Template, 10, 3, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](5, HomeComponent_div_5_Template, 9, 1, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-      }
-      if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", !ctx.player);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.winner && ctx.winner.length > 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player === "John");
-      }
-    },
-    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, src_components_card_table_card_table_card_table_component__WEBPACK_IMPORTED_MODULE_2__.CardTableComponent, src_components_myhand_my_hand_my_hand_component__WEBPACK_IMPORTED_MODULE_3__.MyHandComponent],
-    styles: [".App[_ngcontent-%COMP%] {\n  display: flex;\n  background-color: darkgreen;\n  box-sizing: border-box;\n  padding: 1vw;\n  height: 100vh;\n  width: 100%;\n}\n\n.left-hand-side[_ngcontent-%COMP%] {\n  align-self: stretch;\n  box-sizing: border-box;\n  padding: 0.5vw;\n  display: flex;\n  flex-direction: column;\n  width: 40%;\n}\n\n.right-hand-side[_ngcontent-%COMP%] {\n  align-self: stretch;\n  padding: 0.5vw;\n  box-sizing: border-box;\n  width: 60%;\n}\n\n.gameboard[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n\n.app-dashboard[_ngcontent-%COMP%] {\n  width: 100%;\n  box-sizing: border-box;\n  padding: 5px 5px 5px 5px;\n  height: 85px;\n  background-color: #c0c0c0;\n  border-radius: 5px;\n  flex-grow: 0;\n}\n\n.hand[_ngcontent-%COMP%] {\n  width: 100%;\n  padding-top: 0.5vw;\n  flex-grow: 1;\n}\n\n.app-controls[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  top: 1vw;\n  right: 1vw;\n  background-color: lightgrey;\n  border-radius: 0.2vw;\n}\n\n.gametime[_ngcontent-%COMP%] {\n  padding: 0.2vw;\n}\n\n.control-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.control-buttons[_ngcontent-%COMP%] {\n  margin: 0.2vw;\n  border: none;\n  border-radius: 0.2vw;\n  color: white;\n  padding: 0.2vw 0.3vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 0.6rem;\n}\n\n\n.app-register[_ngcontent-%COMP%] {\n\n  color: white;\n  font-size: 2.5rem;\n  width: 100%;\n  height: 100vh;\n  background-color: darkgreen; \n  background-image: url(\"/assets/all-seven-cards.png\");\n  background-position: right bottom; \n  background-repeat: no-repeat; \n  padding-top: 5vw;\n  padding-left: 5vw;\n}\n\n.app-register-panel[_ngcontent-%COMP%] {\n  width: 33vw;\n  background-color: white;\n  font-size: 1.5rem;\n  color: black;\n  border-style: solid;\n  border-color: red;\n  border-width: 5px;\n  border-radius: 10px;\n  padding: 10px 10px 10px 10px\n}\n\n.app-register-panel[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  padding-right: 5px;\n}\n\n.app-register[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  padding-top:7px;\n}\n\n.app-setplayers[_ngcontent-%COMP%] {\n  width: 570px;\n  background-color: #c0c0c0;\n  padding: 5px 5px 5px 15px;\n  display: flex;\n  align-items: flex-start;\n  border-radius: 5px;\n  margin-bottom: 10px;\n}\n\n.app-playerselecter[_ngcontent-%COMP%] {\n  padding-left: 10px;\n  display: flex;\n  width: 90%;\n  justify-content: space-between;\n}\n\n.app-log[_ngcontent-%COMP%] {\n}\n\n.app-winner[_ngcontent-%COMP%] {\n  position: absolute;\n  z-index: 200;\n  padding: 10px 20px 10px 20px;\n  top: 150px;\n  left: 350px;\n  height: 170px;\n  background-color: white;\n  color: black;\n  border-style: solid;\n  border-width: 3px;\n  border-color: red;\n  border-radius: 10px;\n}\n\n.app-winner[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 3px 10px 3px 0px;\n}"]
-  });
 }
+HomeComponent.ɵfac = function HomeComponent_Factory(t) {
+  return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_1__.WebConnectorService));
+};
+HomeComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
+  type: HomeComponent,
+  selectors: [["Home"]],
+  decls: 6,
+  vars: 5,
+  consts: [[1, "App"], ["class", "app-register", 4, "ngIf"], ["class", "left-hand-side", 4, "ngIf"], ["class", "right-hand-side", 4, "ngIf"], ["class", "app-winner", 4, "ngIf"], ["class", "app-controls", 4, "ngIf"], [1, "app-register"], [1, "app-register-panel"], ["name", "players", "id", "players", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "text", "onChange", "updatePlayerText"], ["type", "button", "value", "Register new name", "onClick", "registerNewName"], [3, "value"], [1, "left-hand-side"], [1, "app-dashboard"], [1, "app-log"], [1, "hand"], [3, "yourGo", "playable", "playcard", "knock", "restoreCard"], [1, "right-hand-side"], [1, "gameboard"], [3, "playCard", "remove", 4, "ngIf"], [3, "playCard", "remove"], [1, "app-winner"], [4, "ngFor", "ngForOf"], [1, "app-controls"], [1, "gametime"], ["type", "button", "value", "New Game", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "value", "Kitty", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "onClick", "sendReset", "value", "Reset Session", 1, "control-buttons", "control-button"]],
+  template: function HomeComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, HomeComponent_div_1_Template, 13, 1, "div", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, HomeComponent_div_2_Template, 11, 5, "div", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](3, HomeComponent_div_3_Template, 3, 1, "div", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](4, HomeComponent_div_4_Template, 10, 3, "div", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](5, HomeComponent_div_5_Template, 9, 1, "div", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", !ctx.player);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.winner && ctx.winner.length > 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player === "John");
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, src_components_card_table_card_table_card_table_component__WEBPACK_IMPORTED_MODULE_2__.CardTableComponent, src_components_myhand_my_hand_my_hand_component__WEBPACK_IMPORTED_MODULE_3__.MyHandComponent],
+  styles: [".App[_ngcontent-%COMP%] {\n  display: flex;\n  background-color: darkgreen;\n  box-sizing: border-box;\n  padding: 1vw;\n  height: 100vh;\n  width: 100%;\n}\n\n.left-hand-side[_ngcontent-%COMP%] {\n  align-self: stretch;\n  box-sizing: border-box;\n  padding: 0.5vw;\n  display: flex;\n  flex-direction: column;\n  width: 40%;\n}\n\n.right-hand-side[_ngcontent-%COMP%] {\n  align-self: stretch;\n  padding: 0.5vw;\n  box-sizing: border-box;\n  width: 60%;\n}\n\n.gameboard[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n\n.app-dashboard[_ngcontent-%COMP%] {\n  width: 100%;\n  box-sizing: border-box;\n  padding: 5px 5px 5px 5px;\n  height: 85px;\n  background-color: #c0c0c0;\n  border-radius: 5px;\n  flex-grow: 0;\n}\n\n.hand[_ngcontent-%COMP%] {\n  width: 100%;\n  padding-top: 0.5vw;\n  flex-grow: 1;\n}\n\n.app-controls[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  top: 1vw;\n  right: 1vw;\n  background-color: lightgrey;\n  border-radius: 0.2vw;\n}\n\n.gametime[_ngcontent-%COMP%] {\n  padding: 0.2vw;\n}\n\n.control-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.control-buttons[_ngcontent-%COMP%] {\n  margin: 0.2vw;\n  border: none;\n  border-radius: 0.2vw;\n  color: white;\n  padding: 0.2vw 0.3vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 0.6rem;\n}\n\n\n.app-register[_ngcontent-%COMP%] {\n\n  color: white;\n  font-size: 2.5rem;\n  width: 100%;\n  height: 100vh;\n  background-color: darkgreen; \n  background-image: url(\"/assets/all-seven-cards.png\");\n  background-position: right bottom; \n  background-repeat: no-repeat; \n  padding-top: 5vw;\n  padding-left: 5vw;\n}\n\n.app-register-panel[_ngcontent-%COMP%] {\n  width: 33vw;\n  background-color: white;\n  font-size: 1.5rem;\n  color: black;\n  border-style: solid;\n  border-color: red;\n  border-width: 5px;\n  border-radius: 10px;\n  padding: 10px 10px 10px 10px\n}\n\n.app-register-panel[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  padding-right: 5px;\n}\n\n.app-register[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  padding-top:7px;\n}\n\n.app-setplayers[_ngcontent-%COMP%] {\n  width: 570px;\n  background-color: #c0c0c0;\n  padding: 5px 5px 5px 15px;\n  display: flex;\n  align-items: flex-start;\n  border-radius: 5px;\n  margin-bottom: 10px;\n}\n\n.app-playerselecter[_ngcontent-%COMP%] {\n  padding-left: 10px;\n  display: flex;\n  width: 90%;\n  justify-content: space-between;\n}\n\n.app-log[_ngcontent-%COMP%] {\n}\n\n.app-winner[_ngcontent-%COMP%] {\n  position: absolute;\n  z-index: 200;\n  padding: 10px 20px 10px 20px;\n  top: 150px;\n  left: 350px;\n  height: 170px;\n  background-color: white;\n  color: black;\n  border-style: solid;\n  border-width: 3px;\n  border-color: red;\n  border-radius: 10px;\n}\n\n.app-winner[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 3px 10px 3px 0px;\n}"]
+});
 
 /***/ }),
 
@@ -1044,42 +1042,42 @@ class MyHandComponent {
       this.knock.emit();
     }
   }
-  static #_ = this.ɵfac = function MyHandComponent_Factory(t) {
-    return new (t || MyHandComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_1__.WebConnectorService));
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
-    type: MyHandComponent,
-    selectors: [["MyHand"]],
-    inputs: {
-      yourGo: "yourGo",
-      playable: "playable"
-    },
-    outputs: {
-      playcard: "playcard",
-      knock: "knock"
-    },
-    features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
-    decls: 4,
-    vars: 2,
-    consts: [[1, "myhand-panel"], [1, "myhand-container"], ["class", "myhand-card", 4, "ngFor", "ngForOf"], ["class", "buttons", 4, "ngIf"], [1, "myhand-card"], [3, "playable", "value", "selected", "click"], [1, "buttons"], ["type", "button", "value", "Play Card", 1, "play-button", "hand-buttons", 3, "click"], ["type", "button", "value", "Knock", 1, "knock-button", "hand-buttons", 3, "ngClass", "click"]],
-    template: function MyHandComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, MyHandComponent_div_2_Template, 2, 3, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](3, MyHandComponent_div_3_Template, 3, 1, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-      }
-      if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx.hand);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.yourGo);
-      }
-    },
-    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgIf, src_components_card_card_component__WEBPACK_IMPORTED_MODULE_2__.CardComponent],
-    styles: [".myhand-panel[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  background-color: #c0c0c0;\n  padding: 0.5vw;\n  border-radius: 0.5vw;\n}\n\n.myhand-non-playable-knock[_ngcontent-%COMP%] {\n\n}\n\n.myhand-playable-knock[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-10vw);} \n  60% {transform: translateY(-5vw);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}\n\n.myhand-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.play-button[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.buttons[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  justify-content: space-around;\n}\n\n.knock-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.hand-buttons[_ngcontent-%COMP%] {\n  border: none;\n  border-radius: 0.5vw;\n  color: white;\n  padding: 1vw 2vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1rem;\n}\n\n.myhand-play-buttons[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  margin-right: 0.5vw;\n}\n\n.myhand-card[_ngcontent-%COMP%] {\n  position: absolute;\n}\n\n.myhand-card[_ngcontent-%COMP%]:nth-child(1) {\n  left: 1vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(2) {\n  left: 4vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(3) {\n  left: 7vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(4) {\n  top: 6.6vw;\n  left: 10vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(5) {\n  left: 13vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(6) {\n  left: 16vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(7) {\n  left: 19vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(8) {\n  left: 1vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(9) {\n  left: 4vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(10) {\n  left: 7vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(11) {\n  left: 10vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(12) {\n  left: 13vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(13) {\n  left: 16vw;\n  top: 21vw;\n}"]
-  });
 }
+MyHandComponent.ɵfac = function MyHandComponent_Factory(t) {
+  return new (t || MyHandComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_1__.WebConnectorService));
+};
+MyHandComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+  type: MyHandComponent,
+  selectors: [["MyHand"]],
+  inputs: {
+    yourGo: "yourGo",
+    playable: "playable"
+  },
+  outputs: {
+    playcard: "playcard",
+    knock: "knock"
+  },
+  features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
+  decls: 4,
+  vars: 2,
+  consts: [[1, "myhand-panel"], [1, "myhand-container"], ["class", "myhand-card", 4, "ngFor", "ngForOf"], ["class", "buttons", 4, "ngIf"], [1, "myhand-card"], [3, "playable", "value", "selected", "click"], [1, "buttons"], ["type", "button", "value", "Play Card", 1, "play-button", "hand-buttons", 3, "click"], ["type", "button", "value", "Knock", 1, "knock-button", "hand-buttons", 3, "ngClass", "click"]],
+  template: function MyHandComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, MyHandComponent_div_2_Template, 2, 3, "div", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](3, MyHandComponent_div_3_Template, 3, 1, "div", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx.hand);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.yourGo);
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgIf, src_components_card_card_component__WEBPACK_IMPORTED_MODULE_2__.CardComponent],
+  styles: [".myhand-panel[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  background-color: #c0c0c0;\n  padding: 0.5vw;\n  border-radius: 0.5vw;\n}\n\n.myhand-non-playable-knock[_ngcontent-%COMP%] {\n\n}\n\n.myhand-playable-knock[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-10vw);} \n  60% {transform: translateY(-5vw);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}\n\n.myhand-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.play-button[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.buttons[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  justify-content: space-around;\n}\n\n.knock-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.hand-buttons[_ngcontent-%COMP%] {\n  border: none;\n  border-radius: 0.5vw;\n  color: white;\n  padding: 1vw 2vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1rem;\n}\n\n.myhand-play-buttons[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  margin-right: 0.5vw;\n}\n\n.myhand-card[_ngcontent-%COMP%] {\n  position: absolute;\n}\n\n.myhand-card[_ngcontent-%COMP%]:nth-child(1) {\n  left: 1vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(2) {\n  left: 4vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(3) {\n  left: 7vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(4) {\n  top: 6.6vw;\n  left: 10vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(5) {\n  left: 13vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(6) {\n  left: 16vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(7) {\n  left: 19vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(8) {\n  left: 1vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(9) {\n  left: 4vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(10) {\n  left: 7vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(11) {\n  left: 10vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(12) {\n  left: 13vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(13) {\n  left: 16vw;\n  top: 21vw;\n}"]
+});
 
 /***/ }),
 
@@ -1099,22 +1097,22 @@ __webpack_require__.r(__webpack_exports__);
 
 class TopLevelComponent {
   constructor() {}
-  static #_ = this.ɵfac = function TopLevelComponent_Factory(t) {
-    return new (t || TopLevelComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
-    type: TopLevelComponent,
-    selectors: [["TopLevel"]],
-    decls: 1,
-    vars: 0,
-    template: function TopLevelComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "Home");
-      }
-    },
-    dependencies: [src_components_home_home_home_component__WEBPACK_IMPORTED_MODULE_0__.HomeComponent]
-  });
 }
+TopLevelComponent.ɵfac = function TopLevelComponent_Factory(t) {
+  return new (t || TopLevelComponent)();
+};
+TopLevelComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+  type: TopLevelComponent,
+  selectors: [["TopLevel"]],
+  decls: 1,
+  vars: 0,
+  template: function TopLevelComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "Home");
+    }
+  },
+  dependencies: [src_components_home_home_home_component__WEBPACK_IMPORTED_MODULE_0__.HomeComponent]
+});
 
 /***/ }),
 
@@ -1135,14 +1133,14 @@ class CardLocDirective {
   constructor(viewContainerRef) {
     this.viewContainerRef = viewContainerRef;
   }
-  static #_ = this.ɵfac = function CardLocDirective_Factory(t) {
-    return new (t || CardLocDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewContainerRef));
-  };
-  static #_2 = this.ɵdir = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
-    type: CardLocDirective,
-    selectors: [["", "cardloc", ""]]
-  });
 }
+CardLocDirective.ɵfac = function CardLocDirective_Factory(t) {
+  return new (t || CardLocDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewContainerRef));
+};
+CardLocDirective.ɵdir = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
+  type: CardLocDirective,
+  selectors: [["", "cardloc", ""]]
+});
 
 /***/ }),
 
@@ -1317,15 +1315,15 @@ class WebConnectorService {
     this.messageListeners[messageType] = new rxjs__WEBPACK_IMPORTED_MODULE_0__.Subject();
     return this.messageListeners[messageType];
   }
-  static #_ = this.ɵfac = function WebConnectorService_Factory(t) {
-    return new (t || WebConnectorService)();
-  };
-  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({
-    token: WebConnectorService,
-    factory: WebConnectorService.ɵfac,
-    providedIn: 'root'
-  });
 }
+WebConnectorService.ɵfac = function WebConnectorService_Factory(t) {
+  return new (t || WebConnectorService)();
+};
+WebConnectorService.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({
+  token: WebConnectorService,
+  factory: WebConnectorService.ɵfac,
+  providedIn: 'root'
+});
 
 /***/ }),
 
