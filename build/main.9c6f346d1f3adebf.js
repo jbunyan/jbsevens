@@ -5594,10 +5594,11 @@ const APP_BASE_HREF = /*#__PURE__*/new _angular_core__WEBPACK_IMPORTED_MODULE_0_
 let PathLocationStrategy = /*#__PURE__*/(() => {
   class PathLocationStrategy extends LocationStrategy {
     constructor(_platformLocation, href) {
+      var _ref, _ref2, _inject$location;
       super();
       this._platformLocation = _platformLocation;
       this._removeListenerFns = [];
-      this._baseHref = href ?? this._platformLocation.getBaseHrefFromDOM() ?? (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DOCUMENT).location?.origin ?? '';
+      this._baseHref = (_ref = (_ref2 = href !== null && href !== void 0 ? href : this._platformLocation.getBaseHrefFromDOM()) !== null && _ref2 !== void 0 ? _ref2 : (_inject$location = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DOCUMENT).location) === null || _inject$location === void 0 ? void 0 : _inject$location.origin) !== null && _ref !== void 0 ? _ref : '';
     }
     /** @nodoc */
     ngOnDestroy() {
@@ -5637,7 +5638,8 @@ let PathLocationStrategy = /*#__PURE__*/(() => {
       return this._platformLocation.getState();
     }
     historyGo(relativePosition = 0) {
-      this._platformLocation.historyGo?.(relativePosition);
+      var _this$_platformLocati, _this$_platformLocati2;
+      (_this$_platformLocati = (_this$_platformLocati2 = this._platformLocation).historyGo) === null || _this$_platformLocati === void 0 ? void 0 : _this$_platformLocati.call(_this$_platformLocati2, relativePosition);
     }
   }
   PathLocationStrategy.ɵfac = function PathLocationStrategy_Factory(t) {
@@ -5737,7 +5739,8 @@ let HashLocationStrategy = /*#__PURE__*/(() => {
       return this._platformLocation.getState();
     }
     historyGo(relativePosition = 0) {
-      this._platformLocation.historyGo?.(relativePosition);
+      var _this$_platformLocati3, _this$_platformLocati4;
+      (_this$_platformLocati3 = (_this$_platformLocati4 = this._platformLocation).historyGo) === null || _this$_platformLocati3 === void 0 ? void 0 : _this$_platformLocati3.call(_this$_platformLocati4, relativePosition);
     }
   }
   HashLocationStrategy.ɵfac = function HashLocationStrategy_Factory(t) {
@@ -5811,7 +5814,8 @@ let Location = /*#__PURE__*/(() => {
     }
     /** @nodoc */
     ngOnDestroy() {
-      this._urlChangeSubscription?.unsubscribe();
+      var _this$_urlChangeSubsc;
+      (_this$_urlChangeSubsc = this._urlChangeSubscription) === null || _this$_urlChangeSubsc === void 0 ? void 0 : _this$_urlChangeSubsc.unsubscribe();
       this._urlChangeListeners = [];
     }
     /**
@@ -5922,7 +5926,8 @@ let Location = /*#__PURE__*/(() => {
      * @see https://developer.mozilla.org/en-US/docs/Web/API/History_API#Moving_to_a_specific_point_in_history
      */
     historyGo(relativePosition = 0) {
-      this._locationStrategy.historyGo?.(relativePosition);
+      var _this$_locationStrate, _this$_locationStrate2;
+      (_this$_locationStrate = (_this$_locationStrate2 = this._locationStrategy).historyGo) === null || _this$_locationStrate === void 0 ? void 0 : _this$_locationStrate.call(_this$_locationStrate2, relativePosition);
     }
     /**
      * Registers a URL change listener. Use to catch updates performed by the Angular
@@ -5942,7 +5947,8 @@ let Location = /*#__PURE__*/(() => {
         const fnIndex = this._urlChangeListeners.indexOf(fn);
         this._urlChangeListeners.splice(fnIndex, 1);
         if (this._urlChangeListeners.length === 0) {
-          this._urlChangeSubscription?.unsubscribe();
+          var _this$_urlChangeSubsc2;
+          (_this$_urlChangeSubsc2 = this._urlChangeSubscription) === null || _this$_urlChangeSubsc2 === void 0 ? void 0 : _this$_urlChangeSubsc2.unsubscribe();
           this._urlChangeSubscription = null;
         }
       };
@@ -9984,8 +9990,9 @@ let DatePipe = /*#__PURE__*/(() => {
     transform(value, format, timezone, locale) {
       if (value == null || value === '' || value !== value) return null;
       try {
-        const _format = format ?? this.defaultOptions?.dateFormat ?? DEFAULT_DATE_FORMAT;
-        const _timezone = timezone ?? this.defaultOptions?.timezone ?? this.defaultTimezone ?? undefined;
+        var _ref3, _this$defaultOptions, _ref4, _ref5, _this$defaultOptions2;
+        const _format = (_ref3 = format !== null && format !== void 0 ? format : (_this$defaultOptions = this.defaultOptions) === null || _this$defaultOptions === void 0 ? void 0 : _this$defaultOptions.dateFormat) !== null && _ref3 !== void 0 ? _ref3 : DEFAULT_DATE_FORMAT;
+        const _timezone = (_ref4 = (_ref5 = timezone !== null && timezone !== void 0 ? timezone : (_this$defaultOptions2 = this.defaultOptions) === null || _this$defaultOptions2 === void 0 ? void 0 : _this$defaultOptions2.timezone) !== null && _ref5 !== void 0 ? _ref5 : this.defaultTimezone) !== null && _ref4 !== void 0 ? _ref4 : undefined;
         return formatDate(value, _format, locale || this.locale, _timezone);
       } catch (error) {
         throw invalidPipeArgumentError(DatePipe, error.message);
@@ -11306,6 +11313,7 @@ let LCPImageObserver = /*#__PURE__*/(() => {
      */
     initPerformanceObserver() {
       const observer = new PerformanceObserver(entryList => {
+        var _lcpElement$element$s, _lcpElement$element;
         const entries = entryList.getEntries();
         if (entries.length === 0) return;
         // We use the latest entry produced by the `PerformanceObserver` as the best
@@ -11315,7 +11323,7 @@ let LCPImageObserver = /*#__PURE__*/(() => {
         const lcpElement = entries[entries.length - 1];
         // Cast to `any` due to missing `element` on the `LargestContentfulPaint` type of entry.
         // See https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint
-        const imgSrc = lcpElement.element?.src ?? '';
+        const imgSrc = (_lcpElement$element$s = (_lcpElement$element = lcpElement.element) === null || _lcpElement$element === void 0 ? void 0 : _lcpElement$element.src) !== null && _lcpElement$element$s !== void 0 ? _lcpElement$element$s : '';
         // Exclude `data:` and `blob:` URLs, since they are not supported by the directive.
         if (imgSrc.startsWith('data:') || imgSrc.startsWith('blob:')) return;
         const imgNgSrc = this.images.get(imgSrc);
@@ -11469,7 +11477,8 @@ let PreconnectLinkChecker = /*#__PURE__*/(() => {
       return preconnectUrls;
     }
     ngOnDestroy() {
-      this.preconnectLinks?.clear();
+      var _this$preconnectLinks;
+      (_this$preconnectLinks = this.preconnectLinks) === null || _this$preconnectLinks === void 0 ? void 0 : _this$preconnectLinks.clear();
       this.alreadySeen.clear();
     }
   }
@@ -11964,11 +11973,12 @@ let NgOptimizedImage = /*#__PURE__*/(() => {
       }
     }
     getResponsiveSrcset() {
+      var _this$sizes;
       const {
         breakpoints
       } = this.config;
       let filteredBreakpoints = breakpoints;
-      if (this.sizes?.trim() === '100vw') {
+      if (((_this$sizes = this.sizes) === null || _this$sizes === void 0 ? void 0 : _this$sizes.trim()) === '100vw') {
         // Since this is a full-screen-width image, our srcset only needs to include
         // breakpoints with full viewport widths.
         filteredBreakpoints = breakpoints.filter(bp => bp >= VIEWPORT_BREAKPOINT_CUTOFF);
@@ -12088,7 +12098,7 @@ function assertNotBase64Image(dir) {
  */
 function assertNoComplexSizes(dir) {
   let sizes = dir.sizes;
-  if (sizes?.match(/((\)|,)\s|^)\d+px/)) {
+  if (sizes !== null && sizes !== void 0 && sizes.match(/((\)|,)\s|^)\d+px/)) {
     throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](2952 /* RuntimeErrorCode.INVALID_INPUT */, `${imgDirectiveDetails(dir.ngSrc, false)} \`sizes\` was set to a string including ` + `pixel values. For automatic \`srcset\` generation, \`sizes\` must only include responsive ` + `values, such as \`sizes="50vw"\` or \`sizes="(min-width: 768px) 50vw, 100vw"\`. ` + `To fix this, modify the \`sizes\` attribute, or provide your own \`ngSrcset\` value directly.`);
   }
 }
@@ -14453,7 +14463,7 @@ function NgOnChangesFeatureImpl(definition) {
  */
 function rememberChangeHistoryAndInvokeOnChangesHook() {
   const simpleChangesStore = getSimpleChangesStore(this);
-  const current = simpleChangesStore?.current;
+  const current = simpleChangesStore === null || simpleChangesStore === void 0 ? void 0 : simpleChangesStore.current;
   if (current) {
     const previous = simpleChangesStore.previous;
     if (previous === EMPTY_OBJ) {
@@ -18138,7 +18148,7 @@ function isHostComponentStandalone(lView) {
   !ngDevMode && throwError('Must never be called in production mode');
   const componentDef = getDeclarationComponentDef(lView);
   // Treat host component as non-standalone if we can't obtain the def.
-  return !!componentDef?.standalone;
+  return !!(componentDef !== null && componentDef !== void 0 && componentDef.standalone);
 }
 /**
  * WARNING: this is a **dev-mode only** function (thus should always be guarded by the `ngDevMode`)
@@ -18151,9 +18161,10 @@ function isHostComponentStandalone(lView) {
  * @param lView An `LView` that represents a current component that is being rendered.
  */
 function getTemplateLocationDetails(lView) {
+  var _hostComponentDef$typ;
   !ngDevMode && throwError('Must never be called in production mode');
   const hostComponentDef = getDeclarationComponentDef(lView);
-  const componentClassName = hostComponentDef?.type?.name;
+  const componentClassName = hostComponentDef === null || hostComponentDef === void 0 ? void 0 : (_hostComponentDef$typ = hostComponentDef.type) === null || _hostComponentDef$typ === void 0 ? void 0 : _hostComponentDef$typ.name;
   return componentClassName ? ` (used in the '${componentClassName}' component template)` : '';
 }
 /**
@@ -19693,7 +19704,8 @@ function getPolicy$1() {
  * element.innerHTML.
  */
 function trustedHTMLFromString(html) {
-  return getPolicy$1()?.createHTML(html) || html;
+  var _getPolicy$;
+  return ((_getPolicy$ = getPolicy$1()) === null || _getPolicy$ === void 0 ? void 0 : _getPolicy$.createHTML(html)) || html;
 }
 /**
  * Unsafely promote a string to a TrustedScript, falling back to strings when
@@ -19703,7 +19715,8 @@ function trustedHTMLFromString(html) {
  * interpreted and executed as a script by a browser, e.g. when calling eval.
  */
 function trustedScriptFromString(script) {
-  return getPolicy$1()?.createScript(script) || script;
+  var _getPolicy$2;
+  return ((_getPolicy$2 = getPolicy$1()) === null || _getPolicy$2 === void 0 ? void 0 : _getPolicy$2.createScript(script)) || script;
 }
 /**
  * Unsafely promote a string to a TrustedScriptURL, falling back to strings
@@ -19715,7 +19728,8 @@ function trustedScriptFromString(script) {
  * assigning to script.src.
  */
 function trustedScriptURLFromString(url) {
-  return getPolicy$1()?.createScriptURL(url) || url;
+  var _getPolicy$3;
+  return ((_getPolicy$3 = getPolicy$1()) === null || _getPolicy$3 === void 0 ? void 0 : _getPolicy$3.createScriptURL(url)) || url;
 }
 /**
  * Unsafely call the Function constructor with the given string arguments. It
@@ -19901,7 +19915,8 @@ function getPolicy() {
  * bypassSecurityTrust* functions.
  */
 function trustedHTMLFromStringBypass(html) {
-  return getPolicy()?.createHTML(html) || html;
+  var _getPolicy;
+  return ((_getPolicy = getPolicy()) === null || _getPolicy === void 0 ? void 0 : _getPolicy.createHTML(html)) || html;
 }
 /**
  * Unsafely promote a string to a TrustedScript, falling back to strings when
@@ -19912,7 +19927,8 @@ function trustedHTMLFromStringBypass(html) {
  * bypassSecurityTrust* functions.
  */
 function trustedScriptFromStringBypass(script) {
-  return getPolicy()?.createScript(script) || script;
+  var _getPolicy2;
+  return ((_getPolicy2 = getPolicy()) === null || _getPolicy2 === void 0 ? void 0 : _getPolicy2.createScript(script)) || script;
 }
 /**
  * Unsafely promote a string to a TrustedScriptURL, falling back to strings
@@ -19923,7 +19939,8 @@ function trustedScriptFromStringBypass(script) {
  * bypassSecurityTrust* functions.
  */
 function trustedScriptURLFromStringBypass(url) {
-  return getPolicy()?.createScriptURL(url) || url;
+  var _getPolicy3;
+  return ((_getPolicy3 = getPolicy()) === null || _getPolicy3 === void 0 ? void 0 : _getPolicy3.createScriptURL(url)) || url;
 }
 
 /**
@@ -20821,7 +20838,7 @@ function internalImportProvidersFrom(checkForStandaloneCmp, ...sources) {
   deepForEach(sources, source => {
     if ((typeof ngDevMode === 'undefined' || ngDevMode) && checkForStandaloneCmp) {
       const cmpDef = getComponentDef(source);
-      if (cmpDef?.standalone) {
+      if (cmpDef !== null && cmpDef !== void 0 && cmpDef.standalone) {
         throw new RuntimeError(800 /* RuntimeErrorCode.IMPORT_PROVIDERS_FROM_STANDALONE */, `Importing providers supports NgModule or ModuleWithProviders but got a standalone component "${stringifyForError(source)}"`);
       }
     }
@@ -22602,7 +22619,8 @@ let Injector = /*#__PURE__*/(() => {
           name: ''
         }, parent, options, '');
       } else {
-        const name = options.name ?? '';
+        var _options$name;
+        const name = (_options$name = options.name) !== null && _options$name !== void 0 ? _options$name : '';
         return createInjector({
           name
         }, options.parent, options.providers, name);
@@ -25399,9 +25417,10 @@ function findDirectiveDefMatches(tView, tNode) {
             markAsComponentHost(tView, tNode, 0);
           }
         } else {
+          var _def$findHostDirectiv;
           // Append any host directives to the matches first.
           hostDirectiveDefs = hostDirectiveDefs || new Map();
-          def.findHostDirectiveDefs?.(def, matches, hostDirectiveDefs);
+          (_def$findHostDirectiv = def.findHostDirectiveDefs) === null || _def$findHostDirectiv === void 0 ? void 0 : _def$findHostDirectiv.call(def, def, matches, hostDirectiveDefs);
           matches.push(def);
         }
       }
@@ -26427,8 +26446,9 @@ class ComponentFactory extends ComponentFactory$1 {
     return toRefArray(this.componentDef.outputs);
   }
   create(injector, projectableNodes, rootSelectorOrNode, environmentInjector) {
+    var _environmentInjector;
     environmentInjector = environmentInjector || this.ngModule;
-    let realEnvironmentInjector = environmentInjector instanceof EnvironmentInjector ? environmentInjector : environmentInjector?.injector;
+    let realEnvironmentInjector = environmentInjector instanceof EnvironmentInjector ? environmentInjector : (_environmentInjector = environmentInjector) === null || _environmentInjector === void 0 ? void 0 : _environmentInjector.injector;
     if (realEnvironmentInjector && this.componentDef.getStandaloneInjector !== null) {
       realEnvironmentInjector = this.componentDef.getStandaloneInjector(realEnvironmentInjector) || realEnvironmentInjector;
     }
@@ -34159,7 +34179,7 @@ class NgModuleFactory$1 {}
  * @publicApi
  */
 function createNgModule(ngModule, parentInjector) {
-  return new NgModuleRef(ngModule, parentInjector ?? null);
+  return new NgModuleRef(ngModule, parentInjector !== null && parentInjector !== void 0 ? parentInjector : null);
 }
 /**
  * The `createNgModule` function alias for backwards-compatibility.
@@ -34513,7 +34533,7 @@ function getDirectives(node) {
   }
   const tView = lView[TVIEW];
   const nodeIndex = context.nodeIndex;
-  if (!tView?.data[nodeIndex]) {
+  if (!(tView !== null && tView !== void 0 && tView.data[nodeIndex])) {
     return [];
   }
   if (context.directives === undefined) {
@@ -35317,10 +35337,11 @@ class EventEmitter_ extends rxjs__WEBPACK_IMPORTED_MODULE_0__.Subject {
     let errorFn = error || (() => null);
     let completeFn = complete;
     if (observerOrNext && typeof observerOrNext === 'object') {
+      var _observer$next, _observer$error, _observer$complete;
       const observer = observerOrNext;
-      nextFn = observer.next?.bind(observer);
-      errorFn = observer.error?.bind(observer);
-      completeFn = observer.complete?.bind(observer);
+      nextFn = (_observer$next = observer.next) === null || _observer$next === void 0 ? void 0 : _observer$next.bind(observer);
+      errorFn = (_observer$error = observer.error) === null || _observer$error === void 0 ? void 0 : _observer$error.bind(observer);
+      completeFn = (_observer$complete = observer.complete) === null || _observer$complete === void 0 ? void 0 : _observer$complete.bind(observer);
     }
     if (this.__isAsync) {
       errorFn = _wrapInTimeout(errorFn);
@@ -36805,7 +36826,7 @@ function verifySemanticsOfNgModuleDef(moduleType, allowDuplicateDeclarationsInRo
   function verifyNotStandalone(type, moduleType) {
     type = resolveForwardRef(type);
     const def = getComponentDef(type) || getDirectiveDef(type) || getPipeDef$1(type);
-    if (def?.standalone) {
+    if (def !== null && def !== void 0 && def.standalone) {
       const location = `"${stringifyForError(moduleType)}" NgModule`;
       errors.push(generateStandaloneInDeclarationsError(type, location));
     }
@@ -37433,6 +37454,7 @@ function extendsDirectlyFromObject(type) {
  * `Component`).
  */
 function directiveMetadata(type, metadata) {
+  var _metadata$hostDirecti;
   // Reflect inputs and outputs.
   const reflect = getReflect();
   const propMetadata = reflect.ownPropMetadata(type);
@@ -37454,9 +37476,9 @@ function directiveMetadata(type, metadata) {
     providers: metadata.providers || null,
     viewQueries: extractQueriesMetadata(type, propMetadata, isViewQuery),
     isStandalone: !!metadata.standalone,
-    hostDirectives: metadata.hostDirectives?.map(directive => typeof directive === 'function' ? {
+    hostDirectives: ((_metadata$hostDirecti = metadata.hostDirectives) === null || _metadata$hostDirecti === void 0 ? void 0 : _metadata$hostDirecti.map(directive => typeof directive === 'function' ? {
       directive
-    } : directive) || null
+    } : directive)) || null
   };
 }
 /**
@@ -38513,8 +38535,9 @@ function getNativeRequestAnimationFrame() {
  */
 class AsyncStackTaggingZoneSpec {
   constructor(namePrefix, consoleAsyncStackTaggingImpl = console) {
+    var _consoleAsyncStackTag;
     this.name = 'asyncStackTagging for ' + namePrefix;
-    this.createTask = consoleAsyncStackTaggingImpl?.createTask ?? (() => null);
+    this.createTask = (_consoleAsyncStackTag = consoleAsyncStackTaggingImpl === null || consoleAsyncStackTaggingImpl === void 0 ? void 0 : consoleAsyncStackTaggingImpl.createTask) !== null && _consoleAsyncStackTag !== void 0 ? _consoleAsyncStackTag : () => null;
   }
   onScheduleTask(delegate, _current, target, task) {
     task.consoleTask = this.createTask(`Zone - ${task.source || task.type}`);
@@ -39224,7 +39247,8 @@ let TestabilityRegistry = /*#__PURE__*/(() => {
      * current node
      */
     findTestabilityInTree(elem, findInAncestors = true) {
-      return _testabilityGetter?.findTestabilityInTree(this, elem, findInAncestors) ?? null;
+      var _testabilityGetter$fi, _testabilityGetter2;
+      return (_testabilityGetter$fi = (_testabilityGetter2 = _testabilityGetter) === null || _testabilityGetter2 === void 0 ? void 0 : _testabilityGetter2.findTestabilityInTree(this, elem, findInAncestors)) !== null && _testabilityGetter$fi !== void 0 ? _testabilityGetter$fi : null;
     }
   }
   TestabilityRegistry.ɵfac = function TestabilityRegistry_Factory(t) {
@@ -39505,7 +39529,8 @@ function createPlatformInjector(providers = [], name) {
  * @publicApi
  */
 function destroyPlatform() {
-  getPlatform()?.destroy();
+  var _getPlatform;
+  (_getPlatform = getPlatform()) === null || _getPlatform === void 0 ? void 0 : _getPlatform.destroy();
 }
 /**
  * Returns the current platform.
@@ -39513,7 +39538,8 @@ function destroyPlatform() {
  * @publicApi
  */
 function getPlatform() {
-  return _platformInjector?.get(PlatformRef) ?? null;
+  var _platformInjector$get, _platformInjector2;
+  return (_platformInjector$get = (_platformInjector2 = _platformInjector) === null || _platformInjector2 === void 0 ? void 0 : _platformInjector2.get(PlatformRef)) !== null && _platformInjector$get !== void 0 ? _platformInjector$get : null;
 }
 /**
  * The Angular platform is the entry point for Angular on a web page.
@@ -39544,7 +39570,7 @@ let PlatformRef = /*#__PURE__*/(() => {
       // as instantiating the module creates some providers eagerly.
       // So we create a mini parent injector that just contains the new NgZone and
       // pass that as parent to the NgModuleFactory.
-      const ngZone = getNgZone(options?.ngZone, getNgZoneOptions(options));
+      const ngZone = getNgZone(options === null || options === void 0 ? void 0 : options.ngZone, getNgZoneOptions(options));
       const providers = [{
         provide: NgZone,
         useValue: ngZone
@@ -39960,11 +39986,11 @@ let ApplicationRef = /*#__PURE__*/(() => {
       const compRef = componentFactory.create(Injector.NULL, [], selectorOrNode, ngModule);
       const nativeElement = compRef.location.nativeElement;
       const testability = compRef.injector.get(TESTABILITY, null);
-      testability?.registerApplication(nativeElement);
+      testability === null || testability === void 0 ? void 0 : testability.registerApplication(nativeElement);
       compRef.onDestroy(() => {
         this.detachView(compRef.hostView);
         remove(this.components, compRef);
-        testability?.unregisterApplication(nativeElement);
+        testability === null || testability === void 0 ? void 0 : testability.unregisterApplication(nativeElement);
       });
       this._loadComponent(compRef);
       if (typeof ngDevMode === 'undefined' || ngDevMode) {
@@ -42115,7 +42141,8 @@ function ɵɵngDeclareDirective(decl) {
  * @codeGenApi
  */
 function ɵɵngDeclareClassMetadata(decl) {
-  setClassMetadata(decl.type, decl.decorators, decl.ctorParameters ?? null, decl.propDecorators ?? null);
+  var _decl$ctorParameters, _decl$propDecorators;
+  setClassMetadata(decl.type, decl.decorators, (_decl$ctorParameters = decl.ctorParameters) !== null && _decl$ctorParameters !== void 0 ? _decl$ctorParameters : null, (_decl$propDecorators = decl.propDecorators) !== null && _decl$propDecorators !== void 0 ? _decl$propDecorators : null);
 }
 /**
  * Compiles a partial component declaration object into a full component definition object.
@@ -43506,8 +43533,9 @@ function createApplication(options) {
   return (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinternalCreateApplication"])(createProvidersConfig(options));
 }
 function createProvidersConfig(options) {
+  var _options$providers;
   return {
-    appProviders: [...BROWSER_MODULE_PROVIDERS, ...(options?.providers ?? [])],
+    appProviders: [...BROWSER_MODULE_PROVIDERS, ...((_options$providers = options === null || options === void 0 ? void 0 : options.providers) !== null && _options$providers !== void 0 ? _options$providers : [])],
     platformProviders: INTERNAL_BROWSER_PLATFORM_PROVIDERS
   };
 }
@@ -45717,6 +45745,7 @@ function createUrlTreeFromSnapshot(relativeTo, commands, queryParams = null, fra
   return createUrlTreeFromSegmentGroup(relativeToUrlSegmentGroup, commands, queryParams, fragment);
 }
 function createSegmentGroupFromRoute(route) {
+  var _targetGroup;
   let targetGroup;
   function createSegmentGroupFromRouteRecursive(currentRoute) {
     const childOutlets = {};
@@ -45732,7 +45761,7 @@ function createSegmentGroupFromRoute(route) {
   }
   const rootCandidate = createSegmentGroupFromRouteRecursive(route.root);
   const rootSegmentGroup = createRoot(rootCandidate);
-  return targetGroup ?? rootSegmentGroup;
+  return (_targetGroup = targetGroup) !== null && _targetGroup !== void 0 ? _targetGroup : rootSegmentGroup;
 }
 function createUrlTreeFromSegmentGroup(relativeTo, commands, queryParams, fragment) {
   let root = relativeTo;
@@ -45754,6 +45783,7 @@ function createUrlTreeFromSegmentGroup(relativeTo, commands, queryParams, fragme
   return tree(root, position.segmentGroup, newSegmentGroup, queryParams, fragment);
 }
 function createUrlTree(route, urlTree, commands, queryParams, fragment) {
+  var _route$snapshot2;
   if (commands.length === 0) {
     return tree(urlTree.root, urlTree.root, urlTree.root, queryParams, fragment);
   }
@@ -45762,7 +45792,8 @@ function createUrlTree(route, urlTree, commands, queryParams, fragment) {
     return tree(urlTree.root, urlTree.root, new UrlSegmentGroup([], {}), queryParams, fragment);
   }
   function createTreeUsingPathIndex(lastPathIndex) {
-    const startingPosition = findStartingPosition(nav, urlTree, route.snapshot?._urlSegment, lastPathIndex);
+    var _route$snapshot;
+    const startingPosition = findStartingPosition(nav, urlTree, (_route$snapshot = route.snapshot) === null || _route$snapshot === void 0 ? void 0 : _route$snapshot._urlSegment, lastPathIndex);
     const segmentGroup = startingPosition.processChildren ? updateSegmentGroupChildren(startingPosition.segmentGroup, startingPosition.index, nav.commands) : updateSegmentGroup(startingPosition.segmentGroup, startingPosition.index, nav.commands);
     return tree(urlTree.root, startingPosition.segmentGroup, segmentGroup, queryParams, fragment);
   }
@@ -45770,7 +45801,7 @@ function createUrlTree(route, urlTree, commands, queryParams, fragment) {
   // may be the case. Since we try to access it at an earlier point before the refactor to add the
   // warning for `relativeLinkResolution: 'legacy'`, this may cause failures in tests where it
   // didn't before.
-  const result = createTreeUsingPathIndex(route.snapshot?._lastPathIndex);
+  const result = createTreeUsingPathIndex((_route$snapshot2 = route.snapshot) === null || _route$snapshot2 === void 0 ? void 0 : _route$snapshot2._lastPathIndex);
   return result;
 }
 function isMatrixParams(command) {
@@ -46475,18 +46506,19 @@ class Scroll {
   }
 }
 function stringifyEvent(routerEvent) {
+  var _routerEvent$snapshot, _routerEvent$snapshot2, _routerEvent$snapshot3, _routerEvent$snapshot4;
   if (!('type' in routerEvent)) {
     return `Unknown Router Event: ${routerEvent.constructor.name}`;
   }
   switch (routerEvent.type) {
     case 14 /* EventType.ActivationEnd */:
-      return `ActivationEnd(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
+      return `ActivationEnd(path: '${((_routerEvent$snapshot = routerEvent.snapshot.routeConfig) === null || _routerEvent$snapshot === void 0 ? void 0 : _routerEvent$snapshot.path) || ''}')`;
     case 13 /* EventType.ActivationStart */:
-      return `ActivationStart(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
+      return `ActivationStart(path: '${((_routerEvent$snapshot2 = routerEvent.snapshot.routeConfig) === null || _routerEvent$snapshot2 === void 0 ? void 0 : _routerEvent$snapshot2.path) || ''}')`;
     case 12 /* EventType.ChildActivationEnd */:
-      return `ChildActivationEnd(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
+      return `ChildActivationEnd(path: '${((_routerEvent$snapshot3 = routerEvent.snapshot.routeConfig) === null || _routerEvent$snapshot3 === void 0 ? void 0 : _routerEvent$snapshot3.path) || ''}')`;
     case 11 /* EventType.ChildActivationStart */:
-      return `ChildActivationStart(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
+      return `ChildActivationStart(path: '${((_routerEvent$snapshot4 = routerEvent.snapshot.routeConfig) === null || _routerEvent$snapshot4 === void 0 ? void 0 : _routerEvent$snapshot4.path) || ''}')`;
     case 8 /* EventType.GuardsCheckEnd */:
       return `GuardsCheckEnd(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state}, shouldActivate: ${routerEvent.shouldActivate})`;
     case 7 /* EventType.GuardsCheckStart */:
@@ -46703,6 +46735,7 @@ class ActivatedRoute {
   data, /** The outlet name of the route, a constant. */
   outlet, /** The component of the route, a constant. */
   component, futureSnapshot) {
+    var _this$data$pipe, _this$data;
     this.url = url;
     this.params = params;
     this.queryParams = queryParams;
@@ -46711,7 +46744,7 @@ class ActivatedRoute {
     this.outlet = outlet;
     this.component = component;
     /** An Observable of the resolved route title */
-    this.title = this.data?.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(d => d[RouteTitleKey])) ?? (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(undefined);
+    this.title = (_this$data$pipe = (_this$data = this.data) === null || _this$data === void 0 ? void 0 : _this$data.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(d => d[RouteTitleKey]))) !== null && _this$data$pipe !== void 0 ? _this$data$pipe : (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(undefined);
     this._futureSnapshot = futureSnapshot;
   }
   /** The configuration used to match this route. */
@@ -46792,6 +46825,7 @@ function inheritedParamsDataResolve(route, paramsInheritanceStrategy = 'emptyOnl
 /** @internal */
 function flattenInherited(pathFromRoot) {
   return pathFromRoot.reduce((res, curr) => {
+    var _curr$routeConfig;
     const params = {
       ...res.params,
       ...curr.params
@@ -46803,7 +46837,7 @@ function flattenInherited(pathFromRoot) {
     const resolve = {
       ...curr.data,
       ...res.resolve,
-      ...curr.routeConfig?.data,
+      ...((_curr$routeConfig = curr.routeConfig) === null || _curr$routeConfig === void 0 ? void 0 : _curr$routeConfig.data),
       ...curr._resolvedData
     };
     return {
@@ -46883,9 +46917,10 @@ class ActivatedRouteSnapshot {
   }
   /** The resolved route title */
   get title() {
+    var _this$data2;
     // Note: This _must_ be a getter because the data is mutated in the resolvers. Title will not be
     // available at the time of class instantiation.
-    return this.data?.[RouteTitleKey];
+    return (_this$data2 = this.data) === null || _this$data2 === void 0 ? void 0 : _this$data2[RouteTitleKey];
   }
   /** The root of the router state */
   get root() {
@@ -47303,7 +47338,8 @@ let RouterOutlet = /*#__PURE__*/(() => {
       }
     }
     isTrackedInParentContexts(outletName) {
-      return this.parentContexts.getContext(outletName)?.outlet === this;
+      var _this$parentContexts$;
+      return ((_this$parentContexts$ = this.parentContexts.getContext(outletName)) === null || _this$parentContexts$ === void 0 ? void 0 : _this$parentContexts$.outlet) === this;
     }
     /** @nodoc */
     ngOnInit() {
@@ -47317,7 +47353,7 @@ let RouterOutlet = /*#__PURE__*/(() => {
       // If the outlet was not instantiated at the time the route got activated we need to populate
       // the outlet when it is initialized (ie inside a NgIf)
       const context = this.parentContexts.getContext(this.name);
-      if (context?.route) {
+      if (context !== null && context !== void 0 && context.route) {
         if (context.attachRef) {
           // `attachRef` is populated when there is an existing component to mount
           this.attach(context.attachRef, context.route);
@@ -47392,7 +47428,7 @@ let RouterOutlet = /*#__PURE__*/(() => {
         const factory = resolverOrInjector.resolveComponentFactory(component);
         this.activated = location.createComponent(factory, location.length, injector);
       } else {
-        const environmentInjector = resolverOrInjector ?? this.environmentInjector;
+        const environmentInjector = resolverOrInjector !== null && resolverOrInjector !== void 0 ? resolverOrInjector : this.environmentInjector;
         this.activated = location.createComponent(component, {
           index: location.length,
           injector,
@@ -47507,10 +47543,11 @@ let ɵEmptyOutletComponent = /*#__PURE__*/(() => {
  * @param currentInjector The parent injector of the `Route`
  */
 function getOrCreateRouteInjectorIfNeeded(route, currentInjector) {
+  var _route$_injector;
   if (route.providers && !route._injector) {
     route._injector = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.createEnvironmentInjector)(route.providers, currentInjector, `Route: ${route.path}`);
   }
-  return route._injector ?? currentInjector;
+  return (_route$_injector = route._injector) !== null && _route$_injector !== void 0 ? _route$_injector : currentInjector;
 }
 function getLoadedRoutes(route) {
   return route._loadedRoutes;
@@ -47656,11 +47693,12 @@ function sortByMatchingOutlets(routes, outletName) {
  * also used for getting the correct injector to use for creating components.
  */
 function getClosestRouteInjector(snapshot) {
+  var _snapshot$routeConfig;
   if (!snapshot) return null;
   // If the current route has its own injector, which is created from the static providers on the
   // route itself, we should use that. Otherwise, we start at the parent since we do not want to
   // include the lazy loaded injector from this route.
-  if (snapshot.routeConfig?._injector) {
+  if ((_snapshot$routeConfig = snapshot.routeConfig) !== null && _snapshot$routeConfig !== void 0 && _snapshot$routeConfig._injector) {
     return snapshot.routeConfig._injector;
   }
   for (let s = snapshot.parent; s; s = s.parent) {
@@ -47669,8 +47707,8 @@ function getClosestRouteInjector(snapshot) {
     // `loadChildren: () => NgModule` so it applies to child routes with priority. The `_injector`
     // is created from the static providers on that parent route, so it applies to the children as
     // well, but only if there is no lazy loaded NgModuleRef injector.
-    if (route?._loadedInjector) return route._loadedInjector;
-    if (route?._injector) return route._injector;
+    if (route !== null && route !== void 0 && route._loadedInjector) return route._loadedInjector;
+    if (route !== null && route !== void 0 && route._injector) return route._injector;
   }
   return null;
 }
@@ -47825,8 +47863,9 @@ class ActivateRoutes {
           advanceActivatedRoute(stored.route.value);
           this.activateChildRoutes(futureNode, null, context.children);
         } else {
+          var _injector$get;
           const injector = getClosestRouteInjector(future.snapshot);
-          const cmpFactoryResolver = injector?.get(_angular_core__WEBPACK_IMPORTED_MODULE_0__.ComponentFactoryResolver) ?? null;
+          const cmpFactoryResolver = (_injector$get = injector === null || injector === void 0 ? void 0 : injector.get(_angular_core__WEBPACK_IMPORTED_MODULE_0__.ComponentFactoryResolver)) !== null && _injector$get !== void 0 ? _injector$get : null;
           context.attachRef = null;
           context.route = future;
           context.resolver = cmpFactoryResolver;
@@ -48035,7 +48074,7 @@ function isNavigationCancelingError(error) {
   return error && error[NAVIGATION_CANCELING_ERROR];
 }
 function isEmptyError(e) {
-  return e instanceof rxjs__WEBPACK_IMPORTED_MODULE_5__.EmptyError || e?.name === 'EmptyError';
+  return e instanceof rxjs__WEBPACK_IMPORTED_MODULE_5__.EmptyError || (e === null || e === void 0 ? void 0 : e.name) === 'EmptyError';
 }
 
 /**
@@ -48145,7 +48184,8 @@ function runCanActivate(futureRSS, futureARS, injector) {
   if (!canActivate || canActivate.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
   const canActivateObservables = canActivate.map(canActivate => {
     return (0,rxjs__WEBPACK_IMPORTED_MODULE_15__.defer)(() => {
-      const closestInjector = getClosestRouteInjector(futureARS) ?? injector;
+      var _getClosestRouteInjec;
+      const closestInjector = (_getClosestRouteInjec = getClosestRouteInjector(futureARS)) !== null && _getClosestRouteInjec !== void 0 ? _getClosestRouteInjec : injector;
       const guard = getTokenOrFunctionIdentity(canActivate, closestInjector);
       const guardVal = isCanActivate(guard) ? guard.canActivate(futureARS, futureRSS) : closestInjector.runInContext(() => guard(futureARS, futureRSS));
       return wrapIntoObservable(guardVal).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.first)());
@@ -48159,7 +48199,8 @@ function runCanActivateChild(futureRSS, path, injector) {
   const canActivateChildGuardsMapped = canActivateChildGuards.map(d => {
     return (0,rxjs__WEBPACK_IMPORTED_MODULE_15__.defer)(() => {
       const guardsMapped = d.guards.map(canActivateChild => {
-        const closestInjector = getClosestRouteInjector(d.node) ?? injector;
+        var _getClosestRouteInjec2;
+        const closestInjector = (_getClosestRouteInjec2 = getClosestRouteInjector(d.node)) !== null && _getClosestRouteInjec2 !== void 0 ? _getClosestRouteInjec2 : injector;
         const guard = getTokenOrFunctionIdentity(canActivateChild, closestInjector);
         const guardVal = isCanActivateChild(guard) ? guard.canActivateChild(futureARS, futureRSS) : closestInjector.runInContext(() => guard(futureARS, futureRSS));
         return wrapIntoObservable(guardVal).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.first)());
@@ -48173,7 +48214,8 @@ function runCanDeactivate(component, currARS, currRSS, futureRSS, injector) {
   const canDeactivate = currARS && currARS.routeConfig ? currARS.routeConfig.canDeactivate : null;
   if (!canDeactivate || canDeactivate.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
   const canDeactivateObservables = canDeactivate.map(c => {
-    const closestInjector = getClosestRouteInjector(currARS) ?? injector;
+    var _getClosestRouteInjec3;
+    const closestInjector = (_getClosestRouteInjec3 = getClosestRouteInjector(currARS)) !== null && _getClosestRouteInjec3 !== void 0 ? _getClosestRouteInjec3 : injector;
     const guard = getTokenOrFunctionIdentity(c, closestInjector);
     const guardVal = isCanDeactivate(guard) ? guard.canDeactivate(component, currARS, currRSS, futureRSS) : closestInjector.runInContext(() => guard(component, currARS, currRSS, futureRSS));
     return wrapIntoObservable(guardVal).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.first)());
@@ -48236,6 +48278,7 @@ function matchWithChecks(segmentGroup, route, segments, injector, urlSerializer)
   }));
 }
 function match(segmentGroup, route, segments) {
+  var _res$posParams;
   if (route.path === '') {
     if (route.pathMatch === 'full' && (segmentGroup.hasChildren() || segments.length > 0)) {
       return {
@@ -48269,7 +48312,7 @@ function match(segmentGroup, route, segments) {
     remainingSegments: segments.slice(res.consumed.length),
     // TODO(atscott): investigate combining parameters and positionalParamSegments
     parameters,
-    positionalParamSegments: res.posParams ?? {}
+    positionalParamSegments: (_res$posParams = res.posParams) !== null && _res$posParams !== void 0 ? _res$posParams : {}
   };
 }
 function split(segmentGroup, consumedSegments, slicedSegments, config) {
@@ -48581,12 +48624,14 @@ class ApplyRedirects {
       consumedSegments,
       remainingSegments
     }) => {
+      var _route$_injector2;
       if (!matched) return noMatch(rawSegmentGroup);
       // If the route has an injector created from providers, we should start using that.
-      injector = route._injector ?? injector;
+      injector = (_route$_injector2 = route._injector) !== null && _route$_injector2 !== void 0 ? _route$_injector2 : injector;
       const childConfig$ = this.getChildConfig(injector, route, segments);
       return childConfig$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.mergeMap)(routerConfig => {
-        const childInjector = routerConfig.injector ?? injector;
+        var _routerConfig$injecto;
+        const childInjector = (_routerConfig$injecto = routerConfig.injector) !== null && _routerConfig$injecto !== void 0 ? _routerConfig$injecto : injector;
         const childConfig = routerConfig.routes;
         const {
           segmentGroup: splitSegmentGroup,
@@ -48814,7 +48859,8 @@ class Recognizer {
   }
   processSegment(injector, routes, segmentGroup, segments, outlet) {
     return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(routes).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_13__.concatMap)(r => {
-      return this.processSegmentAgainstRoute(r._injector ?? injector, r, segmentGroup, segments, outlet);
+      var _r$_injector;
+      return this.processSegmentAgainstRoute((_r$_injector = r._injector) !== null && _r$_injector !== void 0 ? _r$_injector : injector, r, segmentGroup, segments, outlet);
     }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.first)(x => !!x), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_19__.catchError)(e => {
       if (isEmptyError(e)) {
         if (noLeftoversInUrl(segmentGroup, segments, outlet)) {
@@ -48829,11 +48875,12 @@ class Recognizer {
     if (route.redirectTo || !isImmediateMatch(route, rawSegment, segments, outlet)) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
     let matchResult;
     if (route.path === '**') {
+      var _ref, _route$component;
       const params = segments.length > 0 ? last(segments).parameters : {};
       const pathIndexShift = getPathIndexShift(rawSegment) + segments.length;
       const snapshot = new ActivatedRouteSnapshot(segments, params, Object.freeze({
         ...this.urlTree.queryParams
-      }), this.urlTree.fragment, getData(route), getOutlet(route), route.component ?? route._loadedComponent ?? null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route));
+      }), this.urlTree.fragment, getData(route), getOutlet(route), (_ref = (_route$component = route.component) !== null && _route$component !== void 0 ? _route$component : route._loadedComponent) !== null && _ref !== void 0 ? _ref : null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route));
       matchResult = (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)({
         snapshot,
         consumedSegments: [],
@@ -48846,13 +48893,14 @@ class Recognizer {
         remainingSegments,
         parameters
       }) => {
+        var _ref2, _route$component2;
         if (!matched) {
           return null;
         }
         const pathIndexShift = getPathIndexShift(rawSegment) + consumedSegments.length;
         const snapshot = new ActivatedRouteSnapshot(consumedSegments, parameters, Object.freeze({
           ...this.urlTree.queryParams
-        }), this.urlTree.fragment, getData(route), getOutlet(route), route.component ?? route._loadedComponent ?? null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route));
+        }), this.urlTree.fragment, getData(route), getOutlet(route), (_ref2 = (_route$component2 = route.component) !== null && _route$component2 !== void 0 ? _route$component2 : route._loadedComponent) !== null && _ref2 !== void 0 ? _ref2 : null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route));
         return {
           snapshot,
           consumedSegments,
@@ -48861,6 +48909,7 @@ class Recognizer {
       }));
     }
     return matchResult.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_6__.switchMap)(result => {
+      var _route$_injector3, _route$_loadedInjecto;
       if (result === null) {
         return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
       }
@@ -48870,8 +48919,8 @@ class Recognizer {
         remainingSegments
       } = result;
       // If the route has an injector created from providers, we should start using that.
-      injector = route._injector ?? injector;
-      const childInjector = route._loadedInjector ?? injector;
+      injector = (_route$_injector3 = route._injector) !== null && _route$_injector3 !== void 0 ? _route$_injector3 : injector;
+      const childInjector = (_route$_loadedInjecto = route._loadedInjector) !== null && _route$_loadedInjecto !== void 0 ? _route$_loadedInjecto : injector;
       const childConfig = getChildConfig(route);
       const {
         segmentGroup,
@@ -48982,20 +49031,24 @@ function getSourceSegmentGroup(segmentGroup) {
   return s;
 }
 function getPathIndexShift(segmentGroup) {
+  var _s$_segmentIndexShift;
   let s = segmentGroup;
-  let res = s._segmentIndexShift ?? 0;
+  let res = (_s$_segmentIndexShift = s._segmentIndexShift) !== null && _s$_segmentIndexShift !== void 0 ? _s$_segmentIndexShift : 0;
   while (s._sourceSegment) {
+    var _s$_segmentIndexShift2;
     s = s._sourceSegment;
-    res += s._segmentIndexShift ?? 0;
+    res += (_s$_segmentIndexShift2 = s._segmentIndexShift) !== null && _s$_segmentIndexShift2 !== void 0 ? _s$_segmentIndexShift2 : 0;
   }
   return res - 1;
 }
 function getCorrectedPathIndexShift(segmentGroup) {
+  var _ref3, _s$_segmentIndexShift3;
   let s = segmentGroup;
-  let res = s._segmentIndexShiftCorrected ?? s._segmentIndexShift ?? 0;
+  let res = (_ref3 = (_s$_segmentIndexShift3 = s._segmentIndexShiftCorrected) !== null && _s$_segmentIndexShift3 !== void 0 ? _s$_segmentIndexShift3 : s._segmentIndexShift) !== null && _ref3 !== void 0 ? _ref3 : 0;
   while (s._sourceSegment) {
+    var _ref4, _s$_segmentIndexShift4;
     s = s._sourceSegment;
-    res += s._segmentIndexShiftCorrected ?? s._segmentIndexShift ?? 0;
+    res += (_ref4 = (_s$_segmentIndexShift4 = s._segmentIndexShiftCorrected) !== null && _s$_segmentIndexShift4 !== void 0 ? _s$_segmentIndexShift4 : s._segmentIndexShift) !== null && _ref4 !== void 0 ? _ref4 : 0;
   }
   return res - 1;
 }
@@ -49045,7 +49098,7 @@ function resolveData(paramsInheritanceStrategy, injector) {
 function runResolve(futureARS, futureRSS, paramsInheritanceStrategy, injector) {
   const config = futureARS.routeConfig;
   const resolve = futureARS._resolve;
-  if (config?.title !== undefined && !hasStaticTitle(config)) {
+  if ((config === null || config === void 0 ? void 0 : config.title) !== undefined && !hasStaticTitle(config)) {
     resolve[RouteTitleKey] = config.title;
   }
   return resolveNode(resolve, futureARS, futureRSS, injector).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(resolvedData => {
@@ -49071,7 +49124,8 @@ function getDataKeys(obj) {
   return [...Object.keys(obj), ...Object.getOwnPropertySymbols(obj)];
 }
 function getResolver(injectionToken, futureARS, futureRSS, injector) {
-  const closestInjector = getClosestRouteInjector(futureARS) ?? injector;
+  var _getClosestRouteInjec4;
+  const closestInjector = (_getClosestRouteInjec4 = getClosestRouteInjector(futureARS)) !== null && _getClosestRouteInjec4 !== void 0 ? _getClosestRouteInjec4 : injector;
   const resolver = getTokenOrFunctionIdentity(injectionToken, closestInjector);
   const resolverValue = resolver.resolve ? resolver.resolve(futureARS, futureRSS) : closestInjector.runInContext(() => resolver(futureARS, futureRSS));
   return wrapIntoObservable(resolverValue);
@@ -49142,7 +49196,8 @@ let TitleStrategy = /*#__PURE__*/(() => {
       let pageTitle;
       let route = snapshot.root;
       while (route !== undefined) {
-        pageTitle = this.getResolvedTitleForRoute(route) ?? pageTitle;
+        var _this$getResolvedTitl;
+        pageTitle = (_this$getResolvedTitl = this.getResolvedTitleForRoute(route)) !== null && _this$getResolvedTitl !== void 0 ? _this$getResolvedTitl : pageTitle;
         route = route.children.find(child => child.outlet === PRIMARY_OUTLET);
       }
       return pageTitle;
@@ -49334,10 +49389,11 @@ let RouterConfigLoader = /*#__PURE__*/(() => {
         this.onLoadStartListener(route);
       }
       const loadRunner = wrapIntoObservable(route.loadComponent()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(maybeUnwrapDefaultExport), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.tap)(component => {
+        var _route$path;
         if (this.onLoadEndListener) {
           this.onLoadEndListener(route);
         }
-        NG_DEV_MODE$3 && assertStandalone(route.path ?? '', component);
+        NG_DEV_MODE$3 && assertStandalone((_route$path = route.path) !== null && _route$path !== void 0 ? _route$path : '', component);
         route._loadedComponent = component;
       }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_29__.finalize)(() => {
         this.componentLoaders.delete(route);
@@ -49518,17 +49574,18 @@ function assignExtraOptionsToRouter(opts, router) {
   }
 }
 function setupRouter() {
+  var _inject, _inject2;
   const urlSerializer = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(UrlSerializer);
   const contexts = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ChildrenOutletContexts);
   const location = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_common__WEBPACK_IMPORTED_MODULE_33__.Location);
   const injector = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_0__.Injector);
   const compiler = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_0__.Compiler);
-  const config = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTES, {
+  const config = (_inject = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTES, {
     optional: true
-  }) ?? [];
-  const opts = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTER_CONFIGURATION, {
+  })) !== null && _inject !== void 0 ? _inject : [];
+  const opts = (_inject2 = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTER_CONFIGURATION, {
     optional: true
-  }) ?? {};
+  })) !== null && _inject2 !== void 0 ? _inject2 : {};
   const defaultTitleStrategy = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DefaultTitleStrategy);
   const titleStrategy = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(TitleStrategy, {
     optional: true
@@ -49546,7 +49603,7 @@ function setupRouter() {
   if (routeReuseStrategy) {
     router.routeReuseStrategy = routeReuseStrategy;
   }
-  router.titleStrategy = titleStrategy ?? defaultTitleStrategy;
+  router.titleStrategy = titleStrategy !== null && titleStrategy !== void 0 ? titleStrategy : defaultTitleStrategy;
   assignExtraOptionsToRouter(opts, router);
   return router;
 }
@@ -49727,7 +49784,8 @@ let Router = /*#__PURE__*/(() => {
      * page id in the browser history is 1 more than the previous entry.
      */
     get browserPageId() {
-      return this.location.getState()?.ɵrouterPageId;
+      var _this$location$getSta;
+      return (_this$location$getSta = this.location.getState()) === null || _this$location$getSta === void 0 ? void 0 : _this$location$getSta.ɵrouterPageId;
     }
     setupNavigations(transitions) {
       const eventsSubject = this.events;
@@ -49900,8 +49958,9 @@ let Router = /*#__PURE__*/(() => {
         // --- LOAD COMPONENTS ---
         switchTap(t => {
           const loadComponents = route => {
+            var _route$routeConfig;
             const loaders = [];
-            if (route.routeConfig?.loadComponent && !route.routeConfig._loadedComponent) {
+            if ((_route$routeConfig = route.routeConfig) !== null && _route$routeConfig !== void 0 && _route$routeConfig.loadComponent && !route.routeConfig._loadedComponent) {
               loaders.push(this.configLoader.loadComponent(route.routeConfig).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.tap)(loadedComponent => {
                 route.component = loadedComponent;
               }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(() => void 0)));
@@ -49943,6 +50002,7 @@ let Router = /*#__PURE__*/(() => {
             completed = true;
           }
         }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_29__.finalize)(() => {
+          var _this$currentNavigati;
           /* When the navigation stream finishes either through error or success,
            * we set the `completed` or `errored` flag. However, there are some
            * situations where we could get here without either of those being set.
@@ -49955,7 +50015,7 @@ let Router = /*#__PURE__*/(() => {
           }
           // Only clear current navigation if it is still set to the one that
           // finalized.
-          if (this.currentNavigation?.id === overallTransitionState.id) {
+          if (((_this$currentNavigati = this.currentNavigation) === null || _this$currentNavigati === void 0 ? void 0 : _this$currentNavigati.id) === overallTransitionState.id) {
             this.currentNavigation = null;
           }
         }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_19__.catchError)(e => {
@@ -49998,8 +50058,9 @@ let Router = /*#__PURE__*/(() => {
             /* All other errors should reset to the router's internal URL reference
              * to the pre-error state. */
           } else {
+            var _overallTransitionSta;
             this.restoreHistory(overallTransitionState, true);
-            const navError = new NavigationError(overallTransitionState.id, this.serializeUrl(overallTransitionState.extractedUrl), e, overallTransitionState.targetSnapshot ?? undefined);
+            const navError = new NavigationError(overallTransitionState.id, this.serializeUrl(overallTransitionState.extractedUrl), e, (_overallTransitionSta = overallTransitionState.targetSnapshot) !== null && _overallTransitionSta !== void 0 ? _overallTransitionSta : undefined);
             eventsSubject.next(navError);
             try {
               overallTransitionState.resolve(this.errorHandler(e));
@@ -50055,12 +50116,13 @@ let Router = /*#__PURE__*/(() => {
             // The `setTimeout` was added in #12160 and is likely to support Angular/AngularJS
             // hybrid apps.
             setTimeout(() => {
+              var _event$state;
               const extras = {
                 replaceUrl: true
               };
               // Navigations coming from Angular router have a navigationId state
               // property. When this exists, restore the state.
-              const state = event.state?.navigationId ? event.state : null;
+              const state = (_event$state = event.state) !== null && _event$state !== void 0 && _event$state.navigationId ? event.state : null;
               if (state) {
                 const stateCopy = {
                   ...state
@@ -50203,7 +50265,7 @@ let Router = /*#__PURE__*/(() => {
       if (q !== null) {
         q = this.removeEmptyProps(q);
       }
-      return createUrlTree(a, this.currentUrlTree, commands, q, f ?? null);
+      return createUrlTree(a, this.currentUrlTree, commands, q, f !== null && f !== void 0 ? f : null);
     }
     /**
      * Navigates to a view using an absolute route path.
@@ -50319,12 +50381,13 @@ let Router = /*#__PURE__*/(() => {
     }
     processNavigations() {
       this.navigations.subscribe(t => {
+        var _this$titleStrategy;
         this.navigated = true;
         this.lastSuccessfulId = t.id;
         this.currentPageId = t.targetPageId;
         this.events.next(new NavigationEnd(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(this.currentUrlTree)));
         this.lastSuccessfulNavigation = this.currentNavigation;
-        this.titleStrategy?.updateTitle(this.routerState.snapshot);
+        (_this$titleStrategy = this.titleStrategy) === null || _this$titleStrategy === void 0 ? void 0 : _this$titleStrategy.updateTitle(this.routerState.snapshot);
         t.resolve(true);
       }, e => {
         this.console.warn(`Unhandled Navigation Error: ${e}`);
@@ -50363,9 +50426,11 @@ let Router = /*#__PURE__*/(() => {
           // If we're replacing the URL or doing a silent navigation, we do not want to increment the
           // page id because we aren't pushing a new entry to history.
           if (extras.replaceUrl || extras.skipLocationChange) {
-            targetPageId = this.browserPageId ?? 0;
+            var _this$browserPageId;
+            targetPageId = (_this$browserPageId = this.browserPageId) !== null && _this$browserPageId !== void 0 ? _this$browserPageId : 0;
           } else {
-            targetPageId = (this.browserPageId ?? 0) + 1;
+            var _this$browserPageId2;
+            targetPageId = ((_this$browserPageId2 = this.browserPageId) !== null && _this$browserPageId2 !== void 0 ? _this$browserPageId2 : 0) + 1;
           }
         }
       } else {
@@ -50411,16 +50476,17 @@ let Router = /*#__PURE__*/(() => {
      */
     restoreHistory(t, restoringFromCaughtError = false) {
       if (this.canceledNavigationResolution === 'computed') {
+        var _this$currentNavigati2, _this$currentNavigati3;
         const targetPagePosition = this.currentPageId - t.targetPageId;
         // The navigator change the location before triggered the browser event,
         // so we need to go back to the current url if the navigation is canceled.
         // Also, when navigation gets cancelled while using url update strategy eager, then we need to
         // go back. Because, when `urlUpdateStrategy` is `eager`; `setBrowserUrl` method is called
         // before any verification.
-        const browserUrlUpdateOccurred = t.source === 'popstate' || this.urlUpdateStrategy === 'eager' || this.currentUrlTree === this.currentNavigation?.finalUrl;
+        const browserUrlUpdateOccurred = t.source === 'popstate' || this.urlUpdateStrategy === 'eager' || this.currentUrlTree === ((_this$currentNavigati2 = this.currentNavigation) === null || _this$currentNavigati2 === void 0 ? void 0 : _this$currentNavigati2.finalUrl);
         if (browserUrlUpdateOccurred && targetPagePosition !== 0) {
           this.location.historyGo(targetPagePosition);
-        } else if (this.currentUrlTree === this.currentNavigation?.finalUrl && targetPagePosition === 0) {
+        } else if (this.currentUrlTree === ((_this$currentNavigati3 = this.currentNavigation) === null || _this$currentNavigati3 === void 0 ? void 0 : _this$currentNavigati3.finalUrl) && targetPagePosition === 0) {
           // We got to the activation stage (where currentUrlTree is set to the navigation's
           // finalUrl), but we weren't moving anywhere in history (skipLocationChange or replaceUrl).
           // We still need to reset the router state back to what it was when the navigation started.
@@ -50734,10 +50800,12 @@ let RouterLink = /*#__PURE__*/(() => {
     }
     /** @nodoc */
     ngOnDestroy() {
-      this.subscription?.unsubscribe();
+      var _this$subscription;
+      (_this$subscription = this.subscription) === null || _this$subscription === void 0 ? void 0 : _this$subscription.unsubscribe();
     }
     updateHref() {
-      this.href = this.urlTree !== null && this.locationStrategy ? this.locationStrategy?.prepareExternalUrl(this.router.serializeUrl(this.urlTree)) : null;
+      var _this$locationStrateg;
+      this.href = this.urlTree !== null && this.locationStrategy ? (_this$locationStrateg = this.locationStrategy) === null || _this$locationStrateg === void 0 ? void 0 : _this$locationStrateg.prepareExternalUrl(this.router.serializeUrl(this.urlTree)) : null;
       const sanitizedValue = this.href === null ? null :
       // This class represents a directive that can be added to both `<a>` elements,
       // as well as other elements. As a result, we can't define security context at
@@ -50942,7 +51010,8 @@ let RouterLinkActive = /*#__PURE__*/(() => {
       });
     }
     subscribeToEachLinkOnChanges() {
-      this.linkInputChangesSubscription?.unsubscribe();
+      var _this$linkInputChange;
+      (_this$linkInputChange = this.linkInputChangesSubscription) === null || _this$linkInputChange === void 0 ? void 0 : _this$linkInputChange.unsubscribe();
       const allLinkChanges = [...this.links.toArray(), this.link].filter(link => !!link).map(link => link.onChanges);
       this.linkInputChangesSubscription = (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(allLinkChanges).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_34__.mergeAll)()).subscribe(link => {
         if (this.isActive !== this.isLinkActive(this.router)(link)) {
@@ -50960,8 +51029,9 @@ let RouterLinkActive = /*#__PURE__*/(() => {
     }
     /** @nodoc */
     ngOnDestroy() {
+      var _this$linkInputChange2;
       this.routerEventsSubscription.unsubscribe();
-      this.linkInputChangesSubscription?.unsubscribe();
+      (_this$linkInputChange2 = this.linkInputChangesSubscription) === null || _this$linkInputChange2 === void 0 ? void 0 : _this$linkInputChange2.unsubscribe();
     }
     update() {
       if (!this.links || !this.router.navigated) return;
@@ -51145,11 +51215,12 @@ let RouterPreloader = /*#__PURE__*/(() => {
     processRoutes(injector, routes) {
       const res = [];
       for (const route of routes) {
+        var _route$_injector4, _route$_loadedInjecto2;
         if (route.providers && !route._injector) {
           route._injector = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.createEnvironmentInjector)(route.providers, injector, `Route: ${route.path}`);
         }
-        const injectorForCurrentRoute = route._injector ?? injector;
-        const injectorForChildren = route._loadedInjector ?? injectorForCurrentRoute;
+        const injectorForCurrentRoute = (_route$_injector4 = route._injector) !== null && _route$_injector4 !== void 0 ? _route$_injector4 : injector;
+        const injectorForChildren = (_route$_loadedInjecto2 = route._loadedInjector) !== null && _route$_loadedInjecto2 !== void 0 ? _route$_loadedInjecto2 : injectorForCurrentRoute;
         // Note that `canLoad` is only checked as a condition that prevents `loadChildren` and not
         // `loadComponent`. `canLoad` guards only block loading of child routes by design. This
         // happens as a consequence of needing to descend into children for route matching immediately
@@ -51161,7 +51232,8 @@ let RouterPreloader = /*#__PURE__*/(() => {
         if (route.loadChildren && !route._loadedRoutes && route.canLoad === undefined || route.loadComponent && !route._loadedComponent) {
           res.push(this.preloadConfig(injectorForCurrentRoute, route));
         } else if (route.children || route._loadedRoutes) {
-          res.push(this.processRoutes(injectorForChildren, route.children ?? route._loadedRoutes));
+          var _route$children;
+          res.push(this.processRoutes(injectorForChildren, (_route$children = route.children) !== null && _route$children !== void 0 ? _route$children : route._loadedRoutes));
         }
       }
       return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(res).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_34__.mergeAll)());
@@ -51175,6 +51247,7 @@ let RouterPreloader = /*#__PURE__*/(() => {
           loadedChildren$ = (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
         }
         const recursiveLoadChildren$ = loadedChildren$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.mergeMap)(config => {
+          var _config$injector;
           if (config === null) {
             return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(void 0);
           }
@@ -51182,7 +51255,7 @@ let RouterPreloader = /*#__PURE__*/(() => {
           route._loadedInjector = config.injector;
           // If the loaded config was a module, use that as the module/module injector going
           // forward. Otherwise, continue using the current module/module injector.
-          return this.processRoutes(config.injector ?? injector, config.routes);
+          return this.processRoutes((_config$injector = config.injector) !== null && _config$injector !== void 0 ? _config$injector : injector, config.routes);
         }));
         if (route.loadComponent && !route._loadedComponent) {
           const loadComponent$ = this.loader.loadComponent(route);
@@ -51471,6 +51544,7 @@ function withInMemoryScrolling(options = {}) {
 function getBootstrapListener() {
   const injector = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_0__.Injector);
   return bootstrappedComponentRef => {
+    var _injector$get2, _injector$get3;
     const ref = injector.get(_angular_core__WEBPACK_IMPORTED_MODULE_0__.ApplicationRef);
     if (bootstrappedComponentRef !== ref.components[0]) {
       return;
@@ -51480,8 +51554,8 @@ function getBootstrapListener() {
     if (injector.get(INITIAL_NAVIGATION) === 1 /* InitialNavigation.EnabledNonBlocking */) {
       router.initialNavigation();
     }
-    injector.get(ROUTER_PRELOADER, null, _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectFlags.Optional)?.setUpPreloading();
-    injector.get(ROUTER_SCROLLER, null, _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectFlags.Optional)?.init();
+    (_injector$get2 = injector.get(ROUTER_PRELOADER, null, _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectFlags.Optional)) === null || _injector$get2 === void 0 ? void 0 : _injector$get2.setUpPreloading();
+    (_injector$get3 = injector.get(ROUTER_SCROLLER, null, _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectFlags.Optional)) === null || _injector$get3 === void 0 ? void 0 : _injector$get3.init();
     router.resetRootComponentType(ref.componentTypes[0]);
     bootstrapDone.next();
     bootstrapDone.complete();
@@ -51664,11 +51738,12 @@ function withDebugTracing() {
       useFactory: () => {
         const router = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(Router);
         return () => router.events.subscribe(e => {
+          var _console$group, _console, _console$groupEnd, _console2;
           // tslint:disable:no-console
-          console.group?.(`Router Event: ${e.constructor.name}`);
+          (_console$group = (_console = console).group) === null || _console$group === void 0 ? void 0 : _console$group.call(_console, `Router Event: ${e.constructor.name}`);
           console.log(stringifyEvent(e));
           console.log(e);
-          console.groupEnd?.();
+          (_console$groupEnd = (_console2 = console).groupEnd) === null || _console$groupEnd === void 0 ? void 0 : _console$groupEnd.call(_console2);
           // tslint:enable:no-console
         });
       }
@@ -51835,7 +51910,7 @@ let RouterModule = /*#__PURE__*/(() => {
     static forRoot(routes, config) {
       return {
         ngModule: RouterModule,
-        providers: [ROUTER_PROVIDERS, NG_DEV_MODE ? config?.enableTracing ? withDebugTracing().ɵproviders : [] : [], {
+        providers: [ROUTER_PROVIDERS, NG_DEV_MODE ? config !== null && config !== void 0 && config.enableTracing ? withDebugTracing().ɵproviders : [] : [], {
           provide: ROUTES,
           multi: true,
           useValue: routes
@@ -51846,11 +51921,11 @@ let RouterModule = /*#__PURE__*/(() => {
         }, {
           provide: ROUTER_CONFIGURATION,
           useValue: config ? config : {}
-        }, config?.useHash ? provideHashLocationStrategy() : providePathLocationStrategy(), provideRouterScroller(), config?.preloadingStrategy ? withPreloading(config.preloadingStrategy).ɵproviders : [], {
+        }, config !== null && config !== void 0 && config.useHash ? provideHashLocationStrategy() : providePathLocationStrategy(), provideRouterScroller(), config !== null && config !== void 0 && config.preloadingStrategy ? withPreloading(config.preloadingStrategy).ɵproviders : [], {
           provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__.NgProbeToken,
           multi: true,
           useFactory: routerNgProbeToken
-        }, config?.initialNavigation ? provideInitialNavigation(config) : [], provideRouterInitializer()]
+        }, config !== null && config !== void 0 && config.initialNavigation ? provideInitialNavigation(config) : [], provideRouterInitializer()]
       };
     }
     /**
