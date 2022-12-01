@@ -17,16 +17,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [];
-class AppRoutingModule {}
-AppRoutingModule.ɵfac = function AppRoutingModule_Factory(t) {
-  return new (t || AppRoutingModule)();
-};
-AppRoutingModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
-  type: AppRoutingModule
-});
-AppRoutingModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
-  imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule.forRoot(routes), _angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule]
-});
+class AppRoutingModule {
+  static #_ = this.ɵfac = function AppRoutingModule_Factory(t) {
+    return new (t || AppRoutingModule)();
+  };
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+    type: AppRoutingModule
+  });
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+    imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule.forRoot(routes), _angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule]
+  });
+}
 (function () {
   (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppRoutingModule, {
     imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterModule],
@@ -56,25 +57,25 @@ class AppComponent {
   constructor() {
     this.title = 'ng-sevens';
   }
+  static #_ = this.ɵfac = function AppComponent_Factory(t) {
+    return new (t || AppComponent)();
+  };
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+    type: AppComponent,
+    selectors: [["app-root"]],
+    decls: 3,
+    vars: 0,
+    template: function AppComponent_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "TopLevel");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "router-outlet");
+      }
+    },
+    dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterOutlet, src_components_top_level_top_level_top_level_component__WEBPACK_IMPORTED_MODULE_0__.TopLevelComponent]
+  });
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) {
-  return new (t || AppComponent)();
-};
-AppComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
-  type: AppComponent,
-  selectors: [["app-root"]],
-  decls: 3,
-  vars: 0,
-  template: function AppComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "TopLevel");
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "router-outlet");
-    }
-  },
-  dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterOutlet, src_components_top_level_top_level_top_level_component__WEBPACK_IMPORTED_MODULE_0__.TopLevelComponent]
-});
 
 /***/ }),
 
@@ -110,18 +111,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class AppModule {}
-AppModule.ɵfac = function AppModule_Factory(t) {
-  return new (t || AppModule)();
-};
-AppModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({
-  type: AppModule,
-  bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__.AppComponent]
-});
-AppModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({
-  providers: [src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_5__.WebConnectorService],
-  imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_6__.AppRoutingModule]
-});
+class AppModule {
+  static #_ = this.ɵfac = function AppModule_Factory(t) {
+    return new (t || AppModule)();
+  };
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({
+    type: AppModule,
+    bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__.AppComponent]
+  });
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({
+    providers: [src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_5__.WebConnectorService],
+    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_6__.AppRoutingModule]
+  });
+}
 (function () {
   (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵsetNgModuleScope"](AppModule, {
     declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__.AppComponent, src_components_top_level_top_level_top_level_component__WEBPACK_IMPORTED_MODULE_4__.TopLevelComponent, src_components_home_home_home_component__WEBPACK_IMPORTED_MODULE_2__.HomeComponent, src_components_card_table_card_table_card_table_component__WEBPACK_IMPORTED_MODULE_0__.CardTableComponent, src_components_card_card_component__WEBPACK_IMPORTED_MODULE_1__.CardComponent, src_components_myhand_my_hand_my_hand_component__WEBPACK_IMPORTED_MODULE_3__.MyHandComponent, src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_8__.CardLocDirective],
@@ -173,9 +175,9 @@ class CardTableComponent {
     // getting the component's HTML
     let element = componentRef.location.nativeElement;
     let index = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_2__.getIndexInSuit(value);
-    let top = `${25 + index * 28}px`;
+    let top = `${3 + index * 2.5}vw`;
     let suitIndex = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_2__.getSuitAsNumber(value);
-    let left = `${30 + suitIndex * 110}px`;
+    let left = `${3 + suitIndex * 8}vw`;
     // adding styles
     element.style.zIndex = `${100 + index}`;
     element.style.position = "absolute";
@@ -188,40 +190,40 @@ class CardTableComponent {
       element.style.top = top;
     })(), 100);
   }
+  static #_ = this.ɵfac = function CardTableComponent_Factory(t) {
+    return new (t || CardTableComponent)();
+  };
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+    type: CardTableComponent,
+    selectors: [["CardTable"]],
+    viewQuery: function CardTableComponent_Query(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵviewQuery"](src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_1__.CardLocDirective, 7);
+      }
+      if (rf & 2) {
+        let _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.cardloc = _t.first);
+      }
+    },
+    inputs: {
+      playCard: "playCard",
+      remove: "remove"
+    },
+    features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
+    decls: 3,
+    vars: 0,
+    consts: [[1, "cardtable-panel"], [1, "cardtable-container"], ["cardloc", ""]],
+    template: function CardTableComponent_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, CardTableComponent_ng_template_2_Template, 0, 0, "ng-template", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+      }
+    },
+    dependencies: [src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_1__.CardLocDirective],
+    styles: [".cardtable-panel[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n\n.cardtable-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.cardtable-card[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 100px;\n  height: 200px;\n  transition: top 2s;\n}\n\n.cardtable-notplayed[_ngcontent-%COMP%] {\n  top: -100px !important;\n  pointer-events: none;\n}"]
+  });
 }
-CardTableComponent.ɵfac = function CardTableComponent_Factory(t) {
-  return new (t || CardTableComponent)();
-};
-CardTableComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
-  type: CardTableComponent,
-  selectors: [["CardTable"]],
-  viewQuery: function CardTableComponent_Query(rf, ctx) {
-    if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵviewQuery"](src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_1__.CardLocDirective, 7);
-    }
-    if (rf & 2) {
-      let _t;
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.cardloc = _t.first);
-    }
-  },
-  inputs: {
-    playCard: "playCard",
-    remove: "remove"
-  },
-  features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
-  decls: 3,
-  vars: 0,
-  consts: [[1, "cardtable-panel"], [1, "cardtable-container"], ["cardloc", ""]],
-  template: function CardTableComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, CardTableComponent_ng_template_2_Template, 0, 0, "ng-template", 2);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-    }
-  },
-  dependencies: [src_directives_cardloc_cardloc_directive__WEBPACK_IMPORTED_MODULE_1__.CardLocDirective],
-  styles: [".cardtable-panel[_ngcontent-%COMP%] {\n  margin: 3px 3px 3px 3px;\n  width: 490px;\n  height: 520px;\n  background-color: #c0c0c0;\n  padding: 15px 5px 5px 5px;\n  border-radius: 5px;\n}\n\n.cardtable-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.cardtable-card[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 100px;\n  height: 200px;\n  transition: top 2s;\n}\n\n.cardtable-hearts[_ngcontent-%COMP%] {\n  left: 20px;\n}\n.cardtable-clubs[_ngcontent-%COMP%] {\n  left: 140px;\n}\n.cardtable-diamonds[_ngcontent-%COMP%] {\n  left: 260px;\n}\n.cardtable-spades[_ngcontent-%COMP%] {\n  left: 380px;\n}\n\n.cardtable-card[_ngcontent-%COMP%]:nth-child(1) {\n  top: 30px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(2) {\n  top: 60px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(3) {\n  top: 90px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(4) {\n  top: 120px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(5) {\n  top: 150px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(6) {\n  top: 180px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(7) {\n  top: 210px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(8) {\n  top: 240px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(9) {\n  top: 270px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(10) {\n  top: 300px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(11) {\n  top: 330px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(12) {\n  top: 360px;\n}\n.cardtable-card[_ngcontent-%COMP%]:nth-child(13) {\n  top: 390px;\n}\n\n.cardtable-notplayed[_ngcontent-%COMP%] {\n  top: -100px !important;\n  pointer-events: none;\n}"]
-});
 
 /***/ }),
 
@@ -273,38 +275,38 @@ class CardComponent {
     this.cardValue = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getCardValue(this.value);
     this.cardString = this.cardValue + this.suitSymbol;
   }
+  static #_ = this.ɵfac = function CardComponent_Factory(t) {
+    return new (t || CardComponent)();
+  };
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+    type: CardComponent,
+    selectors: [["Card"]],
+    inputs: {
+      selected: "selected",
+      playable: "playable",
+      value: "value",
+      hidden: "hidden"
+    },
+    features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]],
+    decls: 3,
+    vars: 5,
+    template: function CardComponent_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div")(1, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
+      }
+      if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.cardClasses);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.valueClasses);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.cardString, " ");
+      }
+    },
+    styles: [".card-card[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  width: 6vw;\n  height: 10vw;\n  background-color: white;\n  border-radius: 0.6vw;\n  border: solid 0.1vw black;\n  padding: 0.2vw;\n  display: flex;\n  align-items: flex-start;\n  transition: top 0.5s;\n}\n\n.card-selected[_ngcontent-%COMP%] {\n  top: -2vw;\n}\n\n.card-hidden[_ngcontent-%COMP%] {\n  display: none;\n  pointer-events: none;\n}\n\n.card-not-playable[_ngcontent-%COMP%] {\n  opacity: 0.6;\n}\n\n.card-not-playable-grey[_ngcontent-%COMP%] {\n  background-color: #e0e0e0 !important;\n}\n\n.card-selected-not-playable[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n.card-value[_ngcontent-%COMP%] {\n  font-size: 1.2rem;\n}\n\n.card-red[_ngcontent-%COMP%] {\n  color: red;\n}\n\n.card-black[_ngcontent-%COMP%] {\n  color: black;\n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-2vw);} \n  60% {transform: translateY(-1vw);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}"]
+  });
 }
-CardComponent.ɵfac = function CardComponent_Factory(t) {
-  return new (t || CardComponent)();
-};
-CardComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
-  type: CardComponent,
-  selectors: [["Card"]],
-  inputs: {
-    selected: "selected",
-    playable: "playable",
-    value: "value",
-    hidden: "hidden"
-  },
-  features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]],
-  decls: 3,
-  vars: 5,
-  template: function CardComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div")(1, "div");
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-    }
-    if (rf & 2) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.cardClasses);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.valueClasses);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.cardString, " ");
-    }
-  },
-  styles: [".card-card[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  width: 80px;\n  height: 140px;\n  background-color: white;\n  border-radius: 8px;\n  border: solid 1px black;\n  padding: 3px 3px 3px 3px;\n  display: flex;\n  align-items: flex-start;\n  transition: top 0.5s;\n}\n\n.card-selected[_ngcontent-%COMP%] {\n  top: -30px;\n}\n\n.card-hidden[_ngcontent-%COMP%] {\n  display: none;\n  pointer-events: none;\n}\n\n.card-not-playable[_ngcontent-%COMP%] {\n  opacity: 0.6;\n}\n\n.card-not-playable-grey[_ngcontent-%COMP%] {\n  background-color: #e0e0e0 !important;\n}\n\n.card-selected-not-playable[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n.card-value[_ngcontent-%COMP%] {\n  font-size: 20px;\n}\n\n.card-red[_ngcontent-%COMP%] {\n  color: red;\n}\n\n.card-black[_ngcontent-%COMP%] {\n  color: black;\n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-30px);} \n  60% {transform: translateY(-15px);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}"]
-});
 
 /***/ }),
 
@@ -332,44 +334,44 @@ __webpack_require__.r(__webpack_exports__);
 
 function HomeComponent_div_1_option_7_Template(rf, ctx) {
   if (rf & 1) {
-    const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "option", 9);
+    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "option", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("value", function HomeComponent_div_1_option_7_Template_option_value_0_listener() {
-      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r5);
-      const p_r3 = restoredCtx.$implicit;
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](p_r3);
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r8);
+      const p_r6 = restoredCtx.$implicit;
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](p_r6);
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const p_r3 = ctx.$implicit;
+    const p_r6 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](p_r3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](p_r6);
   }
 }
 function HomeComponent_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 3)(1, "h1");
+    const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 6)(1, "h1");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2, "Sevens!");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div", 4)(4, "label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div", 7)(4, "label");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](5, "Choose a predefined player:");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](6, "select", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](6, "select", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("change", function HomeComponent_div_1_Template_select_change_6_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r7);
-      const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r6.playerChanged($event));
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r10);
+      const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r9.playerChanged($event));
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](7, HomeComponent_div_1_option_7_Template, 2, 1, "option", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](7, HomeComponent_div_1_option_7_Template, 2, 1, "option", 9);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](8, ") ");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](9, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](10, "...or enter a different name:");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](11, "input", 7)(12, "input", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](11, "input", 10)(12, "input", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -378,153 +380,151 @@ function HomeComponent_div_1_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx_r0.players);
   }
 }
-function HomeComponent_div_2_div_1_div_2_Template(rf, ctx) {
+function HomeComponent_div_2_Template(rf, ctx) {
   if (rf & 1) {
-    const _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 20)(1, "div", 21)(2, "div")(3, "span");
+    const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 13)(1, "div", 14)(2, "div")(3, "div", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](5, "div")(6, "input", 22);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function HomeComponent_div_2_div_1_div_2_Template_input_click_6_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r13);
-      const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](3);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r12.sendNewGame());
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](5, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](7, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](9, "div", 16)(10, "MyHand", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("playcard", function HomeComponent_div_2_Template_MyHand_playcard_10_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r12);
+      const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r11.sendCard($event));
+    })("knock", function HomeComponent_div_2_Template_MyHand_knock_10_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r12);
+      const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r13.knock());
+    })("restoreCard", function HomeComponent_div_2_Template_MyHand_restoreCard_10_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r12);
+      const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r14.restoreCard);
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](7, "div")(8, "input", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function HomeComponent_div_2_div_1_div_2_Template_input_click_8_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r13);
-      const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](3);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r14.showKitty());
-    });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](9, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](10, "input", 24);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
   }
   if (rf & 2) {
-    const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](3);
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"]("", ctx_r11.gameTime, " : ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx_r1.log);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx_r1.log2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"]("kitty: ", ctx_r1.kitty, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("yourGo", ctx_r1.nextPlayer === ctx_r1.player || ctx_r1.nextPlayer === "start")("playable", ctx_r1.playable);
   }
 }
-function HomeComponent_div_2_div_1_Template(rf, ctx) {
+function HomeComponent_div_3_CardTable_2_Template(rf, ctx) {
   if (rf & 1) {
-    const _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 15)(1, "div", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, HomeComponent_div_2_div_1_div_2_Template, 11, 1, "div", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div")(4, "div", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](6, "MyHand", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("playcard", function HomeComponent_div_2_div_1_Template_MyHand_playcard_6_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r16);
-      const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r15.sendCard($event));
-    })("knock", function HomeComponent_div_2_div_1_Template_MyHand_knock_6_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r16);
-      const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r17.knock());
-    })("restoreCard", function HomeComponent_div_2_div_1_Template_MyHand_restoreCard_6_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r16);
-      const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r18.restoreCard);
+    const _r17 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "CardTable", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("remove", function HomeComponent_div_3_CardTable_2_Template_CardTable_remove_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r17);
+      const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r16.removeCard);
     });
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("playCard", ctx_r15.newCard);
+  }
+}
+function HomeComponent_div_3_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 18)(1, "div", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, HomeComponent_div_3_CardTable_2_Template, 1, 1, "CardTable", 20);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r8.player === "John");
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate2"]("", ctx_r8.log, " - kitty: ", ctx_r8.kitty, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("yourGo", ctx_r8.nextPlayer === ctx_r8.player || ctx_r8.nextPlayer === "start")("playable", ctx_r8.playable);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r2.player);
   }
 }
-function HomeComponent_div_2_CardTable_3_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "CardTable", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("remove", function HomeComponent_div_2_CardTable_3_Template_CardTable_remove_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r20);
-      const ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r19.removeCard);
-    });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-  }
-  if (rf & 2) {
-    const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("playCard", ctx_r9.newCard);
-  }
-}
-function HomeComponent_div_2_div_4_td_7_Template(rf, ctx) {
+function HomeComponent_div_4_td_7_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "td");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const knocker_r23 = ctx.$implicit;
+    const knocker_r20 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](knocker_r23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](knocker_r20);
   }
 }
-function HomeComponent_div_2_div_4_td_9_Template(rf, ctx) {
+function HomeComponent_div_4_td_9_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "td");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const knocked_r24 = ctx.$implicit;
+    const knocked_r21 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](knocked_r24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](knocked_r21);
   }
 }
-function HomeComponent_div_2_div_4_Template(rf, ctx) {
+function HomeComponent_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 26)(1, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 22)(1, "p");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "p");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](4, "Knocks");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](5, "table")(6, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](7, HomeComponent_div_2_div_4_td_7_Template, 2, 1, "td", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](7, HomeComponent_div_4_td_7_Template, 2, 1, "td", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](8, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](9, HomeComponent_div_2_div_4_td_9_Template, 2, 1, "td", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](9, HomeComponent_div_4_td_9_Template, 2, 1, "td", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
   }
   if (rf & 2) {
-    const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"]("", ctx_r10.winner, " wins!");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"]("", ctx_r3.winner, " wins!");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx_r10.knocks.players);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx_r3.knocks.players);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx_r10.knocks.knocks);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx_r3.knocks.knocks);
   }
 }
-function HomeComponent_div_2_Template(rf, ctx) {
+function HomeComponent_div_5_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, HomeComponent_div_2_div_1_Template, 7, 5, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "div", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](3, HomeComponent_div_2_CardTable_3_Template, 1, 1, "CardTable", 13);
+    const _r23 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 24)(1, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](4, HomeComponent_div_2_div_4_Template, 10, 3, "div", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div")(4, "input", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function HomeComponent_div_5_Template_input_click_4_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r23);
+      const ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r22.sendNewGame());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](5, "div")(6, "input", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function HomeComponent_div_5_Template_input_click_6_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r23);
+      const ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r24.showKitty());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](7, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](8, "input", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r1.player);
+    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r1.player);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r1.winner && ctx_r1.winner.length > 0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx_r4.gameTime);
   }
 }
 class HomeComponent {
@@ -533,6 +533,7 @@ class HomeComponent {
     this.player = "";
     this.nextPlayer = "";
     this.log = "";
+    this.log2 = "";
     this.kitty = 0;
     this.knocks = {};
     this.players = ["...", "John", "Nancy", "Eric", "Allen", "Gavin"];
@@ -546,7 +547,7 @@ class HomeComponent {
     this.gameTime = 0;
     let now = Date.now();
     setInterval(() => {
-      this.gameTime = (Date.now() - now) / 1000;
+      this.gameTime = Math.round((Date.now() - now) / 1000);
     }, 30000);
     console.log("Home page constructor");
     this.webConnectorService.messageSubscription('message').subscribe(data => this.logMessage(data));
@@ -577,6 +578,7 @@ class HomeComponent {
     this.nextPlayer = 'start';
     this.newCard = "";
     this.log = `New game! - who has the the 7 of Diamonds?`;
+    this.log2 = "";
     this.resetGame();
     this.webConnectorService.sendHandRequest(this.player);
     this.playable = ["7D"];
@@ -586,10 +588,12 @@ class HomeComponent {
     this.nextPlayer = data.nextplayer;
     if (data.card.remaining === 0) {
       this.log = `${data.player} played ${this.getCard(data.card.card)} and has WON!!!!!!!`;
+      this.log2 = "";
       this.winner = data.player;
       this.nextPlayer = "game over";
     } else {
-      this.log = `${data.player} played ${this.getCard(data.card.card)} and has ${data.card.remaining} card(s) left - ${np} go...`;
+      this.log = `${data.player} played ${this.getCard(data.card.card)} and has ${data.card.remaining} card(s) left`;
+      this.log2 = `${np} go`;
     }
     let suit = data.card.card.length === 2 ? data.card.card.charAt(1) : data.card.card.charAt(2);
     let cardValue = data.card.card.length === 2 ? data.card.card.substring(0, 1) : data.card.card.substring(0, 2);
@@ -669,7 +673,8 @@ class HomeComponent {
   knocked(data) {
     let np = data.nextplayer === this.player ? "YOUR" : `${data.nextplayer}'s`;
     this.nextPlayer = data.nextplayer;
-    this.log = `${data.player} knocked! - ${np} go...`;
+    this.log = `${data.player} knocked!`;
+    this.log2 = `${np} go`;
   }
   sendCard(card) {
     this.webConnectorService.sendCard(this.player, {
@@ -850,33 +855,42 @@ class HomeComponent {
       }]
     };
   }
+  static #_ = this.ɵfac = function HomeComponent_Factory(t) {
+    return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_1__.WebConnectorService));
+  };
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
+    type: HomeComponent,
+    selectors: [["Home"]],
+    decls: 6,
+    vars: 5,
+    consts: [[1, "App"], ["class", "app-register", 4, "ngIf"], ["class", "left-hand-side", 4, "ngIf"], ["class", "right-hand-side", 4, "ngIf"], ["class", "app-winner", 4, "ngIf"], ["class", "app-controls", 4, "ngIf"], [1, "app-register"], [1, "app-register-panel"], ["name", "players", "id", "players", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "text", "onChange", "updatePlayerText"], ["type", "button", "value", "Register new name", "onClick", "registerNewName"], [3, "value"], [1, "left-hand-side"], [1, "app-dashboard"], [1, "app-log"], [1, "hand"], [3, "yourGo", "playable", "playcard", "knock", "restoreCard"], [1, "right-hand-side"], [1, "gameboard"], [3, "playCard", "remove", 4, "ngIf"], [3, "playCard", "remove"], [1, "app-winner"], [4, "ngFor", "ngForOf"], [1, "app-controls"], [1, "gametime"], ["type", "button", "value", "New Game", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "value", "Kitty", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "onClick", "sendReset", "value", "Reset Session", 1, "control-buttons", "control-button"]],
+    template: function HomeComponent_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, HomeComponent_div_1_Template, 13, 1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, HomeComponent_div_2_Template, 11, 5, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](3, HomeComponent_div_3_Template, 3, 1, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](4, HomeComponent_div_4_Template, 10, 3, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](5, HomeComponent_div_5_Template, 9, 1, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+      }
+      if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", !ctx.player);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.winner && ctx.winner.length > 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player === "John");
+      }
+    },
+    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, src_components_card_table_card_table_card_table_component__WEBPACK_IMPORTED_MODULE_2__.CardTableComponent, src_components_myhand_my_hand_my_hand_component__WEBPACK_IMPORTED_MODULE_3__.MyHandComponent],
+    styles: [".App[_ngcontent-%COMP%] {\n  display: flex;\n  background-color: darkgreen;\n  box-sizing: border-box;\n  padding: 1vw;\n  height: 100vh;\n  width: 100%;\n}\n\n.left-hand-side[_ngcontent-%COMP%] {\n  align-self: stretch;\n  box-sizing: border-box;\n  padding: 0.5vw;\n  display: flex;\n  flex-direction: column;\n  width: 40%;\n}\n\n.right-hand-side[_ngcontent-%COMP%] {\n  align-self: stretch;\n  padding: 0.5vw;\n  box-sizing: border-box;\n  width: 60%;\n}\n\n.gameboard[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n\n.app-dashboard[_ngcontent-%COMP%] {\n  width: 100%;\n  box-sizing: border-box;\n  padding: 5px 5px 5px 5px;\n  height: 85px;\n  background-color: #c0c0c0;\n  border-radius: 5px;\n  flex-grow: 0;\n}\n\n.hand[_ngcontent-%COMP%] {\n  width: 100%;\n  padding-top: 0.5vw;\n  flex-grow: 1;\n}\n\n.app-controls[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  top: 1vw;\n  right: 1vw;\n  background-color: lightgrey;\n  border-radius: 0.2vw;\n}\n\n.gametime[_ngcontent-%COMP%] {\n  padding: 0.2vw;\n}\n\n.control-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.control-buttons[_ngcontent-%COMP%] {\n  margin: 0.2vw;\n  border: none;\n  border-radius: 0.2vw;\n  color: white;\n  padding: 0.2vw 0.3vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 0.6rem;\n}\n\n\n.app-register[_ngcontent-%COMP%] {\n\n  color: white;\n  font-size: 2.5rem;\n  width: 100%;\n  height: 100vh;\n  background-color: darkgreen; \n  background-image: url(\"/assets/all-seven-cards.png\");\n  background-position: right bottom; \n  background-repeat: no-repeat; \n  padding-top: 5vw;\n  padding-left: 5vw;\n}\n\n.app-register-panel[_ngcontent-%COMP%] {\n  width: 33vw;\n  background-color: white;\n  font-size: 1.5rem;\n  color: black;\n  border-style: solid;\n  border-color: red;\n  border-width: 5px;\n  border-radius: 10px;\n  padding: 10px 10px 10px 10px\n}\n\n.app-register-panel[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  padding-right: 5px;\n}\n\n.app-register[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  padding-top:7px;\n}\n\n.app-setplayers[_ngcontent-%COMP%] {\n  width: 570px;\n  background-color: #c0c0c0;\n  padding: 5px 5px 5px 15px;\n  display: flex;\n  align-items: flex-start;\n  border-radius: 5px;\n  margin-bottom: 10px;\n}\n\n.app-playerselecter[_ngcontent-%COMP%] {\n  padding-left: 10px;\n  display: flex;\n  width: 90%;\n  justify-content: space-between;\n}\n\n.app-log[_ngcontent-%COMP%] {\n}\n\n.app-winner[_ngcontent-%COMP%] {\n  position: absolute;\n  z-index: 200;\n  padding: 10px 20px 10px 20px;\n  top: 150px;\n  left: 350px;\n  height: 170px;\n  background-color: white;\n  color: black;\n  border-style: solid;\n  border-width: 3px;\n  border-color: red;\n  border-radius: 10px;\n}\n\n.app-winner[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 3px 10px 3px 0px;\n}"]
+  });
 }
-HomeComponent.ɵfac = function HomeComponent_Factory(t) {
-  return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_1__.WebConnectorService));
-};
-HomeComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
-  type: HomeComponent,
-  selectors: [["Home"]],
-  decls: 3,
-  vars: 2,
-  consts: [[1, "App"], ["class", "app-register", 4, "ngIf"], ["class", "gameboard", 4, "ngIf"], [1, "app-register"], [1, "app-register-panel"], ["name", "players", "id", "players", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "text", "onChange", "updatePlayerText"], ["type", "button", "value", "Register new name", "onClick", "registerNewName"], [3, "value"], [1, "gameboard"], ["class", "app-controls-and-hand", 4, "ngIf"], [1, "app-card-table"], [3, "playCard", "remove", 4, "ngIf"], ["class", "app-winner", 4, "ngIf"], [1, "app-controls-and-hand"], [1, "app-controls"], ["class", "app-container", 4, "ngIf"], [1, "app-log"], [3, "yourGo", "playable", "playcard", "knock", "restoreCard"], [1, "app-container"], [1, "app-playerselecter"], ["type", "button", "value", "New Game", 3, "click"], ["type", "button", "value", "Kitty", 3, "click"], ["type", "button", "onClick", "sendReset", "value", "Reset Session"], [3, "playCard", "remove"], [1, "app-winner"], [4, "ngFor", "ngForOf"]],
-  template: function HomeComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0);
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, HomeComponent_div_1_Template, 13, 1, "div", 1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, HomeComponent_div_2_Template, 5, 3, "div", 2);
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    }
-    if (rf & 2) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", !ctx.player);
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.player);
-    }
-  },
-  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, src_components_card_table_card_table_card_table_component__WEBPACK_IMPORTED_MODULE_2__.CardTableComponent, src_components_myhand_my_hand_my_hand_component__WEBPACK_IMPORTED_MODULE_3__.MyHandComponent],
-  styles: [".App[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 5px 5px 5px 5px;\n  flex-wrap: wrap;\n  background-color: darkgreen;\n  height: 100vh;\n  width: 100%;\n}\n\n.gameboard[_ngcontent-%COMP%] {\n  width: 900px;\n  display: flex;\n}\n\n.app-controls[_ngcontent-%COMP%] {\n  width: 360px;\n  padding: 5px 5px 5px 5px;\n  margin-bottom: 5px;\n  height: 85px;\n  background-color: #c0c0c0;\n  border-radius: 5px;\n}\n\n.app-controls-and-hand[_ngcontent-%COMP%] {\n  margin: 3px 3px 3px 3px;\n}\n\n.app-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.app-register[_ngcontent-%COMP%] {\n\n  color: white;\n  font-size: 3rem;\n  width: 100%;\n  height: 100vh;\n  background-color: darkgreen; \n  background-image: url(\"/assets/all-seven-cards.png\");\n  background-position: right bottom; \n  background-repeat: no-repeat; \n  padding-top: 50px;\n  padding-left: 50px;\n}\n\n.app-register-panel[_ngcontent-%COMP%] {\n  width: 350px;\n  background-color: white;\n  font-size: 1.5rem;\n  color: black;\n  border-style: solid;\n  border-color: red;\n  border-width: 5px;\n  border-radius: 10px;\n  padding: 10px 10px 10px 10px\n}\n\n.app-register-panel[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  padding-right: 5px;\n}\n\n.app-register[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  padding-top:7px;\n}\n\n.app-setplayers[_ngcontent-%COMP%] {\n  width: 570px;\n  background-color: #c0c0c0;\n  padding: 5px 5px 5px 15px;\n  display: flex;\n  align-items: flex-start;\n  border-radius: 5px;\n  margin-bottom: 10px;\n}\n\n.app-playerselecter[_ngcontent-%COMP%] {\n  padding-left: 10px;\n  display: flex;\n  width: 90%;\n  justify-content: space-between;\n}\n\n.app-log[_ngcontent-%COMP%] {\n}\n\n.app-winner[_ngcontent-%COMP%] {\n  position: absolute;\n  z-index: 200;\n  padding: 10px 20px 10px 20px;\n  top: 150px;\n  left: 350px;\n  height: 170px;\n  background-color: white;\n  color: black;\n  border-style: solid;\n  border-width: 3px;\n  border-color: red;\n  border-radius: 10px;\n}\n\n.app-winner[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 3px 10px 3px 0px;\n}"]
-});
 
 /***/ }),
 
@@ -935,9 +949,6 @@ function MyHandComponent_div_3_Template(rf, ctx) {
       const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
       return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r8.knocking());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "span");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4, "Your go!");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -1033,42 +1044,42 @@ class MyHandComponent {
       this.knock.emit();
     }
   }
+  static #_ = this.ɵfac = function MyHandComponent_Factory(t) {
+    return new (t || MyHandComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_1__.WebConnectorService));
+  };
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+    type: MyHandComponent,
+    selectors: [["MyHand"]],
+    inputs: {
+      yourGo: "yourGo",
+      playable: "playable"
+    },
+    outputs: {
+      playcard: "playcard",
+      knock: "knock"
+    },
+    features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
+    decls: 4,
+    vars: 2,
+    consts: [[1, "myhand-panel"], [1, "myhand-container"], ["class", "myhand-card", 4, "ngFor", "ngForOf"], ["class", "buttons", 4, "ngIf"], [1, "myhand-card"], [3, "playable", "value", "selected", "click"], [1, "buttons"], ["type", "button", "value", "Play Card", 1, "play-button", "hand-buttons", 3, "click"], ["type", "button", "value", "Knock", 1, "knock-button", "hand-buttons", 3, "ngClass", "click"]],
+    template: function MyHandComponent_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, MyHandComponent_div_2_Template, 2, 3, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](3, MyHandComponent_div_3_Template, 3, 1, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+      }
+      if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx.hand);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.yourGo);
+      }
+    },
+    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgIf, src_components_card_card_component__WEBPACK_IMPORTED_MODULE_2__.CardComponent],
+    styles: [".myhand-panel[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  background-color: #c0c0c0;\n  padding: 0.5vw;\n  border-radius: 0.5vw;\n}\n\n.myhand-non-playable-knock[_ngcontent-%COMP%] {\n\n}\n\n.myhand-playable-knock[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-10vw);} \n  60% {transform: translateY(-5vw);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}\n\n.myhand-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.play-button[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.buttons[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  justify-content: space-around;\n}\n\n.knock-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.hand-buttons[_ngcontent-%COMP%] {\n  border: none;\n  border-radius: 0.5vw;\n  color: white;\n  padding: 1vw 2vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1rem;\n}\n\n.myhand-play-buttons[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  margin-right: 0.5vw;\n}\n\n.myhand-card[_ngcontent-%COMP%] {\n  position: absolute;\n}\n\n.myhand-card[_ngcontent-%COMP%]:nth-child(1) {\n  left: 1vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(2) {\n  left: 4vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(3) {\n  left: 7vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(4) {\n  top: 6.6vw;\n  left: 10vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(5) {\n  left: 13vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(6) {\n  left: 16vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(7) {\n  left: 19vw;\n  top: 6.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(8) {\n  left: 1vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(9) {\n  left: 4vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(10) {\n  left: 7vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(11) {\n  left: 10vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(12) {\n  left: 13vw;\n  top: 21vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(13) {\n  left: 16vw;\n  top: 21vw;\n}"]
+  });
 }
-MyHandComponent.ɵfac = function MyHandComponent_Factory(t) {
-  return new (t || MyHandComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_services_web_connector_web_connector_service__WEBPACK_IMPORTED_MODULE_1__.WebConnectorService));
-};
-MyHandComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
-  type: MyHandComponent,
-  selectors: [["MyHand"]],
-  inputs: {
-    yourGo: "yourGo",
-    playable: "playable"
-  },
-  outputs: {
-    playcard: "playcard",
-    knock: "knock"
-  },
-  features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
-  decls: 4,
-  vars: 2,
-  consts: [[1, "myhand-panel"], [1, "myhand-container"], ["class", "myhand-card", 4, "ngFor", "ngForOf"], ["class", "myhand-play-buttons", 4, "ngIf"], [1, "myhand-card"], [3, "playable", "value", "selected", "click"], [1, "myhand-play-buttons"], ["type", "button", "value", "Play Card", 3, "click"], ["type", "button", "value", "Knock", 3, "ngClass", "click"]],
-  template: function MyHandComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, MyHandComponent_div_2_Template, 2, 3, "div", 2);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](3, MyHandComponent_div_3_Template, 5, 1, "div", 3);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-    }
-    if (rf & 2) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx.hand);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.yourGo);
-    }
-  },
-  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgIf, src_components_card_card_component__WEBPACK_IMPORTED_MODULE_2__.CardComponent],
-  styles: [".myhand-panel[_ngcontent-%COMP%] {\n  width: 360px;\n  height: 430px;\n  background-color: #c0c0c0;\n  padding: 5px 5px 5px 5px;\n  display: flex;\n  align-items: flex-start;\n  border-radius: 5px;\n}\n\n.myhand-non-playable-knock[_ngcontent-%COMP%] {\n\n}\n\n.myhand-playable-knock[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-30px);} \n  60% {transform: translateY(-15px);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}\n\n.myhand-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.myhand-play-buttons[_ngcontent-%COMP%] {\n  background-color: red;\n  border: solid 3px red;\n  color: white;\n}\n\n.myhand-play-buttons[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  margin-right: 5px;\n}\n\n.myhand-card[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 100px;\n  height: 200px;\n}\n\n.myhand-card[_ngcontent-%COMP%]:nth-child(1) {\n  left: 10px;\n  top: 60px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(2) {\n  left: 50px;\n  top: 60px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(3) {\n  left: 90px;\n  top: 60px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(4) {\n  top: 60px;\n  left: 130px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(5) {\n  left: 170px;\n  top: 60px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(6) {\n  left: 210px;\n  top: 60px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(7) {\n  left: 250px;\n  top: 60px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(8) {\n  left: 10px;\n  top: 260px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(9) {\n  left: 50px;\n  top: 260px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(10) {\n  left: 90px;\n  top: 260px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(11) {\n  left: 130px;\n  top: 260px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(12) {\n  left: 170px;\n  top: 260px;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(13) {\n  left: 210px;\n  top: 260px;\n}"]
-});
 
 /***/ }),
 
@@ -1088,22 +1099,22 @@ __webpack_require__.r(__webpack_exports__);
 
 class TopLevelComponent {
   constructor() {}
+  static #_ = this.ɵfac = function TopLevelComponent_Factory(t) {
+    return new (t || TopLevelComponent)();
+  };
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+    type: TopLevelComponent,
+    selectors: [["TopLevel"]],
+    decls: 1,
+    vars: 0,
+    template: function TopLevelComponent_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "Home");
+      }
+    },
+    dependencies: [src_components_home_home_home_component__WEBPACK_IMPORTED_MODULE_0__.HomeComponent]
+  });
 }
-TopLevelComponent.ɵfac = function TopLevelComponent_Factory(t) {
-  return new (t || TopLevelComponent)();
-};
-TopLevelComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
-  type: TopLevelComponent,
-  selectors: [["TopLevel"]],
-  decls: 1,
-  vars: 0,
-  template: function TopLevelComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "Home");
-    }
-  },
-  dependencies: [src_components_home_home_home_component__WEBPACK_IMPORTED_MODULE_0__.HomeComponent]
-});
 
 /***/ }),
 
@@ -1124,14 +1135,14 @@ class CardLocDirective {
   constructor(viewContainerRef) {
     this.viewContainerRef = viewContainerRef;
   }
+  static #_ = this.ɵfac = function CardLocDirective_Factory(t) {
+    return new (t || CardLocDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewContainerRef));
+  };
+  static #_2 = this.ɵdir = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
+    type: CardLocDirective,
+    selectors: [["", "cardloc", ""]]
+  });
 }
-CardLocDirective.ɵfac = function CardLocDirective_Factory(t) {
-  return new (t || CardLocDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewContainerRef));
-};
-CardLocDirective.ɵdir = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
-  type: CardLocDirective,
-  selectors: [["", "cardloc", ""]]
-});
 
 /***/ }),
 
@@ -1306,15 +1317,15 @@ class WebConnectorService {
     this.messageListeners[messageType] = new rxjs__WEBPACK_IMPORTED_MODULE_0__.Subject();
     return this.messageListeners[messageType];
   }
+  static #_ = this.ɵfac = function WebConnectorService_Factory(t) {
+    return new (t || WebConnectorService)();
+  };
+  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({
+    token: WebConnectorService,
+    factory: WebConnectorService.ɵfac,
+    providedIn: 'root'
+  });
 }
-WebConnectorService.ɵfac = function WebConnectorService_Factory(t) {
-  return new (t || WebConnectorService)();
-};
-WebConnectorService.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({
-  token: WebConnectorService,
-  factory: WebConnectorService.ɵfac,
-  providedIn: 'root'
-});
 
 /***/ }),
 
@@ -5585,11 +5596,10 @@ const APP_BASE_HREF = /*#__PURE__*/new _angular_core__WEBPACK_IMPORTED_MODULE_0_
 let PathLocationStrategy = /*#__PURE__*/(() => {
   class PathLocationStrategy extends LocationStrategy {
     constructor(_platformLocation, href) {
-      var _ref, _ref2, _inject$location;
       super();
       this._platformLocation = _platformLocation;
       this._removeListenerFns = [];
-      this._baseHref = (_ref = (_ref2 = href !== null && href !== void 0 ? href : this._platformLocation.getBaseHrefFromDOM()) !== null && _ref2 !== void 0 ? _ref2 : (_inject$location = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DOCUMENT).location) === null || _inject$location === void 0 ? void 0 : _inject$location.origin) !== null && _ref !== void 0 ? _ref : '';
+      this._baseHref = href ?? this._platformLocation.getBaseHrefFromDOM() ?? (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DOCUMENT).location?.origin ?? '';
     }
     /** @nodoc */
     ngOnDestroy() {
@@ -5629,8 +5639,7 @@ let PathLocationStrategy = /*#__PURE__*/(() => {
       return this._platformLocation.getState();
     }
     historyGo(relativePosition = 0) {
-      var _this$_platformLocati, _this$_platformLocati2;
-      (_this$_platformLocati = (_this$_platformLocati2 = this._platformLocation).historyGo) === null || _this$_platformLocati === void 0 ? void 0 : _this$_platformLocati.call(_this$_platformLocati2, relativePosition);
+      this._platformLocation.historyGo?.(relativePosition);
     }
   }
   PathLocationStrategy.ɵfac = function PathLocationStrategy_Factory(t) {
@@ -5730,8 +5739,7 @@ let HashLocationStrategy = /*#__PURE__*/(() => {
       return this._platformLocation.getState();
     }
     historyGo(relativePosition = 0) {
-      var _this$_platformLocati3, _this$_platformLocati4;
-      (_this$_platformLocati3 = (_this$_platformLocati4 = this._platformLocation).historyGo) === null || _this$_platformLocati3 === void 0 ? void 0 : _this$_platformLocati3.call(_this$_platformLocati4, relativePosition);
+      this._platformLocation.historyGo?.(relativePosition);
     }
   }
   HashLocationStrategy.ɵfac = function HashLocationStrategy_Factory(t) {
@@ -5805,8 +5813,7 @@ let Location = /*#__PURE__*/(() => {
     }
     /** @nodoc */
     ngOnDestroy() {
-      var _this$_urlChangeSubsc;
-      (_this$_urlChangeSubsc = this._urlChangeSubscription) === null || _this$_urlChangeSubsc === void 0 ? void 0 : _this$_urlChangeSubsc.unsubscribe();
+      this._urlChangeSubscription?.unsubscribe();
       this._urlChangeListeners = [];
     }
     /**
@@ -5917,8 +5924,7 @@ let Location = /*#__PURE__*/(() => {
      * @see https://developer.mozilla.org/en-US/docs/Web/API/History_API#Moving_to_a_specific_point_in_history
      */
     historyGo(relativePosition = 0) {
-      var _this$_locationStrate, _this$_locationStrate2;
-      (_this$_locationStrate = (_this$_locationStrate2 = this._locationStrategy).historyGo) === null || _this$_locationStrate === void 0 ? void 0 : _this$_locationStrate.call(_this$_locationStrate2, relativePosition);
+      this._locationStrategy.historyGo?.(relativePosition);
     }
     /**
      * Registers a URL change listener. Use to catch updates performed by the Angular
@@ -5938,8 +5944,7 @@ let Location = /*#__PURE__*/(() => {
         const fnIndex = this._urlChangeListeners.indexOf(fn);
         this._urlChangeListeners.splice(fnIndex, 1);
         if (this._urlChangeListeners.length === 0) {
-          var _this$_urlChangeSubsc2;
-          (_this$_urlChangeSubsc2 = this._urlChangeSubscription) === null || _this$_urlChangeSubsc2 === void 0 ? void 0 : _this$_urlChangeSubsc2.unsubscribe();
+          this._urlChangeSubscription?.unsubscribe();
           this._urlChangeSubscription = null;
         }
       };
@@ -9981,9 +9986,8 @@ let DatePipe = /*#__PURE__*/(() => {
     transform(value, format, timezone, locale) {
       if (value == null || value === '' || value !== value) return null;
       try {
-        var _ref3, _this$defaultOptions, _ref4, _ref5, _this$defaultOptions2;
-        const _format = (_ref3 = format !== null && format !== void 0 ? format : (_this$defaultOptions = this.defaultOptions) === null || _this$defaultOptions === void 0 ? void 0 : _this$defaultOptions.dateFormat) !== null && _ref3 !== void 0 ? _ref3 : DEFAULT_DATE_FORMAT;
-        const _timezone = (_ref4 = (_ref5 = timezone !== null && timezone !== void 0 ? timezone : (_this$defaultOptions2 = this.defaultOptions) === null || _this$defaultOptions2 === void 0 ? void 0 : _this$defaultOptions2.timezone) !== null && _ref5 !== void 0 ? _ref5 : this.defaultTimezone) !== null && _ref4 !== void 0 ? _ref4 : undefined;
+        const _format = format ?? this.defaultOptions?.dateFormat ?? DEFAULT_DATE_FORMAT;
+        const _timezone = timezone ?? this.defaultOptions?.timezone ?? this.defaultTimezone ?? undefined;
         return formatDate(value, _format, locale || this.locale, _timezone);
       } catch (error) {
         throw invalidPipeArgumentError(DatePipe, error.message);
@@ -11304,7 +11308,6 @@ let LCPImageObserver = /*#__PURE__*/(() => {
      */
     initPerformanceObserver() {
       const observer = new PerformanceObserver(entryList => {
-        var _lcpElement$element$s, _lcpElement$element;
         const entries = entryList.getEntries();
         if (entries.length === 0) return;
         // We use the latest entry produced by the `PerformanceObserver` as the best
@@ -11314,7 +11317,7 @@ let LCPImageObserver = /*#__PURE__*/(() => {
         const lcpElement = entries[entries.length - 1];
         // Cast to `any` due to missing `element` on the `LargestContentfulPaint` type of entry.
         // See https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint
-        const imgSrc = (_lcpElement$element$s = (_lcpElement$element = lcpElement.element) === null || _lcpElement$element === void 0 ? void 0 : _lcpElement$element.src) !== null && _lcpElement$element$s !== void 0 ? _lcpElement$element$s : '';
+        const imgSrc = lcpElement.element?.src ?? '';
         // Exclude `data:` and `blob:` URLs, since they are not supported by the directive.
         if (imgSrc.startsWith('data:') || imgSrc.startsWith('blob:')) return;
         const imgNgSrc = this.images.get(imgSrc);
@@ -11468,8 +11471,7 @@ let PreconnectLinkChecker = /*#__PURE__*/(() => {
       return preconnectUrls;
     }
     ngOnDestroy() {
-      var _this$preconnectLinks;
-      (_this$preconnectLinks = this.preconnectLinks) === null || _this$preconnectLinks === void 0 ? void 0 : _this$preconnectLinks.clear();
+      this.preconnectLinks?.clear();
       this.alreadySeen.clear();
     }
   }
@@ -11964,12 +11966,11 @@ let NgOptimizedImage = /*#__PURE__*/(() => {
       }
     }
     getResponsiveSrcset() {
-      var _this$sizes;
       const {
         breakpoints
       } = this.config;
       let filteredBreakpoints = breakpoints;
-      if (((_this$sizes = this.sizes) === null || _this$sizes === void 0 ? void 0 : _this$sizes.trim()) === '100vw') {
+      if (this.sizes?.trim() === '100vw') {
         // Since this is a full-screen-width image, our srcset only needs to include
         // breakpoints with full viewport widths.
         filteredBreakpoints = breakpoints.filter(bp => bp >= VIEWPORT_BREAKPOINT_CUTOFF);
@@ -12089,7 +12090,7 @@ function assertNotBase64Image(dir) {
  */
 function assertNoComplexSizes(dir) {
   let sizes = dir.sizes;
-  if (sizes !== null && sizes !== void 0 && sizes.match(/((\)|,)\s|^)\d+px/)) {
+  if (sizes?.match(/((\)|,)\s|^)\d+px/)) {
     throw new _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵRuntimeError"](2952 /* RuntimeErrorCode.INVALID_INPUT */, `${imgDirectiveDetails(dir.ngSrc, false)} \`sizes\` was set to a string including ` + `pixel values. For automatic \`srcset\` generation, \`sizes\` must only include responsive ` + `values, such as \`sizes="50vw"\` or \`sizes="(min-width: 768px) 50vw, 100vw"\`. ` + `To fix this, modify the \`sizes\` attribute, or provide your own \`ngSrcset\` value directly.`);
   }
 }
@@ -14454,7 +14455,7 @@ function NgOnChangesFeatureImpl(definition) {
  */
 function rememberChangeHistoryAndInvokeOnChangesHook() {
   const simpleChangesStore = getSimpleChangesStore(this);
-  const current = simpleChangesStore === null || simpleChangesStore === void 0 ? void 0 : simpleChangesStore.current;
+  const current = simpleChangesStore?.current;
   if (current) {
     const previous = simpleChangesStore.previous;
     if (previous === EMPTY_OBJ) {
@@ -18139,7 +18140,7 @@ function isHostComponentStandalone(lView) {
   !ngDevMode && throwError('Must never be called in production mode');
   const componentDef = getDeclarationComponentDef(lView);
   // Treat host component as non-standalone if we can't obtain the def.
-  return !!(componentDef !== null && componentDef !== void 0 && componentDef.standalone);
+  return !!componentDef?.standalone;
 }
 /**
  * WARNING: this is a **dev-mode only** function (thus should always be guarded by the `ngDevMode`)
@@ -18152,10 +18153,9 @@ function isHostComponentStandalone(lView) {
  * @param lView An `LView` that represents a current component that is being rendered.
  */
 function getTemplateLocationDetails(lView) {
-  var _hostComponentDef$typ;
   !ngDevMode && throwError('Must never be called in production mode');
   const hostComponentDef = getDeclarationComponentDef(lView);
-  const componentClassName = hostComponentDef === null || hostComponentDef === void 0 ? void 0 : (_hostComponentDef$typ = hostComponentDef.type) === null || _hostComponentDef$typ === void 0 ? void 0 : _hostComponentDef$typ.name;
+  const componentClassName = hostComponentDef?.type?.name;
   return componentClassName ? ` (used in the '${componentClassName}' component template)` : '';
 }
 /**
@@ -19695,8 +19695,7 @@ function getPolicy$1() {
  * element.innerHTML.
  */
 function trustedHTMLFromString(html) {
-  var _getPolicy$;
-  return ((_getPolicy$ = getPolicy$1()) === null || _getPolicy$ === void 0 ? void 0 : _getPolicy$.createHTML(html)) || html;
+  return getPolicy$1()?.createHTML(html) || html;
 }
 /**
  * Unsafely promote a string to a TrustedScript, falling back to strings when
@@ -19706,8 +19705,7 @@ function trustedHTMLFromString(html) {
  * interpreted and executed as a script by a browser, e.g. when calling eval.
  */
 function trustedScriptFromString(script) {
-  var _getPolicy$2;
-  return ((_getPolicy$2 = getPolicy$1()) === null || _getPolicy$2 === void 0 ? void 0 : _getPolicy$2.createScript(script)) || script;
+  return getPolicy$1()?.createScript(script) || script;
 }
 /**
  * Unsafely promote a string to a TrustedScriptURL, falling back to strings
@@ -19719,8 +19717,7 @@ function trustedScriptFromString(script) {
  * assigning to script.src.
  */
 function trustedScriptURLFromString(url) {
-  var _getPolicy$3;
-  return ((_getPolicy$3 = getPolicy$1()) === null || _getPolicy$3 === void 0 ? void 0 : _getPolicy$3.createScriptURL(url)) || url;
+  return getPolicy$1()?.createScriptURL(url) || url;
 }
 /**
  * Unsafely call the Function constructor with the given string arguments. It
@@ -19906,8 +19903,7 @@ function getPolicy() {
  * bypassSecurityTrust* functions.
  */
 function trustedHTMLFromStringBypass(html) {
-  var _getPolicy;
-  return ((_getPolicy = getPolicy()) === null || _getPolicy === void 0 ? void 0 : _getPolicy.createHTML(html)) || html;
+  return getPolicy()?.createHTML(html) || html;
 }
 /**
  * Unsafely promote a string to a TrustedScript, falling back to strings when
@@ -19918,8 +19914,7 @@ function trustedHTMLFromStringBypass(html) {
  * bypassSecurityTrust* functions.
  */
 function trustedScriptFromStringBypass(script) {
-  var _getPolicy2;
-  return ((_getPolicy2 = getPolicy()) === null || _getPolicy2 === void 0 ? void 0 : _getPolicy2.createScript(script)) || script;
+  return getPolicy()?.createScript(script) || script;
 }
 /**
  * Unsafely promote a string to a TrustedScriptURL, falling back to strings
@@ -19930,8 +19925,7 @@ function trustedScriptFromStringBypass(script) {
  * bypassSecurityTrust* functions.
  */
 function trustedScriptURLFromStringBypass(url) {
-  var _getPolicy3;
-  return ((_getPolicy3 = getPolicy()) === null || _getPolicy3 === void 0 ? void 0 : _getPolicy3.createScriptURL(url)) || url;
+  return getPolicy()?.createScriptURL(url) || url;
 }
 
 /**
@@ -20829,7 +20823,7 @@ function internalImportProvidersFrom(checkForStandaloneCmp, ...sources) {
   deepForEach(sources, source => {
     if ((typeof ngDevMode === 'undefined' || ngDevMode) && checkForStandaloneCmp) {
       const cmpDef = getComponentDef(source);
-      if (cmpDef !== null && cmpDef !== void 0 && cmpDef.standalone) {
+      if (cmpDef?.standalone) {
         throw new RuntimeError(800 /* RuntimeErrorCode.IMPORT_PROVIDERS_FROM_STANDALONE */, `Importing providers supports NgModule or ModuleWithProviders but got a standalone component "${stringifyForError(source)}"`);
       }
     }
@@ -22610,8 +22604,7 @@ let Injector = /*#__PURE__*/(() => {
           name: ''
         }, parent, options, '');
       } else {
-        var _options$name;
-        const name = (_options$name = options.name) !== null && _options$name !== void 0 ? _options$name : '';
+        const name = options.name ?? '';
         return createInjector({
           name
         }, options.parent, options.providers, name);
@@ -25408,10 +25401,9 @@ function findDirectiveDefMatches(tView, tNode) {
             markAsComponentHost(tView, tNode, 0);
           }
         } else {
-          var _def$findHostDirectiv;
           // Append any host directives to the matches first.
           hostDirectiveDefs = hostDirectiveDefs || new Map();
-          (_def$findHostDirectiv = def.findHostDirectiveDefs) === null || _def$findHostDirectiv === void 0 ? void 0 : _def$findHostDirectiv.call(def, def, matches, hostDirectiveDefs);
+          def.findHostDirectiveDefs?.(def, matches, hostDirectiveDefs);
           matches.push(def);
         }
       }
@@ -26437,9 +26429,8 @@ class ComponentFactory extends ComponentFactory$1 {
     return toRefArray(this.componentDef.outputs);
   }
   create(injector, projectableNodes, rootSelectorOrNode, environmentInjector) {
-    var _environmentInjector;
     environmentInjector = environmentInjector || this.ngModule;
-    let realEnvironmentInjector = environmentInjector instanceof EnvironmentInjector ? environmentInjector : (_environmentInjector = environmentInjector) === null || _environmentInjector === void 0 ? void 0 : _environmentInjector.injector;
+    let realEnvironmentInjector = environmentInjector instanceof EnvironmentInjector ? environmentInjector : environmentInjector?.injector;
     if (realEnvironmentInjector && this.componentDef.getStandaloneInjector !== null) {
       realEnvironmentInjector = this.componentDef.getStandaloneInjector(realEnvironmentInjector) || realEnvironmentInjector;
     }
@@ -34170,7 +34161,7 @@ class NgModuleFactory$1 {}
  * @publicApi
  */
 function createNgModule(ngModule, parentInjector) {
-  return new NgModuleRef(ngModule, parentInjector !== null && parentInjector !== void 0 ? parentInjector : null);
+  return new NgModuleRef(ngModule, parentInjector ?? null);
 }
 /**
  * The `createNgModule` function alias for backwards-compatibility.
@@ -34524,7 +34515,7 @@ function getDirectives(node) {
   }
   const tView = lView[TVIEW];
   const nodeIndex = context.nodeIndex;
-  if (!(tView !== null && tView !== void 0 && tView.data[nodeIndex])) {
+  if (!tView?.data[nodeIndex]) {
     return [];
   }
   if (context.directives === undefined) {
@@ -35328,11 +35319,10 @@ class EventEmitter_ extends rxjs__WEBPACK_IMPORTED_MODULE_0__.Subject {
     let errorFn = error || (() => null);
     let completeFn = complete;
     if (observerOrNext && typeof observerOrNext === 'object') {
-      var _observer$next, _observer$error, _observer$complete;
       const observer = observerOrNext;
-      nextFn = (_observer$next = observer.next) === null || _observer$next === void 0 ? void 0 : _observer$next.bind(observer);
-      errorFn = (_observer$error = observer.error) === null || _observer$error === void 0 ? void 0 : _observer$error.bind(observer);
-      completeFn = (_observer$complete = observer.complete) === null || _observer$complete === void 0 ? void 0 : _observer$complete.bind(observer);
+      nextFn = observer.next?.bind(observer);
+      errorFn = observer.error?.bind(observer);
+      completeFn = observer.complete?.bind(observer);
     }
     if (this.__isAsync) {
       errorFn = _wrapInTimeout(errorFn);
@@ -36817,7 +36807,7 @@ function verifySemanticsOfNgModuleDef(moduleType, allowDuplicateDeclarationsInRo
   function verifyNotStandalone(type, moduleType) {
     type = resolveForwardRef(type);
     const def = getComponentDef(type) || getDirectiveDef(type) || getPipeDef$1(type);
-    if (def !== null && def !== void 0 && def.standalone) {
+    if (def?.standalone) {
       const location = `"${stringifyForError(moduleType)}" NgModule`;
       errors.push(generateStandaloneInDeclarationsError(type, location));
     }
@@ -37445,7 +37435,6 @@ function extendsDirectlyFromObject(type) {
  * `Component`).
  */
 function directiveMetadata(type, metadata) {
-  var _metadata$hostDirecti;
   // Reflect inputs and outputs.
   const reflect = getReflect();
   const propMetadata = reflect.ownPropMetadata(type);
@@ -37467,9 +37456,9 @@ function directiveMetadata(type, metadata) {
     providers: metadata.providers || null,
     viewQueries: extractQueriesMetadata(type, propMetadata, isViewQuery),
     isStandalone: !!metadata.standalone,
-    hostDirectives: ((_metadata$hostDirecti = metadata.hostDirectives) === null || _metadata$hostDirecti === void 0 ? void 0 : _metadata$hostDirecti.map(directive => typeof directive === 'function' ? {
+    hostDirectives: metadata.hostDirectives?.map(directive => typeof directive === 'function' ? {
       directive
-    } : directive)) || null
+    } : directive) || null
   };
 }
 /**
@@ -38526,9 +38515,8 @@ function getNativeRequestAnimationFrame() {
  */
 class AsyncStackTaggingZoneSpec {
   constructor(namePrefix, consoleAsyncStackTaggingImpl = console) {
-    var _consoleAsyncStackTag;
     this.name = 'asyncStackTagging for ' + namePrefix;
-    this.createTask = (_consoleAsyncStackTag = consoleAsyncStackTaggingImpl === null || consoleAsyncStackTaggingImpl === void 0 ? void 0 : consoleAsyncStackTaggingImpl.createTask) !== null && _consoleAsyncStackTag !== void 0 ? _consoleAsyncStackTag : () => null;
+    this.createTask = consoleAsyncStackTaggingImpl?.createTask ?? (() => null);
   }
   onScheduleTask(delegate, _current, target, task) {
     task.consoleTask = this.createTask(`Zone - ${task.source || task.type}`);
@@ -39238,8 +39226,7 @@ let TestabilityRegistry = /*#__PURE__*/(() => {
      * current node
      */
     findTestabilityInTree(elem, findInAncestors = true) {
-      var _testabilityGetter$fi, _testabilityGetter2;
-      return (_testabilityGetter$fi = (_testabilityGetter2 = _testabilityGetter) === null || _testabilityGetter2 === void 0 ? void 0 : _testabilityGetter2.findTestabilityInTree(this, elem, findInAncestors)) !== null && _testabilityGetter$fi !== void 0 ? _testabilityGetter$fi : null;
+      return _testabilityGetter?.findTestabilityInTree(this, elem, findInAncestors) ?? null;
     }
   }
   TestabilityRegistry.ɵfac = function TestabilityRegistry_Factory(t) {
@@ -39520,8 +39507,7 @@ function createPlatformInjector(providers = [], name) {
  * @publicApi
  */
 function destroyPlatform() {
-  var _getPlatform;
-  (_getPlatform = getPlatform()) === null || _getPlatform === void 0 ? void 0 : _getPlatform.destroy();
+  getPlatform()?.destroy();
 }
 /**
  * Returns the current platform.
@@ -39529,8 +39515,7 @@ function destroyPlatform() {
  * @publicApi
  */
 function getPlatform() {
-  var _platformInjector$get, _platformInjector2;
-  return (_platformInjector$get = (_platformInjector2 = _platformInjector) === null || _platformInjector2 === void 0 ? void 0 : _platformInjector2.get(PlatformRef)) !== null && _platformInjector$get !== void 0 ? _platformInjector$get : null;
+  return _platformInjector?.get(PlatformRef) ?? null;
 }
 /**
  * The Angular platform is the entry point for Angular on a web page.
@@ -39561,7 +39546,7 @@ let PlatformRef = /*#__PURE__*/(() => {
       // as instantiating the module creates some providers eagerly.
       // So we create a mini parent injector that just contains the new NgZone and
       // pass that as parent to the NgModuleFactory.
-      const ngZone = getNgZone(options === null || options === void 0 ? void 0 : options.ngZone, getNgZoneOptions(options));
+      const ngZone = getNgZone(options?.ngZone, getNgZoneOptions(options));
       const providers = [{
         provide: NgZone,
         useValue: ngZone
@@ -39977,11 +39962,11 @@ let ApplicationRef = /*#__PURE__*/(() => {
       const compRef = componentFactory.create(Injector.NULL, [], selectorOrNode, ngModule);
       const nativeElement = compRef.location.nativeElement;
       const testability = compRef.injector.get(TESTABILITY, null);
-      testability === null || testability === void 0 ? void 0 : testability.registerApplication(nativeElement);
+      testability?.registerApplication(nativeElement);
       compRef.onDestroy(() => {
         this.detachView(compRef.hostView);
         remove(this.components, compRef);
-        testability === null || testability === void 0 ? void 0 : testability.unregisterApplication(nativeElement);
+        testability?.unregisterApplication(nativeElement);
       });
       this._loadComponent(compRef);
       if (typeof ngDevMode === 'undefined' || ngDevMode) {
@@ -42132,8 +42117,7 @@ function ɵɵngDeclareDirective(decl) {
  * @codeGenApi
  */
 function ɵɵngDeclareClassMetadata(decl) {
-  var _decl$ctorParameters, _decl$propDecorators;
-  setClassMetadata(decl.type, decl.decorators, (_decl$ctorParameters = decl.ctorParameters) !== null && _decl$ctorParameters !== void 0 ? _decl$ctorParameters : null, (_decl$propDecorators = decl.propDecorators) !== null && _decl$propDecorators !== void 0 ? _decl$propDecorators : null);
+  setClassMetadata(decl.type, decl.decorators, decl.ctorParameters ?? null, decl.propDecorators ?? null);
 }
 /**
  * Compiles a partial component declaration object into a full component definition object.
@@ -43524,9 +43508,8 @@ function createApplication(options) {
   return (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵinternalCreateApplication"])(createProvidersConfig(options));
 }
 function createProvidersConfig(options) {
-  var _options$providers;
   return {
-    appProviders: [...BROWSER_MODULE_PROVIDERS, ...((_options$providers = options === null || options === void 0 ? void 0 : options.providers) !== null && _options$providers !== void 0 ? _options$providers : [])],
+    appProviders: [...BROWSER_MODULE_PROVIDERS, ...(options?.providers ?? [])],
     platformProviders: INTERNAL_BROWSER_PLATFORM_PROVIDERS
   };
 }
@@ -45736,7 +45719,6 @@ function createUrlTreeFromSnapshot(relativeTo, commands, queryParams = null, fra
   return createUrlTreeFromSegmentGroup(relativeToUrlSegmentGroup, commands, queryParams, fragment);
 }
 function createSegmentGroupFromRoute(route) {
-  var _targetGroup;
   let targetGroup;
   function createSegmentGroupFromRouteRecursive(currentRoute) {
     const childOutlets = {};
@@ -45752,7 +45734,7 @@ function createSegmentGroupFromRoute(route) {
   }
   const rootCandidate = createSegmentGroupFromRouteRecursive(route.root);
   const rootSegmentGroup = createRoot(rootCandidate);
-  return (_targetGroup = targetGroup) !== null && _targetGroup !== void 0 ? _targetGroup : rootSegmentGroup;
+  return targetGroup ?? rootSegmentGroup;
 }
 function createUrlTreeFromSegmentGroup(relativeTo, commands, queryParams, fragment) {
   let root = relativeTo;
@@ -45774,7 +45756,6 @@ function createUrlTreeFromSegmentGroup(relativeTo, commands, queryParams, fragme
   return tree(root, position.segmentGroup, newSegmentGroup, queryParams, fragment);
 }
 function createUrlTree(route, urlTree, commands, queryParams, fragment) {
-  var _route$snapshot2;
   if (commands.length === 0) {
     return tree(urlTree.root, urlTree.root, urlTree.root, queryParams, fragment);
   }
@@ -45783,8 +45764,7 @@ function createUrlTree(route, urlTree, commands, queryParams, fragment) {
     return tree(urlTree.root, urlTree.root, new UrlSegmentGroup([], {}), queryParams, fragment);
   }
   function createTreeUsingPathIndex(lastPathIndex) {
-    var _route$snapshot;
-    const startingPosition = findStartingPosition(nav, urlTree, (_route$snapshot = route.snapshot) === null || _route$snapshot === void 0 ? void 0 : _route$snapshot._urlSegment, lastPathIndex);
+    const startingPosition = findStartingPosition(nav, urlTree, route.snapshot?._urlSegment, lastPathIndex);
     const segmentGroup = startingPosition.processChildren ? updateSegmentGroupChildren(startingPosition.segmentGroup, startingPosition.index, nav.commands) : updateSegmentGroup(startingPosition.segmentGroup, startingPosition.index, nav.commands);
     return tree(urlTree.root, startingPosition.segmentGroup, segmentGroup, queryParams, fragment);
   }
@@ -45792,7 +45772,7 @@ function createUrlTree(route, urlTree, commands, queryParams, fragment) {
   // may be the case. Since we try to access it at an earlier point before the refactor to add the
   // warning for `relativeLinkResolution: 'legacy'`, this may cause failures in tests where it
   // didn't before.
-  const result = createTreeUsingPathIndex((_route$snapshot2 = route.snapshot) === null || _route$snapshot2 === void 0 ? void 0 : _route$snapshot2._lastPathIndex);
+  const result = createTreeUsingPathIndex(route.snapshot?._lastPathIndex);
   return result;
 }
 function isMatrixParams(command) {
@@ -46497,19 +46477,18 @@ class Scroll {
   }
 }
 function stringifyEvent(routerEvent) {
-  var _routerEvent$snapshot, _routerEvent$snapshot2, _routerEvent$snapshot3, _routerEvent$snapshot4;
   if (!('type' in routerEvent)) {
     return `Unknown Router Event: ${routerEvent.constructor.name}`;
   }
   switch (routerEvent.type) {
     case 14 /* EventType.ActivationEnd */:
-      return `ActivationEnd(path: '${((_routerEvent$snapshot = routerEvent.snapshot.routeConfig) === null || _routerEvent$snapshot === void 0 ? void 0 : _routerEvent$snapshot.path) || ''}')`;
+      return `ActivationEnd(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
     case 13 /* EventType.ActivationStart */:
-      return `ActivationStart(path: '${((_routerEvent$snapshot2 = routerEvent.snapshot.routeConfig) === null || _routerEvent$snapshot2 === void 0 ? void 0 : _routerEvent$snapshot2.path) || ''}')`;
+      return `ActivationStart(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
     case 12 /* EventType.ChildActivationEnd */:
-      return `ChildActivationEnd(path: '${((_routerEvent$snapshot3 = routerEvent.snapshot.routeConfig) === null || _routerEvent$snapshot3 === void 0 ? void 0 : _routerEvent$snapshot3.path) || ''}')`;
+      return `ChildActivationEnd(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
     case 11 /* EventType.ChildActivationStart */:
-      return `ChildActivationStart(path: '${((_routerEvent$snapshot4 = routerEvent.snapshot.routeConfig) === null || _routerEvent$snapshot4 === void 0 ? void 0 : _routerEvent$snapshot4.path) || ''}')`;
+      return `ChildActivationStart(path: '${routerEvent.snapshot.routeConfig?.path || ''}')`;
     case 8 /* EventType.GuardsCheckEnd */:
       return `GuardsCheckEnd(id: ${routerEvent.id}, url: '${routerEvent.url}', urlAfterRedirects: '${routerEvent.urlAfterRedirects}', state: ${routerEvent.state}, shouldActivate: ${routerEvent.shouldActivate})`;
     case 7 /* EventType.GuardsCheckStart */:
@@ -46726,7 +46705,6 @@ class ActivatedRoute {
   data, /** The outlet name of the route, a constant. */
   outlet, /** The component of the route, a constant. */
   component, futureSnapshot) {
-    var _this$data$pipe, _this$data;
     this.url = url;
     this.params = params;
     this.queryParams = queryParams;
@@ -46735,7 +46713,7 @@ class ActivatedRoute {
     this.outlet = outlet;
     this.component = component;
     /** An Observable of the resolved route title */
-    this.title = (_this$data$pipe = (_this$data = this.data) === null || _this$data === void 0 ? void 0 : _this$data.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(d => d[RouteTitleKey]))) !== null && _this$data$pipe !== void 0 ? _this$data$pipe : (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(undefined);
+    this.title = this.data?.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(d => d[RouteTitleKey])) ?? (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(undefined);
     this._futureSnapshot = futureSnapshot;
   }
   /** The configuration used to match this route. */
@@ -46816,7 +46794,6 @@ function inheritedParamsDataResolve(route, paramsInheritanceStrategy = 'emptyOnl
 /** @internal */
 function flattenInherited(pathFromRoot) {
   return pathFromRoot.reduce((res, curr) => {
-    var _curr$routeConfig;
     const params = {
       ...res.params,
       ...curr.params
@@ -46828,7 +46805,7 @@ function flattenInherited(pathFromRoot) {
     const resolve = {
       ...curr.data,
       ...res.resolve,
-      ...((_curr$routeConfig = curr.routeConfig) === null || _curr$routeConfig === void 0 ? void 0 : _curr$routeConfig.data),
+      ...curr.routeConfig?.data,
       ...curr._resolvedData
     };
     return {
@@ -46908,10 +46885,9 @@ class ActivatedRouteSnapshot {
   }
   /** The resolved route title */
   get title() {
-    var _this$data2;
     // Note: This _must_ be a getter because the data is mutated in the resolvers. Title will not be
     // available at the time of class instantiation.
-    return (_this$data2 = this.data) === null || _this$data2 === void 0 ? void 0 : _this$data2[RouteTitleKey];
+    return this.data?.[RouteTitleKey];
   }
   /** The root of the router state */
   get root() {
@@ -47329,8 +47305,7 @@ let RouterOutlet = /*#__PURE__*/(() => {
       }
     }
     isTrackedInParentContexts(outletName) {
-      var _this$parentContexts$;
-      return ((_this$parentContexts$ = this.parentContexts.getContext(outletName)) === null || _this$parentContexts$ === void 0 ? void 0 : _this$parentContexts$.outlet) === this;
+      return this.parentContexts.getContext(outletName)?.outlet === this;
     }
     /** @nodoc */
     ngOnInit() {
@@ -47344,7 +47319,7 @@ let RouterOutlet = /*#__PURE__*/(() => {
       // If the outlet was not instantiated at the time the route got activated we need to populate
       // the outlet when it is initialized (ie inside a NgIf)
       const context = this.parentContexts.getContext(this.name);
-      if (context !== null && context !== void 0 && context.route) {
+      if (context?.route) {
         if (context.attachRef) {
           // `attachRef` is populated when there is an existing component to mount
           this.attach(context.attachRef, context.route);
@@ -47419,7 +47394,7 @@ let RouterOutlet = /*#__PURE__*/(() => {
         const factory = resolverOrInjector.resolveComponentFactory(component);
         this.activated = location.createComponent(factory, location.length, injector);
       } else {
-        const environmentInjector = resolverOrInjector !== null && resolverOrInjector !== void 0 ? resolverOrInjector : this.environmentInjector;
+        const environmentInjector = resolverOrInjector ?? this.environmentInjector;
         this.activated = location.createComponent(component, {
           index: location.length,
           injector,
@@ -47534,11 +47509,10 @@ let ɵEmptyOutletComponent = /*#__PURE__*/(() => {
  * @param currentInjector The parent injector of the `Route`
  */
 function getOrCreateRouteInjectorIfNeeded(route, currentInjector) {
-  var _route$_injector;
   if (route.providers && !route._injector) {
     route._injector = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.createEnvironmentInjector)(route.providers, currentInjector, `Route: ${route.path}`);
   }
-  return (_route$_injector = route._injector) !== null && _route$_injector !== void 0 ? _route$_injector : currentInjector;
+  return route._injector ?? currentInjector;
 }
 function getLoadedRoutes(route) {
   return route._loadedRoutes;
@@ -47684,12 +47658,11 @@ function sortByMatchingOutlets(routes, outletName) {
  * also used for getting the correct injector to use for creating components.
  */
 function getClosestRouteInjector(snapshot) {
-  var _snapshot$routeConfig;
   if (!snapshot) return null;
   // If the current route has its own injector, which is created from the static providers on the
   // route itself, we should use that. Otherwise, we start at the parent since we do not want to
   // include the lazy loaded injector from this route.
-  if ((_snapshot$routeConfig = snapshot.routeConfig) !== null && _snapshot$routeConfig !== void 0 && _snapshot$routeConfig._injector) {
+  if (snapshot.routeConfig?._injector) {
     return snapshot.routeConfig._injector;
   }
   for (let s = snapshot.parent; s; s = s.parent) {
@@ -47698,8 +47671,8 @@ function getClosestRouteInjector(snapshot) {
     // `loadChildren: () => NgModule` so it applies to child routes with priority. The `_injector`
     // is created from the static providers on that parent route, so it applies to the children as
     // well, but only if there is no lazy loaded NgModuleRef injector.
-    if (route !== null && route !== void 0 && route._loadedInjector) return route._loadedInjector;
-    if (route !== null && route !== void 0 && route._injector) return route._injector;
+    if (route?._loadedInjector) return route._loadedInjector;
+    if (route?._injector) return route._injector;
   }
   return null;
 }
@@ -47854,9 +47827,8 @@ class ActivateRoutes {
           advanceActivatedRoute(stored.route.value);
           this.activateChildRoutes(futureNode, null, context.children);
         } else {
-          var _injector$get;
           const injector = getClosestRouteInjector(future.snapshot);
-          const cmpFactoryResolver = (_injector$get = injector === null || injector === void 0 ? void 0 : injector.get(_angular_core__WEBPACK_IMPORTED_MODULE_0__.ComponentFactoryResolver)) !== null && _injector$get !== void 0 ? _injector$get : null;
+          const cmpFactoryResolver = injector?.get(_angular_core__WEBPACK_IMPORTED_MODULE_0__.ComponentFactoryResolver) ?? null;
           context.attachRef = null;
           context.route = future;
           context.resolver = cmpFactoryResolver;
@@ -48065,7 +48037,7 @@ function isNavigationCancelingError(error) {
   return error && error[NAVIGATION_CANCELING_ERROR];
 }
 function isEmptyError(e) {
-  return e instanceof rxjs__WEBPACK_IMPORTED_MODULE_5__.EmptyError || (e === null || e === void 0 ? void 0 : e.name) === 'EmptyError';
+  return e instanceof rxjs__WEBPACK_IMPORTED_MODULE_5__.EmptyError || e?.name === 'EmptyError';
 }
 
 /**
@@ -48175,8 +48147,7 @@ function runCanActivate(futureRSS, futureARS, injector) {
   if (!canActivate || canActivate.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
   const canActivateObservables = canActivate.map(canActivate => {
     return (0,rxjs__WEBPACK_IMPORTED_MODULE_15__.defer)(() => {
-      var _getClosestRouteInjec;
-      const closestInjector = (_getClosestRouteInjec = getClosestRouteInjector(futureARS)) !== null && _getClosestRouteInjec !== void 0 ? _getClosestRouteInjec : injector;
+      const closestInjector = getClosestRouteInjector(futureARS) ?? injector;
       const guard = getTokenOrFunctionIdentity(canActivate, closestInjector);
       const guardVal = isCanActivate(guard) ? guard.canActivate(futureARS, futureRSS) : closestInjector.runInContext(() => guard(futureARS, futureRSS));
       return wrapIntoObservable(guardVal).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.first)());
@@ -48190,8 +48161,7 @@ function runCanActivateChild(futureRSS, path, injector) {
   const canActivateChildGuardsMapped = canActivateChildGuards.map(d => {
     return (0,rxjs__WEBPACK_IMPORTED_MODULE_15__.defer)(() => {
       const guardsMapped = d.guards.map(canActivateChild => {
-        var _getClosestRouteInjec2;
-        const closestInjector = (_getClosestRouteInjec2 = getClosestRouteInjector(d.node)) !== null && _getClosestRouteInjec2 !== void 0 ? _getClosestRouteInjec2 : injector;
+        const closestInjector = getClosestRouteInjector(d.node) ?? injector;
         const guard = getTokenOrFunctionIdentity(canActivateChild, closestInjector);
         const guardVal = isCanActivateChild(guard) ? guard.canActivateChild(futureARS, futureRSS) : closestInjector.runInContext(() => guard(futureARS, futureRSS));
         return wrapIntoObservable(guardVal).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.first)());
@@ -48205,8 +48175,7 @@ function runCanDeactivate(component, currARS, currRSS, futureRSS, injector) {
   const canDeactivate = currARS && currARS.routeConfig ? currARS.routeConfig.canDeactivate : null;
   if (!canDeactivate || canDeactivate.length === 0) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(true);
   const canDeactivateObservables = canDeactivate.map(c => {
-    var _getClosestRouteInjec3;
-    const closestInjector = (_getClosestRouteInjec3 = getClosestRouteInjector(currARS)) !== null && _getClosestRouteInjec3 !== void 0 ? _getClosestRouteInjec3 : injector;
+    const closestInjector = getClosestRouteInjector(currARS) ?? injector;
     const guard = getTokenOrFunctionIdentity(c, closestInjector);
     const guardVal = isCanDeactivate(guard) ? guard.canDeactivate(component, currARS, currRSS, futureRSS) : closestInjector.runInContext(() => guard(component, currARS, currRSS, futureRSS));
     return wrapIntoObservable(guardVal).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.first)());
@@ -48269,7 +48238,6 @@ function matchWithChecks(segmentGroup, route, segments, injector, urlSerializer)
   }));
 }
 function match(segmentGroup, route, segments) {
-  var _res$posParams;
   if (route.path === '') {
     if (route.pathMatch === 'full' && (segmentGroup.hasChildren() || segments.length > 0)) {
       return {
@@ -48303,7 +48271,7 @@ function match(segmentGroup, route, segments) {
     remainingSegments: segments.slice(res.consumed.length),
     // TODO(atscott): investigate combining parameters and positionalParamSegments
     parameters,
-    positionalParamSegments: (_res$posParams = res.posParams) !== null && _res$posParams !== void 0 ? _res$posParams : {}
+    positionalParamSegments: res.posParams ?? {}
   };
 }
 function split(segmentGroup, consumedSegments, slicedSegments, config) {
@@ -48615,14 +48583,12 @@ class ApplyRedirects {
       consumedSegments,
       remainingSegments
     }) => {
-      var _route$_injector2;
       if (!matched) return noMatch(rawSegmentGroup);
       // If the route has an injector created from providers, we should start using that.
-      injector = (_route$_injector2 = route._injector) !== null && _route$_injector2 !== void 0 ? _route$_injector2 : injector;
+      injector = route._injector ?? injector;
       const childConfig$ = this.getChildConfig(injector, route, segments);
       return childConfig$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.mergeMap)(routerConfig => {
-        var _routerConfig$injecto;
-        const childInjector = (_routerConfig$injecto = routerConfig.injector) !== null && _routerConfig$injecto !== void 0 ? _routerConfig$injecto : injector;
+        const childInjector = routerConfig.injector ?? injector;
         const childConfig = routerConfig.routes;
         const {
           segmentGroup: splitSegmentGroup,
@@ -48850,8 +48816,7 @@ class Recognizer {
   }
   processSegment(injector, routes, segmentGroup, segments, outlet) {
     return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(routes).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_13__.concatMap)(r => {
-      var _r$_injector;
-      return this.processSegmentAgainstRoute((_r$_injector = r._injector) !== null && _r$_injector !== void 0 ? _r$_injector : injector, r, segmentGroup, segments, outlet);
+      return this.processSegmentAgainstRoute(r._injector ?? injector, r, segmentGroup, segments, outlet);
     }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.first)(x => !!x), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_19__.catchError)(e => {
       if (isEmptyError(e)) {
         if (noLeftoversInUrl(segmentGroup, segments, outlet)) {
@@ -48866,12 +48831,11 @@ class Recognizer {
     if (route.redirectTo || !isImmediateMatch(route, rawSegment, segments, outlet)) return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
     let matchResult;
     if (route.path === '**') {
-      var _ref, _route$component;
       const params = segments.length > 0 ? last(segments).parameters : {};
       const pathIndexShift = getPathIndexShift(rawSegment) + segments.length;
       const snapshot = new ActivatedRouteSnapshot(segments, params, Object.freeze({
         ...this.urlTree.queryParams
-      }), this.urlTree.fragment, getData(route), getOutlet(route), (_ref = (_route$component = route.component) !== null && _route$component !== void 0 ? _route$component : route._loadedComponent) !== null && _ref !== void 0 ? _ref : null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route));
+      }), this.urlTree.fragment, getData(route), getOutlet(route), route.component ?? route._loadedComponent ?? null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route));
       matchResult = (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)({
         snapshot,
         consumedSegments: [],
@@ -48884,14 +48848,13 @@ class Recognizer {
         remainingSegments,
         parameters
       }) => {
-        var _ref2, _route$component2;
         if (!matched) {
           return null;
         }
         const pathIndexShift = getPathIndexShift(rawSegment) + consumedSegments.length;
         const snapshot = new ActivatedRouteSnapshot(consumedSegments, parameters, Object.freeze({
           ...this.urlTree.queryParams
-        }), this.urlTree.fragment, getData(route), getOutlet(route), (_ref2 = (_route$component2 = route.component) !== null && _route$component2 !== void 0 ? _route$component2 : route._loadedComponent) !== null && _ref2 !== void 0 ? _ref2 : null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route));
+        }), this.urlTree.fragment, getData(route), getOutlet(route), route.component ?? route._loadedComponent ?? null, route, getSourceSegmentGroup(rawSegment), pathIndexShift, getResolve(route));
         return {
           snapshot,
           consumedSegments,
@@ -48900,7 +48863,6 @@ class Recognizer {
       }));
     }
     return matchResult.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_6__.switchMap)(result => {
-      var _route$_injector3, _route$_loadedInjecto;
       if (result === null) {
         return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
       }
@@ -48910,8 +48872,8 @@ class Recognizer {
         remainingSegments
       } = result;
       // If the route has an injector created from providers, we should start using that.
-      injector = (_route$_injector3 = route._injector) !== null && _route$_injector3 !== void 0 ? _route$_injector3 : injector;
-      const childInjector = (_route$_loadedInjecto = route._loadedInjector) !== null && _route$_loadedInjecto !== void 0 ? _route$_loadedInjecto : injector;
+      injector = route._injector ?? injector;
+      const childInjector = route._loadedInjector ?? injector;
       const childConfig = getChildConfig(route);
       const {
         segmentGroup,
@@ -49022,24 +48984,20 @@ function getSourceSegmentGroup(segmentGroup) {
   return s;
 }
 function getPathIndexShift(segmentGroup) {
-  var _s$_segmentIndexShift;
   let s = segmentGroup;
-  let res = (_s$_segmentIndexShift = s._segmentIndexShift) !== null && _s$_segmentIndexShift !== void 0 ? _s$_segmentIndexShift : 0;
+  let res = s._segmentIndexShift ?? 0;
   while (s._sourceSegment) {
-    var _s$_segmentIndexShift2;
     s = s._sourceSegment;
-    res += (_s$_segmentIndexShift2 = s._segmentIndexShift) !== null && _s$_segmentIndexShift2 !== void 0 ? _s$_segmentIndexShift2 : 0;
+    res += s._segmentIndexShift ?? 0;
   }
   return res - 1;
 }
 function getCorrectedPathIndexShift(segmentGroup) {
-  var _ref3, _s$_segmentIndexShift3;
   let s = segmentGroup;
-  let res = (_ref3 = (_s$_segmentIndexShift3 = s._segmentIndexShiftCorrected) !== null && _s$_segmentIndexShift3 !== void 0 ? _s$_segmentIndexShift3 : s._segmentIndexShift) !== null && _ref3 !== void 0 ? _ref3 : 0;
+  let res = s._segmentIndexShiftCorrected ?? s._segmentIndexShift ?? 0;
   while (s._sourceSegment) {
-    var _ref4, _s$_segmentIndexShift4;
     s = s._sourceSegment;
-    res += (_ref4 = (_s$_segmentIndexShift4 = s._segmentIndexShiftCorrected) !== null && _s$_segmentIndexShift4 !== void 0 ? _s$_segmentIndexShift4 : s._segmentIndexShift) !== null && _ref4 !== void 0 ? _ref4 : 0;
+    res += s._segmentIndexShiftCorrected ?? s._segmentIndexShift ?? 0;
   }
   return res - 1;
 }
@@ -49089,7 +49047,7 @@ function resolveData(paramsInheritanceStrategy, injector) {
 function runResolve(futureARS, futureRSS, paramsInheritanceStrategy, injector) {
   const config = futureARS.routeConfig;
   const resolve = futureARS._resolve;
-  if ((config === null || config === void 0 ? void 0 : config.title) !== undefined && !hasStaticTitle(config)) {
+  if (config?.title !== undefined && !hasStaticTitle(config)) {
     resolve[RouteTitleKey] = config.title;
   }
   return resolveNode(resolve, futureARS, futureRSS, injector).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(resolvedData => {
@@ -49115,8 +49073,7 @@ function getDataKeys(obj) {
   return [...Object.keys(obj), ...Object.getOwnPropertySymbols(obj)];
 }
 function getResolver(injectionToken, futureARS, futureRSS, injector) {
-  var _getClosestRouteInjec4;
-  const closestInjector = (_getClosestRouteInjec4 = getClosestRouteInjector(futureARS)) !== null && _getClosestRouteInjec4 !== void 0 ? _getClosestRouteInjec4 : injector;
+  const closestInjector = getClosestRouteInjector(futureARS) ?? injector;
   const resolver = getTokenOrFunctionIdentity(injectionToken, closestInjector);
   const resolverValue = resolver.resolve ? resolver.resolve(futureARS, futureRSS) : closestInjector.runInContext(() => resolver(futureARS, futureRSS));
   return wrapIntoObservable(resolverValue);
@@ -49187,8 +49144,7 @@ let TitleStrategy = /*#__PURE__*/(() => {
       let pageTitle;
       let route = snapshot.root;
       while (route !== undefined) {
-        var _this$getResolvedTitl;
-        pageTitle = (_this$getResolvedTitl = this.getResolvedTitleForRoute(route)) !== null && _this$getResolvedTitl !== void 0 ? _this$getResolvedTitl : pageTitle;
+        pageTitle = this.getResolvedTitleForRoute(route) ?? pageTitle;
         route = route.children.find(child => child.outlet === PRIMARY_OUTLET);
       }
       return pageTitle;
@@ -49380,11 +49336,10 @@ let RouterConfigLoader = /*#__PURE__*/(() => {
         this.onLoadStartListener(route);
       }
       const loadRunner = wrapIntoObservable(route.loadComponent()).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(maybeUnwrapDefaultExport), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.tap)(component => {
-        var _route$path;
         if (this.onLoadEndListener) {
           this.onLoadEndListener(route);
         }
-        NG_DEV_MODE$3 && assertStandalone((_route$path = route.path) !== null && _route$path !== void 0 ? _route$path : '', component);
+        NG_DEV_MODE$3 && assertStandalone(route.path ?? '', component);
         route._loadedComponent = component;
       }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_29__.finalize)(() => {
         this.componentLoaders.delete(route);
@@ -49565,18 +49520,17 @@ function assignExtraOptionsToRouter(opts, router) {
   }
 }
 function setupRouter() {
-  var _inject, _inject2;
   const urlSerializer = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(UrlSerializer);
   const contexts = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ChildrenOutletContexts);
   const location = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_common__WEBPACK_IMPORTED_MODULE_33__.Location);
   const injector = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_0__.Injector);
   const compiler = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_0__.Compiler);
-  const config = (_inject = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTES, {
+  const config = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTES, {
     optional: true
-  })) !== null && _inject !== void 0 ? _inject : [];
-  const opts = (_inject2 = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTER_CONFIGURATION, {
+  }) ?? [];
+  const opts = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(ROUTER_CONFIGURATION, {
     optional: true
-  })) !== null && _inject2 !== void 0 ? _inject2 : {};
+  }) ?? {};
   const defaultTitleStrategy = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(DefaultTitleStrategy);
   const titleStrategy = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(TitleStrategy, {
     optional: true
@@ -49594,7 +49548,7 @@ function setupRouter() {
   if (routeReuseStrategy) {
     router.routeReuseStrategy = routeReuseStrategy;
   }
-  router.titleStrategy = titleStrategy !== null && titleStrategy !== void 0 ? titleStrategy : defaultTitleStrategy;
+  router.titleStrategy = titleStrategy ?? defaultTitleStrategy;
   assignExtraOptionsToRouter(opts, router);
   return router;
 }
@@ -49775,8 +49729,7 @@ let Router = /*#__PURE__*/(() => {
      * page id in the browser history is 1 more than the previous entry.
      */
     get browserPageId() {
-      var _this$location$getSta;
-      return (_this$location$getSta = this.location.getState()) === null || _this$location$getSta === void 0 ? void 0 : _this$location$getSta.ɵrouterPageId;
+      return this.location.getState()?.ɵrouterPageId;
     }
     setupNavigations(transitions) {
       const eventsSubject = this.events;
@@ -49949,9 +49902,8 @@ let Router = /*#__PURE__*/(() => {
         // --- LOAD COMPONENTS ---
         switchTap(t => {
           const loadComponents = route => {
-            var _route$routeConfig;
             const loaders = [];
-            if ((_route$routeConfig = route.routeConfig) !== null && _route$routeConfig !== void 0 && _route$routeConfig.loadComponent && !route.routeConfig._loadedComponent) {
+            if (route.routeConfig?.loadComponent && !route.routeConfig._loadedComponent) {
               loaders.push(this.configLoader.loadComponent(route.routeConfig).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_17__.tap)(loadedComponent => {
                 route.component = loadedComponent;
               }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.map)(() => void 0)));
@@ -49993,7 +49945,6 @@ let Router = /*#__PURE__*/(() => {
             completed = true;
           }
         }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_29__.finalize)(() => {
-          var _this$currentNavigati;
           /* When the navigation stream finishes either through error or success,
            * we set the `completed` or `errored` flag. However, there are some
            * situations where we could get here without either of those being set.
@@ -50006,7 +49957,7 @@ let Router = /*#__PURE__*/(() => {
           }
           // Only clear current navigation if it is still set to the one that
           // finalized.
-          if (((_this$currentNavigati = this.currentNavigation) === null || _this$currentNavigati === void 0 ? void 0 : _this$currentNavigati.id) === overallTransitionState.id) {
+          if (this.currentNavigation?.id === overallTransitionState.id) {
             this.currentNavigation = null;
           }
         }), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_19__.catchError)(e => {
@@ -50049,9 +50000,8 @@ let Router = /*#__PURE__*/(() => {
             /* All other errors should reset to the router's internal URL reference
              * to the pre-error state. */
           } else {
-            var _overallTransitionSta;
             this.restoreHistory(overallTransitionState, true);
-            const navError = new NavigationError(overallTransitionState.id, this.serializeUrl(overallTransitionState.extractedUrl), e, (_overallTransitionSta = overallTransitionState.targetSnapshot) !== null && _overallTransitionSta !== void 0 ? _overallTransitionSta : undefined);
+            const navError = new NavigationError(overallTransitionState.id, this.serializeUrl(overallTransitionState.extractedUrl), e, overallTransitionState.targetSnapshot ?? undefined);
             eventsSubject.next(navError);
             try {
               overallTransitionState.resolve(this.errorHandler(e));
@@ -50107,13 +50057,12 @@ let Router = /*#__PURE__*/(() => {
             // The `setTimeout` was added in #12160 and is likely to support Angular/AngularJS
             // hybrid apps.
             setTimeout(() => {
-              var _event$state;
               const extras = {
                 replaceUrl: true
               };
               // Navigations coming from Angular router have a navigationId state
               // property. When this exists, restore the state.
-              const state = (_event$state = event.state) !== null && _event$state !== void 0 && _event$state.navigationId ? event.state : null;
+              const state = event.state?.navigationId ? event.state : null;
               if (state) {
                 const stateCopy = {
                   ...state
@@ -50256,7 +50205,7 @@ let Router = /*#__PURE__*/(() => {
       if (q !== null) {
         q = this.removeEmptyProps(q);
       }
-      return createUrlTree(a, this.currentUrlTree, commands, q, f !== null && f !== void 0 ? f : null);
+      return createUrlTree(a, this.currentUrlTree, commands, q, f ?? null);
     }
     /**
      * Navigates to a view using an absolute route path.
@@ -50372,13 +50321,12 @@ let Router = /*#__PURE__*/(() => {
     }
     processNavigations() {
       this.navigations.subscribe(t => {
-        var _this$titleStrategy;
         this.navigated = true;
         this.lastSuccessfulId = t.id;
         this.currentPageId = t.targetPageId;
         this.events.next(new NavigationEnd(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(this.currentUrlTree)));
         this.lastSuccessfulNavigation = this.currentNavigation;
-        (_this$titleStrategy = this.titleStrategy) === null || _this$titleStrategy === void 0 ? void 0 : _this$titleStrategy.updateTitle(this.routerState.snapshot);
+        this.titleStrategy?.updateTitle(this.routerState.snapshot);
         t.resolve(true);
       }, e => {
         this.console.warn(`Unhandled Navigation Error: ${e}`);
@@ -50417,11 +50365,9 @@ let Router = /*#__PURE__*/(() => {
           // If we're replacing the URL or doing a silent navigation, we do not want to increment the
           // page id because we aren't pushing a new entry to history.
           if (extras.replaceUrl || extras.skipLocationChange) {
-            var _this$browserPageId;
-            targetPageId = (_this$browserPageId = this.browserPageId) !== null && _this$browserPageId !== void 0 ? _this$browserPageId : 0;
+            targetPageId = this.browserPageId ?? 0;
           } else {
-            var _this$browserPageId2;
-            targetPageId = ((_this$browserPageId2 = this.browserPageId) !== null && _this$browserPageId2 !== void 0 ? _this$browserPageId2 : 0) + 1;
+            targetPageId = (this.browserPageId ?? 0) + 1;
           }
         }
       } else {
@@ -50467,17 +50413,16 @@ let Router = /*#__PURE__*/(() => {
      */
     restoreHistory(t, restoringFromCaughtError = false) {
       if (this.canceledNavigationResolution === 'computed') {
-        var _this$currentNavigati2, _this$currentNavigati3;
         const targetPagePosition = this.currentPageId - t.targetPageId;
         // The navigator change the location before triggered the browser event,
         // so we need to go back to the current url if the navigation is canceled.
         // Also, when navigation gets cancelled while using url update strategy eager, then we need to
         // go back. Because, when `urlUpdateStrategy` is `eager`; `setBrowserUrl` method is called
         // before any verification.
-        const browserUrlUpdateOccurred = t.source === 'popstate' || this.urlUpdateStrategy === 'eager' || this.currentUrlTree === ((_this$currentNavigati2 = this.currentNavigation) === null || _this$currentNavigati2 === void 0 ? void 0 : _this$currentNavigati2.finalUrl);
+        const browserUrlUpdateOccurred = t.source === 'popstate' || this.urlUpdateStrategy === 'eager' || this.currentUrlTree === this.currentNavigation?.finalUrl;
         if (browserUrlUpdateOccurred && targetPagePosition !== 0) {
           this.location.historyGo(targetPagePosition);
-        } else if (this.currentUrlTree === ((_this$currentNavigati3 = this.currentNavigation) === null || _this$currentNavigati3 === void 0 ? void 0 : _this$currentNavigati3.finalUrl) && targetPagePosition === 0) {
+        } else if (this.currentUrlTree === this.currentNavigation?.finalUrl && targetPagePosition === 0) {
           // We got to the activation stage (where currentUrlTree is set to the navigation's
           // finalUrl), but we weren't moving anywhere in history (skipLocationChange or replaceUrl).
           // We still need to reset the router state back to what it was when the navigation started.
@@ -50791,12 +50736,10 @@ let RouterLink = /*#__PURE__*/(() => {
     }
     /** @nodoc */
     ngOnDestroy() {
-      var _this$subscription;
-      (_this$subscription = this.subscription) === null || _this$subscription === void 0 ? void 0 : _this$subscription.unsubscribe();
+      this.subscription?.unsubscribe();
     }
     updateHref() {
-      var _this$locationStrateg;
-      this.href = this.urlTree !== null && this.locationStrategy ? (_this$locationStrateg = this.locationStrategy) === null || _this$locationStrateg === void 0 ? void 0 : _this$locationStrateg.prepareExternalUrl(this.router.serializeUrl(this.urlTree)) : null;
+      this.href = this.urlTree !== null && this.locationStrategy ? this.locationStrategy?.prepareExternalUrl(this.router.serializeUrl(this.urlTree)) : null;
       const sanitizedValue = this.href === null ? null :
       // This class represents a directive that can be added to both `<a>` elements,
       // as well as other elements. As a result, we can't define security context at
@@ -51001,8 +50944,7 @@ let RouterLinkActive = /*#__PURE__*/(() => {
       });
     }
     subscribeToEachLinkOnChanges() {
-      var _this$linkInputChange;
-      (_this$linkInputChange = this.linkInputChangesSubscription) === null || _this$linkInputChange === void 0 ? void 0 : _this$linkInputChange.unsubscribe();
+      this.linkInputChangesSubscription?.unsubscribe();
       const allLinkChanges = [...this.links.toArray(), this.link].filter(link => !!link).map(link => link.onChanges);
       this.linkInputChangesSubscription = (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(allLinkChanges).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_34__.mergeAll)()).subscribe(link => {
         if (this.isActive !== this.isLinkActive(this.router)(link)) {
@@ -51020,9 +50962,8 @@ let RouterLinkActive = /*#__PURE__*/(() => {
     }
     /** @nodoc */
     ngOnDestroy() {
-      var _this$linkInputChange2;
       this.routerEventsSubscription.unsubscribe();
-      (_this$linkInputChange2 = this.linkInputChangesSubscription) === null || _this$linkInputChange2 === void 0 ? void 0 : _this$linkInputChange2.unsubscribe();
+      this.linkInputChangesSubscription?.unsubscribe();
     }
     update() {
       if (!this.links || !this.router.navigated) return;
@@ -51206,12 +51147,11 @@ let RouterPreloader = /*#__PURE__*/(() => {
     processRoutes(injector, routes) {
       const res = [];
       for (const route of routes) {
-        var _route$_injector4, _route$_loadedInjecto2;
         if (route.providers && !route._injector) {
           route._injector = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.createEnvironmentInjector)(route.providers, injector, `Route: ${route.path}`);
         }
-        const injectorForCurrentRoute = (_route$_injector4 = route._injector) !== null && _route$_injector4 !== void 0 ? _route$_injector4 : injector;
-        const injectorForChildren = (_route$_loadedInjecto2 = route._loadedInjector) !== null && _route$_loadedInjecto2 !== void 0 ? _route$_loadedInjecto2 : injectorForCurrentRoute;
+        const injectorForCurrentRoute = route._injector ?? injector;
+        const injectorForChildren = route._loadedInjector ?? injectorForCurrentRoute;
         // Note that `canLoad` is only checked as a condition that prevents `loadChildren` and not
         // `loadComponent`. `canLoad` guards only block loading of child routes by design. This
         // happens as a consequence of needing to descend into children for route matching immediately
@@ -51223,8 +51163,7 @@ let RouterPreloader = /*#__PURE__*/(() => {
         if (route.loadChildren && !route._loadedRoutes && route.canLoad === undefined || route.loadComponent && !route._loadedComponent) {
           res.push(this.preloadConfig(injectorForCurrentRoute, route));
         } else if (route.children || route._loadedRoutes) {
-          var _route$children;
-          res.push(this.processRoutes(injectorForChildren, (_route$children = route.children) !== null && _route$children !== void 0 ? _route$children : route._loadedRoutes));
+          res.push(this.processRoutes(injectorForChildren, route.children ?? route._loadedRoutes));
         }
       }
       return (0,rxjs__WEBPACK_IMPORTED_MODULE_1__.from)(res).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_34__.mergeAll)());
@@ -51238,7 +51177,6 @@ let RouterPreloader = /*#__PURE__*/(() => {
           loadedChildren$ = (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(null);
         }
         const recursiveLoadChildren$ = loadedChildren$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.mergeMap)(config => {
-          var _config$injector;
           if (config === null) {
             return (0,rxjs__WEBPACK_IMPORTED_MODULE_2__.of)(void 0);
           }
@@ -51246,7 +51184,7 @@ let RouterPreloader = /*#__PURE__*/(() => {
           route._loadedInjector = config.injector;
           // If the loaded config was a module, use that as the module/module injector going
           // forward. Otherwise, continue using the current module/module injector.
-          return this.processRoutes((_config$injector = config.injector) !== null && _config$injector !== void 0 ? _config$injector : injector, config.routes);
+          return this.processRoutes(config.injector ?? injector, config.routes);
         }));
         if (route.loadComponent && !route._loadedComponent) {
           const loadComponent$ = this.loader.loadComponent(route);
@@ -51535,7 +51473,6 @@ function withInMemoryScrolling(options = {}) {
 function getBootstrapListener() {
   const injector = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_angular_core__WEBPACK_IMPORTED_MODULE_0__.Injector);
   return bootstrappedComponentRef => {
-    var _injector$get2, _injector$get3;
     const ref = injector.get(_angular_core__WEBPACK_IMPORTED_MODULE_0__.ApplicationRef);
     if (bootstrappedComponentRef !== ref.components[0]) {
       return;
@@ -51545,8 +51482,8 @@ function getBootstrapListener() {
     if (injector.get(INITIAL_NAVIGATION) === 1 /* InitialNavigation.EnabledNonBlocking */) {
       router.initialNavigation();
     }
-    (_injector$get2 = injector.get(ROUTER_PRELOADER, null, _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectFlags.Optional)) === null || _injector$get2 === void 0 ? void 0 : _injector$get2.setUpPreloading();
-    (_injector$get3 = injector.get(ROUTER_SCROLLER, null, _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectFlags.Optional)) === null || _injector$get3 === void 0 ? void 0 : _injector$get3.init();
+    injector.get(ROUTER_PRELOADER, null, _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectFlags.Optional)?.setUpPreloading();
+    injector.get(ROUTER_SCROLLER, null, _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectFlags.Optional)?.init();
     router.resetRootComponentType(ref.componentTypes[0]);
     bootstrapDone.next();
     bootstrapDone.complete();
@@ -51729,12 +51666,11 @@ function withDebugTracing() {
       useFactory: () => {
         const router = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(Router);
         return () => router.events.subscribe(e => {
-          var _console$group, _console, _console$groupEnd, _console2;
           // tslint:disable:no-console
-          (_console$group = (_console = console).group) === null || _console$group === void 0 ? void 0 : _console$group.call(_console, `Router Event: ${e.constructor.name}`);
+          console.group?.(`Router Event: ${e.constructor.name}`);
           console.log(stringifyEvent(e));
           console.log(e);
-          (_console$groupEnd = (_console2 = console).groupEnd) === null || _console$groupEnd === void 0 ? void 0 : _console$groupEnd.call(_console2);
+          console.groupEnd?.();
           // tslint:enable:no-console
         });
       }
@@ -51901,7 +51837,7 @@ let RouterModule = /*#__PURE__*/(() => {
     static forRoot(routes, config) {
       return {
         ngModule: RouterModule,
-        providers: [ROUTER_PROVIDERS, NG_DEV_MODE ? config !== null && config !== void 0 && config.enableTracing ? withDebugTracing().ɵproviders : [] : [], {
+        providers: [ROUTER_PROVIDERS, NG_DEV_MODE ? config?.enableTracing ? withDebugTracing().ɵproviders : [] : [], {
           provide: ROUTES,
           multi: true,
           useValue: routes
@@ -51912,11 +51848,11 @@ let RouterModule = /*#__PURE__*/(() => {
         }, {
           provide: ROUTER_CONFIGURATION,
           useValue: config ? config : {}
-        }, config !== null && config !== void 0 && config.useHash ? provideHashLocationStrategy() : providePathLocationStrategy(), provideRouterScroller(), config !== null && config !== void 0 && config.preloadingStrategy ? withPreloading(config.preloadingStrategy).ɵproviders : [], {
+        }, config?.useHash ? provideHashLocationStrategy() : providePathLocationStrategy(), provideRouterScroller(), config?.preloadingStrategy ? withPreloading(config.preloadingStrategy).ɵproviders : [], {
           provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__.NgProbeToken,
           multi: true,
           useFactory: routerNgProbeToken
-        }, config !== null && config !== void 0 && config.initialNavigation ? provideInitialNavigation(config) : [], provideRouterInitializer()]
+        }, config?.initialNavigation ? provideInitialNavigation(config) : [], provideRouterInitializer()]
       };
     }
     /**
