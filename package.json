@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "update": "rm -r build; cp -r ../ng-sevens/dist/ng-sevens build",
+    "deploy": "git add .;git commit;git push origin"
   },
   "author": "",
   "license": "ISC",
