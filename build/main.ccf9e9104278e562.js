@@ -415,7 +415,7 @@ function HomeComponent_div_2_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"]("kitty: ", ctx_r1.kitty, "p");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("yourGo", ctx_r1.nextPlayer === ctx_r1.player || ctx_r1.nextPlayer === "start")("playable", ctx_r1.playable);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("isBot", ctx_r1.isBot)("yourGo", ctx_r1.nextPlayer === ctx_r1.player || ctx_r1.nextPlayer === "start")("playable", ctx_r1.playable);
   }
 }
 function HomeComponent_div_3_CardTable_2_Template(rf, ctx) {
@@ -529,12 +529,13 @@ class HomeComponent {
   constructor(webConnectorService) {
     this.webConnectorService = webConnectorService;
     this.player = "";
+    this.isBot = false;
     this.nextPlayer = "";
     this.log = "";
     this.log2 = "";
     this.kitty = 0;
     this.knocks = {};
-    this.players = ["...", "John", "Nancy", "Eric", "Allen", "Gavin"];
+    this.players = ["...", "John", "Nancy", "Eric", "Allen", "Gavin", "Bot1", "Bot2", "Bot3"];
     this.removeCard = false;
     this.game = {};
     this.restoreCard = false;
@@ -565,6 +566,7 @@ class HomeComponent {
   playerChanged(event) {
     this.player = event.target.value;
     this.webConnectorService.registerPlayer(this.player);
+    if (this.player.startsWith("Bot")) this.isBot = true;
   }
   sendNewGame() {
     this.webConnectorService.newGame();
@@ -690,6 +692,7 @@ class HomeComponent {
     this.webConnectorService.sendKnock(this.player);
   }
   resetGame() {
+    this.hand = [];
     this.game = {
       "hearts": [{
         value: 'A',
@@ -862,12 +865,12 @@ HomeComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["�
   selectors: [["Home"]],
   decls: 6,
   vars: 5,
-  consts: [[1, "App"], ["class", "app-register", 4, "ngIf"], ["class", "left-hand-side", 4, "ngIf"], ["class", "right-hand-side", 4, "ngIf"], ["class", "app-winner", 4, "ngIf"], ["class", "app-controls", 4, "ngIf"], [1, "app-register"], [1, "app-register-panel"], ["name", "players", "id", "players", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "text", "onChange", "updatePlayerText"], ["type", "button", "value", "Register new name", "onClick", "registerNewName"], [3, "value"], [1, "left-hand-side"], [1, "app-dashboard"], [1, "app-log"], [1, "hand"], [3, "yourGo", "playable", "playcard", "knock", "restoreCard"], [1, "right-hand-side"], [1, "gameboard"], [3, "playCard", "remove", 4, "ngIf"], [3, "playCard", "remove"], [1, "app-winner"], [4, "ngFor", "ngForOf"], [1, "app-controls"], [1, "gametime"], ["type", "button", "value", "New Game", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "value", "Kitty", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "onClick", "sendReset", "value", "Reset Session", 1, "control-buttons", "control-button"]],
+  consts: [[1, "App"], ["class", "app-register", 4, "ngIf"], ["class", "left-hand-side", 4, "ngIf"], ["class", "right-hand-side", 4, "ngIf"], ["class", "app-winner", 4, "ngIf"], ["class", "app-controls", 4, "ngIf"], [1, "app-register"], [1, "app-register-panel"], ["name", "players", "id", "players", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "text", "onChange", "updatePlayerText"], ["type", "button", "value", "Register new name", "onClick", "registerNewName"], [3, "value"], [1, "left-hand-side"], [1, "app-dashboard"], [1, "app-log"], [1, "hand"], [3, "isBot", "yourGo", "playable", "playcard", "knock", "restoreCard"], [1, "right-hand-side"], [1, "gameboard"], [3, "playCard", "remove", 4, "ngIf"], [3, "playCard", "remove"], [1, "app-winner"], [4, "ngFor", "ngForOf"], [1, "app-controls"], [1, "gametime"], ["type", "button", "value", "New Game", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "value", "Kitty", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "onClick", "sendReset", "value", "Reset Session", 1, "control-buttons", "control-button"]],
   template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0);
       _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, HomeComponent_div_1_Template, 13, 1, "div", 1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, HomeComponent_div_2_Template, 11, 5, "div", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, HomeComponent_div_2_Template, 11, 6, "div", 2);
       _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](3, HomeComponent_div_3_Template, 3, 1, "div", 3);
       _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](4, HomeComponent_div_4_Template, 10, 3, "div", 4);
       _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](5, HomeComponent_div_5_Template, 9, 1, "div", 5);
@@ -960,12 +963,19 @@ function MyHandComponent_div_3_Template(rf, ctx) {
 class MyHandComponent {
   constructor(webConnectionService) {
     this.webConnectionService = webConnectionService;
+    this.isBot = false;
     this.yourGo = false;
     this.playable = [];
     this.playcard = new _angular_core__WEBPACK_IMPORTED_MODULE_3__.EventEmitter();
     this.knock = new _angular_core__WEBPACK_IMPORTED_MODULE_3__.EventEmitter();
     this.hand = [];
     this.playableClass = "";
+    this.ranks = {
+      "H": [],
+      "C": [],
+      "D": [],
+      "S": []
+    };
     console.log("MyHand constructor");
     this.webConnectionService.messageSubscription('hand').subscribe(data => this.newHand(data));
   }
@@ -990,8 +1000,13 @@ class MyHandComponent {
       };
       return r;
     });
+    if (this.isBot) {
+      this.applyRankings();
+    }
+    this.botSelectCard();
   }
   ngOnChanges() {
+    console.log(`ngOnChanges called, isBot: ${this.isBot}, yourGo: ${this.yourGo}, hand.length: ${this.hand.length}, playable.length: ${this.playable.length}`);
     if (this.hand.length == 0) return;
     this.hand.forEach(xcard => {
       let playable = false;
@@ -1000,6 +1015,104 @@ class MyHandComponent {
       });
       if (index !== -1) xcard.playable = true;
     });
+    if (this.isBot && this.yourGo) this.botSelectCard();
+  }
+  applyRankings() {
+    // initialise rankings
+    let suits = ["H", "C", "D", "S"];
+    suits.forEach(suit => {
+      for (let i = 0; i < 13; i++) {
+        this.ranks[suit][i] = {
+          "blockingRank": 0,
+          "outerRank": 0
+        };
+      }
+    });
+    suits.forEach(suit => {
+      // get card indexes for suit
+      let indexes = [];
+      this.hand.forEach(card => {
+        let s = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getCardSuit(card.value);
+        if (s == suit) {
+          indexes.push(src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getIndexInSuit(card.value));
+        }
+      });
+      // apply outer ranking
+      let outerRank = 1;
+      let found = false;
+      for (let i = 0; i < 7; i++) {
+        if (indexes.indexOf(i) != -1) {
+          this.ranks[suit][i].outerRank = outerRank;
+          found = true;
+        } else {
+          if (found) break;
+          outerRank++;
+        }
+      }
+      outerRank = 1;
+      found = false;
+      for (let i = 12; i > 5; i--) {
+        if (indexes.indexOf(i) != -1) {
+          this.ranks[suit][i].outerRank = outerRank;
+          found = true;
+        } else {
+          if (found) break;
+          outerRank++;
+        }
+      }
+      // OK, now go for blocking rank (low = good, i.e. play first)
+      // get lower outerRank
+      let lowerOuterRank = 100;
+      let lowerStartIndex = 0;
+      for (let i = 6; i > -1; i--) {
+        if (this.ranks[suit][i].outerRank > 0) {
+          if (this.ranks[suit][i].outerRank < lowerOuterRank) {
+            lowerOuterRank = this.ranks[suit][i].outerRank;
+            lowerStartIndex = i;
+          }
+        }
+      }
+      if (lowerOuterRank == 100) lowerOuterRank = 0;
+      if (lowerOuterRank > 0) {
+        for (let i = 6; i > -1; i--) {
+          if (indexes.indexOf(i) != -1) {
+            if (i > lowerOuterRank && i > lowerStartIndex) {
+              this.ranks[suit][i].blockingRank = i + lowerOuterRank;
+            }
+          }
+        }
+      }
+      // get upper outerRank
+      let upperOuterRank = 100;
+      let upperStartIndex = 12;
+      for (let i = 6; i < 13; i++) {
+        if (this.ranks[suit][i].outerRank > 0) {
+          if (this.ranks[suit][i].outerRank < upperOuterRank) {
+            upperOuterRank = this.ranks[suit][i].outerRank;
+            upperStartIndex = i;
+          }
+        }
+      }
+      if (upperOuterRank == 100) upperOuterRank = 0;
+      if (upperOuterRank > 0) {
+        for (let i = 6; i < 12; i++) {
+          if (indexes.indexOf(i) != -1) {
+            if (i < upperStartIndex) {
+              if (this.ranks[suit][i].blockingRank > 0) {
+                // woooaaah... must be the seven already has a blocking score.
+                // try and work out which side is best
+                let upperBlockingRank = 12 - i + upperOuterRank;
+                if (upperBlockingRank < this.ranks[suit][i].blockingRank) {
+                  this.ranks[suit][i].blockingRank = upperBlockingRank;
+                }
+              } else {
+                this.ranks[suit][i].blockingRank = 12 - i + upperOuterRank;
+              }
+            }
+          }
+        }
+      }
+    });
   }
   toggleSelected(i) {
     this.hand[i].selected = !this.hand[i].selected;
@@ -1007,6 +1120,74 @@ class MyHandComponent {
       this.hand.forEach((card, index) => {
         if (index != i) card.selected = false;
       });
+    }
+  }
+  botSelectCard() {
+    let myPlayable = this.playable.filter(card => {
+      let index = this.hand.findIndex(mycard => {
+        return mycard.value == card;
+      });
+      return index != -1;
+    });
+    if (myPlayable.length > 0) {
+      // find any blocking cards from the playable list
+      let myPlayableBlockingRank = [];
+      myPlayable.forEach(card => {
+        let suit = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getCardSuit(card);
+        let index = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getIndexInSuit(card);
+        if (this.ranks[suit][index].blockingRank > 0) {
+          myPlayableBlockingRank.push({
+            value: card,
+            blockingRank: this.ranks[suit][index].blockingRank
+          });
+        }
+      });
+      myPlayableBlockingRank.sort((a, b) => {
+        return a.blockingRank - b.blockingRank;
+      });
+      console.log(`Playable blocking ranks: ${JSON.stringify(myPlayableBlockingRank)}`);
+      // find playable outer cards
+      let myPlayableOuterRank = [];
+      myPlayable.forEach(card => {
+        let suit = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getCardSuit(card);
+        let index = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getIndexInSuit(card);
+        if (this.ranks[suit][index].outerRank > 0) myPlayableOuterRank.push({
+          value: card,
+          outerRank: this.ranks[suit][index].outerRank
+        });
+      });
+      myPlayableOuterRank.sort((a, b) => {
+        return b.outerRank - a.outerRank;
+      });
+      console.log(`Playable blocking ranks: ${JSON.stringify(myPlayableOuterRank)}`);
+      myPlayable = [];
+      let blockingRank = 100;
+      let outerRank = 0;
+      myPlayableBlockingRank.forEach(card => {
+        if (card.blockingRank <= blockingRank) {
+          myPlayable.push(card.value);
+          blockingRank = card.blockingRank;
+        }
+      });
+      if (myPlayable.length == 0) {
+        myPlayableOuterRank.forEach(card => {
+          if (card.outerRank >= outerRank) {
+            myPlayable.push(card.value);
+            outerRank = card.outerRank;
+          }
+        });
+      }
+      console.log(`Revised playable: ${JSON.stringify(myPlayable)}`);
+      let selected = myPlayable[Math.floor(Math.random() * myPlayable.length)];
+      let selectedIndex = this.hand.findIndex(card => {
+        return card.value == selected;
+      });
+      this.hand[selectedIndex].selected = true;
+      setTimeout(() => this.playCard(), 2000);
+    } else {
+      if (this.playable.length > 0 && this.playable[0] != "7D") {
+        setTimeout(() => this.knocking(), 2000);
+      }
     }
   }
   playCard() {
@@ -1052,6 +1233,7 @@ MyHandComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__[
   type: MyHandComponent,
   selectors: [["MyHand"]],
   inputs: {
+    isBot: "isBot",
     yourGo: "yourGo",
     playable: "playable"
   },
@@ -1370,7 +1552,7 @@ function getCardValue(card) {
   return card.length === 2 ? card.substring(0, 1) : card.substring(0, 2);
 }
 function getCardSuit(card) {
-  return card.length === 2 ? card.substring(1, 1) : card.substring(2, 1);
+  return card.length === 2 ? card.substring(1, 2) : card.substring(2, 3);
 }
 function getSuitAsNumber(card) {
   let suit = card.length === 2 ? card.substring(1, 2) : card.substring(2, 3);
