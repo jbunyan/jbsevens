@@ -916,11 +916,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function MyHandComponent_div_2_Template(rf, ctx) {
+function MyHandComponent_div_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 4)(1, "Card", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function MyHandComponent_div_2_Template_Card_click_1_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 3)(1, "Card", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function MyHandComponent_div_1_Template_Card_click_1_listener() {
       const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r5);
       const i_r3 = restoredCtx.index;
       const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
@@ -934,19 +934,19 @@ function MyHandComponent_div_2_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("playable", card_r2.playable)("value", card_r2.value)("selected", card_r2.selected);
   }
 }
-function MyHandComponent_div_3_Template(rf, ctx) {
+function MyHandComponent_div_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 6)(1, "div", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function MyHandComponent_div_3_Template_div_click_1_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 5)(1, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function MyHandComponent_div_2_Template_div_click_1_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r7);
       const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
       return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r6.playCard());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "Play Card");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function MyHandComponent_div_3_Template_div_click_3_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function MyHandComponent_div_2_Template_div_click_3_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r7);
       const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
       return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r8.knocking());
@@ -1242,25 +1242,25 @@ MyHandComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__[
     knock: "knock"
   },
   features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
-  decls: 4,
+  decls: 3,
   vars: 2,
-  consts: [[1, "myhand-panel"], [1, "myhand-container"], ["class", "myhand-card", 4, "ngFor", "ngForOf"], ["class", "buttons", 4, "ngIf"], [1, "myhand-card"], [3, "playable", "value", "selected", "click"], [1, "buttons"], [1, "play-button", "hand-buttons", 3, "click"], [1, "knock-button", "hand-buttons", 3, "ngClass", "click"]],
+  consts: [[1, "myhand-panel"], ["class", "myhand-card", 4, "ngFor", "ngForOf"], ["class", "buttons", 4, "ngIf"], [1, "myhand-card"], [3, "playable", "value", "selected", "click"], [1, "buttons"], [1, "play-button", "hand-buttons", 3, "click"], [1, "knock-button", "hand-buttons", 3, "ngClass", "click"]],
   template: function MyHandComponent_Template(rf, ctx) {
     if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, MyHandComponent_div_2_Template, 2, 3, "div", 2);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](3, MyHandComponent_div_3_Template, 5, 1, "div", 3);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](1, MyHandComponent_div_1_Template, 2, 3, "div", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, MyHandComponent_div_2_Template, 5, 1, "div", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     }
     if (rf & 2) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx.hand);
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.yourGo);
     }
   },
   dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_4__.NgIf, src_components_card_card_component__WEBPACK_IMPORTED_MODULE_2__.CardComponent],
-  styles: [".myhand-panel[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  background-color: #c0c0c0;\n  padding: 0.5vw;\n  border-radius: 0.5vw;\n}\n\n.myhand-non-playable-knock[_ngcontent-%COMP%] {\n\n}\n\n.myhand-playable-knock[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-10vw);} \n  60% {transform: translateY(-5vw);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}\n\n.myhand-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.play-button[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.buttons[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  justify-content: space-around;\n}\n\n.knock-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.hand-buttons[_ngcontent-%COMP%] {\n  border: none;\n  border-radius: 0.5vw;\n  display: inline;\n  color: white;\n  padding: 1vw 2vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1rem;\n}\n\n.myhand-play-buttons[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  margin-right: 0.5vw;\n}\n\n.myhand-card[_ngcontent-%COMP%] {\n  position: absolute;\n}\n\n.myhand-card[_ngcontent-%COMP%]:nth-child(1) {\n  left: 1vw;\n  top: 15vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(2) {\n  left: 4.2vw;\n  top: 15vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(3) {\n  left: 7.4vw;\n  top: 15vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(4) {\n  top: 15vh;\n  left: 10.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(5) {\n  left: 13.8vw;\n  top: 15vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(6) {\n  left: 17vw;\n  top: 15vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(7) {\n  left: 20.2vw;\n  top: 15vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(8) {\n  left: 1vw;\n  top: 48vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(9) {\n  left: 4.2vw;\n  top: 48vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(10) {\n  left: 7.4vw;\n  top: 48vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(11) {\n  left: 10.6vw;\n  top: 48vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(12) {\n  left: 13.8vw;\n  top: 48vh;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(13) {\n  left: 17vw;\n  top: 48vh;\n}"]
+  styles: [".myhand-panel[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  background-color: #c0c0c0;\n  padding: 0.5vw;\n  border-radius: 0.5vw;\n}\n\n.myhand-non-playable-knock[_ngcontent-%COMP%] {\n\n}\n\n.myhand-playable-knock[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-10vw);} \n  60% {transform: translateY(-5vw);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}\n\n.myhand-container[_ngcontent-%COMP%] {\n  position: relative;\n  top: 0;\n  left: 0;\n}\n\n.play-button[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.buttons[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  justify-content: space-around;\n}\n\n.knock-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.hand-buttons[_ngcontent-%COMP%] {\n  border: none;\n  border-radius: 0.5vw;\n  display: inline;\n  color: white;\n  padding: 1vw 2vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1rem;\n}\n\n.myhand-play-buttons[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  margin-right: 0.5vw;\n}\n\n.myhand-card[_ngcontent-%COMP%] {\n  position: absolute;\n}\n\n.myhand-card[_ngcontent-%COMP%]:nth-child(1) {\n  left: 1vw;\n  top: 20%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(2) {\n  left: 4.2vw;\n  top: 20%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(3) {\n  left: 7.4vw;\n  top: 20%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(4) {\n  top: 20%;\n  left: 10.6vw;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(5) {\n  left: 13.8vw;\n  top: 20%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(6) {\n  left: 17vw;\n  top: 20%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(7) {\n  left: 20.2vw;\n  top: 20%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(8) {\n  left: 1vw;\n  top: 60%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(9) {\n  left: 4.2vw;\n  top: 60%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(10) {\n  left: 7.4vw;\n  top: 60%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(11) {\n  left: 10.6vw;\n  top: 60%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(12) {\n  left: 13.8vw;\n  top: 60%;\n}\n.myhand-card[_ngcontent-%COMP%]:nth-child(13) {\n  left: 17vw;\n  top: 60%;\n}"]
 });
 
 /***/ }),
