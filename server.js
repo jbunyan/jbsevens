@@ -22,8 +22,6 @@ let sequenceNumber = 0;
 const PORT = process.env.PORT || 3001;
 const INDEX = '/index.html';
 
-// Sevens Game Server
-
 const server = express()
   .use(express.static('build'))
   .get('/api/poll', function(req, res){
