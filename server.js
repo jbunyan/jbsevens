@@ -27,7 +27,7 @@ const server = express()
   .get('/api/poll', function(req, res){
     res.send(`Hello World at ${Date.now()}`);
   })
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+  .listen(PORT, () => console.log(`Listening on port: ${PORT}`));
 
 const wss = new WebSocket.Server({ server });
 
