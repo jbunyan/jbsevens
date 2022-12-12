@@ -39,7 +39,7 @@ function storeConnection(c) {
   })
 
   if (index === -1) {
-    console.log("storing connection")
+    console.log("storing client connection")
     connections.push(c)
   }
 }
