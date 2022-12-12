@@ -1221,6 +1221,9 @@ class MyHandComponent {
     });
     if (playableCards) {
       this.playableClass = "myhand-playable-knock bounce";
+      setTimeout(() => {
+        this.playableClass = "myhand-non-playable-knock";
+      }, 2000);
     } else {
       this.playableClass = "myhand-non-playable-knock";
       this.knock.emit();
