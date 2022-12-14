@@ -610,7 +610,7 @@ class HomeComponent {
     this.register();
   }
   display(winnings) {
-    return winnings.winnings;
+    return `won: ${winnings.won} winnings: ${winnings.winnings} spent: ${winnings.spent} knocks: ${winnings.knocks}`;
   }
   register() {
     this.webConnectorService.registerPlayer(this.player);
