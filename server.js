@@ -135,15 +135,15 @@ function register(p) {
 }
 
 function processWinner(player) {
-  winnings[player][winnings] = winnings[player][winnings] + kitty
-  winnings[player][wins]++
+  winnings[player].winnings = winnings[player].winnings + kitty
+  winnings[player].wins++
 }
 
 function updateKitty(player) {
   kitty++
   let index = players.findIndex(p => p === player)
   knocks[index]++
-  winnings[player][spent]++
+  winnings[player].spent++
 }
 
 function newGame() {
@@ -170,7 +170,7 @@ function newGame() {
   knocks = [0,0,0,0]
 
   players.forEach( (p) => {
-    winnings[p][spent] = winnings[p][spent] + 2
+    winnings[p].spent = winnings[p].spent + 2
   })
 
   console.log(JSON.stringify(hands))
