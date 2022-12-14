@@ -16,6 +16,7 @@ let players = [];
 
 let kitty = 0;
 let knocks = [];
+let winnings = {};
 
 let sequenceNumber = 0;
 
@@ -58,6 +59,9 @@ wss.on('connection', (ws) => {
         reset();
         break;
       case 'card':
+        if ( m.left == 0 ) {
+          processWinner(m.player)
+        }
         sendCard(m.card,m.left,m.player);
         break;
       case 'retractCard':
@@ -117,6 +121,7 @@ function register(p) {
   players.push(p);
   let messagePart = players.length < 4 ? ` - ${players.length} waiting` : ` 4 players registered! - wait for new game`
 
+  winnings[p]={"won":0, "winnings": 0, "spent": 0, "net": 0 }
   broadcast(
     {
       "sequenceNumber": getSequenceNumber(),type: 'message',
@@ -129,10 +134,16 @@ function register(p) {
   // }
 }
 
+processWinner(player) {
+  winnings[player][winnings] = winnings[player][winnings] + kitty
+  winnings[player][wins]++
+}
+
 function updateKitty(player) {
   kitty++
   let index = players.findIndex(p => p === player)
   knocks[index]++
+  winnings[player][spent]++
 }
 
 function newGame() {
@@ -157,6 +168,10 @@ function newGame() {
 
   kitty = players.length * 2
   knocks = [0,0,0,0]
+
+  players.forEach( (p) => {
+    winnings[p][spent] = winnings[p][spent] + 2
+  })
 
   console.log(JSON.stringify(hands))
 
@@ -236,7 +251,8 @@ function sendKitty() {
       knocks: {
         "players": players,
         "knocks": knocks
-      }
+      },
+      winnings: winnings
     }
   )
 }
