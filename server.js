@@ -59,7 +59,7 @@ wss.on('connection', (ws) => {
         reset();
         break;
       case 'card':
-        if ( m.left == 0 ) {
+        if ( m.card.remaining == 0 ) {
           processWinner(m.player)
         }
         sendCard(m.card,m.left,m.player);
