@@ -134,7 +134,7 @@ function register(p) {
   // }
 }
 
-processWinner(player) {
+function processWinner(player) {
   winnings[player][winnings] = winnings[player][winnings] + kitty
   winnings[player][wins]++
 }
