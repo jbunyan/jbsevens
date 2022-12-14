@@ -137,6 +137,7 @@ function register(p) {
 function processWinner(player) {
   winnings[player].winnings = winnings[player].winnings + kitty
   winnings[player].wins++
+  console.log(`Processing winnner, player: ${player}, winnings: ${JSON.stringify(winnings[player])}`)
 }
 
 function updateKitty(player) {
