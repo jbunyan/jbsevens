@@ -514,10 +514,11 @@ function HomeComponent_div_7_div_1_Template(rf, ctx) {
   }
   if (rf & 2) {
     const item_r26 = ctx.$implicit;
+    const ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](item_r26.key);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](item_r26.value);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx_r25.display(item_r26.value));
   }
 }
 function HomeComponent_div_7_Template(rf, ctx) {
@@ -607,6 +608,9 @@ class HomeComponent {
   playerChanged(event) {
     this.player = event.target.value;
     this.register();
+  }
+  display(winnings) {
+    return winnings.winnings;
   }
   register() {
     this.webConnectorService.registerPlayer(this.player);
