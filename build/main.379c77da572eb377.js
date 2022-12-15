@@ -505,10 +505,10 @@ function HomeComponent_div_6_Template(rf, ctx) {
 }
 function HomeComponent_div_7_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div")(1, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 25)(1, "div", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
   }
@@ -524,7 +524,7 @@ function HomeComponent_div_7_div_1_Template(rf, ctx) {
 function HomeComponent_div_7_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, HomeComponent_div_7_div_1_Template, 5, 2, "div", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, HomeComponent_div_7_div_1_Template, 5, 2, "div", 24);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipe"](2, "keyvalue");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
@@ -537,17 +537,17 @@ function HomeComponent_div_7_Template(rf, ctx) {
 function HomeComponent_div_8_Template(rf, ctx) {
   if (rf & 1) {
     const _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 24)(1, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 28)(1, "div", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div")(4, "input", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div")(4, "input", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function HomeComponent_div_8_Template_input_click_4_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r28);
       const ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
       return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r27.sendNewGame());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](5, "div")(6, "input", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](5, "div")(6, "input", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function HomeComponent_div_8_Template_input_click_6_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r28);
       const ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
@@ -555,7 +555,7 @@ function HomeComponent_div_8_Template(rf, ctx) {
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](7, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](8, "input", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](8, "input", 32);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -610,7 +610,7 @@ class HomeComponent {
     this.register();
   }
   display(winnings) {
-    return `won: ${winnings.won} winnings: ${winnings.winnings} spent: ${winnings.spent} knocks: ${winnings.knocks}`;
+    return `won: ${winnings.won} winnings: ${winnings.winnings} spent: ${winnings.spent} net: ${winnings.winnings - winnings.spent} knocks: ${winnings.knocks}`;
   }
   register() {
     this.webConnectorService.registerPlayer(this.player);
@@ -919,7 +919,7 @@ HomeComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["�
   selectors: [["Home"]],
   decls: 9,
   vars: 7,
-  consts: [[1, "App"], ["class", "app-register", 4, "ngIf"], ["class", "app-dashboard", 4, "ngIf"], ["class", "hand", 4, "ngIf"], [1, "gameboard"], [3, "playCard", "remove", 4, "ngIf"], ["class", "app-winner", 4, "ngIf"], ["class", "winnings", 4, "ngIf"], ["class", "app-controls", 4, "ngIf"], [1, "app-register"], [1, "app-register-panel"], ["name", "players", "id", "players", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "text", 3, "change"], ["type", "button", "value", "Register new name", 3, "click"], [3, "value"], [1, "app-dashboard"], [1, "app-log"], [1, "hand"], [3, "isBot", "yourGo", "playable", "playcard", "knock", "restoreCard"], [3, "playCard", "remove"], [1, "app-winner"], [4, "ngFor", "ngForOf"], [1, "winnings"], [1, "app-controls"], [1, "gametime"], ["type", "button", "value", "New Game", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "value", "Kitty", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "onClick", "sendReset", "value", "Reset Session", 1, "control-buttons", "control-button"]],
+  consts: [[1, "App"], ["class", "app-register", 4, "ngIf"], ["class", "app-dashboard", 4, "ngIf"], ["class", "hand", 4, "ngIf"], [1, "gameboard"], [3, "playCard", "remove", 4, "ngIf"], ["class", "app-winner", 4, "ngIf"], ["class", "winnings", 4, "ngIf"], ["class", "app-controls", 4, "ngIf"], [1, "app-register"], [1, "app-register-panel"], ["name", "players", "id", "players", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "text", 3, "change"], ["type", "button", "value", "Register new name", 3, "click"], [3, "value"], [1, "app-dashboard"], [1, "app-log"], [1, "hand"], [3, "isBot", "yourGo", "playable", "playcard", "knock", "restoreCard"], [3, "playCard", "remove"], [1, "app-winner"], [4, "ngFor", "ngForOf"], [1, "winnings"], ["class", "winningsRow", 4, "ngFor", "ngForOf"], [1, "winningsRow"], [1, "score-player"], [1, "score-score"], [1, "app-controls"], [1, "gametime"], ["type", "button", "value", "New Game", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "value", "Kitty", 1, "control-buttons", "control-button", 3, "click"], ["type", "button", "onClick", "sendReset", "value", "Reset Session", 1, "control-buttons", "control-button"]],
   template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0);
@@ -952,7 +952,7 @@ HomeComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["�
     }
   },
   dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, src_components_card_table_card_table_card_table_component__WEBPACK_IMPORTED_MODULE_2__.CardTableComponent, src_components_myhand_my_hand_my_hand_component__WEBPACK_IMPORTED_MODULE_3__.MyHandComponent, _angular_common__WEBPACK_IMPORTED_MODULE_5__.KeyValuePipe],
-  styles: [".App[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  background-color: darkgreen;\n  box-sizing: border-box;\n  padding: 2vw;\n  top: 0px;\n  bottom: 0px;\n  width: 100%;\n}\n\n.gameboard[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0px;\n  bottom: 0px;\n  left: 42%;\n  padding: 0.5vw;\n  box-sizing: border-box;\n  width: 50%;\n}\n\n.app-dashboard[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 2%;\n  width: 40%;\n  box-sizing: border-box;\n  padding: 5px 5px 5px 5px;\n  height: 12%;\n  margin-top: 2%;\n  margin-bottom: 1%;\n  background-color: #c0c0c0;\n  border-radius: 5px;\n}\n\n.hand[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 17%;\n  left: 2%;\n  width: 40%;\n  box-sizing: border-box;\n  height: 80%;\n}\n\n.app-controls[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  top: 1vw;\n  right: 1vw;\n  background-color: lightgrey;\n  border-radius: 0.2vw;\n}\n\n.gametime[_ngcontent-%COMP%] {\n  padding: 0.2vw;\n}\n\n.control-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.control-buttons[_ngcontent-%COMP%] {\n  margin: 0.2vw;\n  border: none;\n  border-radius: 0.2vw;\n  color: white;\n  padding: 0.2vw 0.3vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 0.6rem;\n}\n\n.winnings[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n}\n\n.app-register[_ngcontent-%COMP%] {\n\n  color: white;\n  font-size: 2.5rem;\n  width: 100%;\n  height: 100vh;\n  background-color: darkgreen; \n  background-image: url(\"/assets/all-seven-cards.png\");\n  background-position: right bottom; \n  background-repeat: no-repeat; \n  padding-top: 5vw;\n  padding-left: 5vw;\n}\n\n.app-register-panel[_ngcontent-%COMP%] {\n  width: 33vw;\n  background-color: white;\n  font-size: 1.5rem;\n  color: black;\n  border-style: solid;\n  border-color: red;\n  border-width: 5px;\n  border-radius: 10px;\n  padding: 10px 10px 10px 10px\n}\n\n.app-register-panel[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  padding-right: 5px;\n}\n\n.app-register[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  padding-top:7px;\n}\n\n.app-setplayers[_ngcontent-%COMP%] {\n  width: 570px;\n  background-color: #c0c0c0;\n  padding: 5px 5px 5px 15px;\n  display: flex;\n  align-items: flex-start;\n  border-radius: 5px;\n  margin-bottom: 10px;\n}\n\n.app-playerselecter[_ngcontent-%COMP%] {\n  padding-left: 10px;\n  display: flex;\n  width: 90%;\n  justify-content: space-between;\n}\n\n.app-log[_ngcontent-%COMP%] {\n}\n\n.app-winner[_ngcontent-%COMP%] {\n  position: absolute;\n  z-index: 200;\n  padding: 10px 20px 10px 20px;\n  top: 150px;\n  left: 350px;\n  height: 170px;\n  background-color: white;\n  color: black;\n  border-style: solid;\n  border-width: 3px;\n  border-color: red;\n  border-radius: 10px;\n}\n\n.app-winner[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 3px 10px 3px 0px;\n}"]
+  styles: [".App[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  background-color: darkgreen;\n  box-sizing: border-box;\n  padding: 2vw;\n  top: 0px;\n  bottom: 0px;\n  width: 100%;\n}\n\n.gameboard[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0px;\n  bottom: 0px;\n  left: 42%;\n  padding: 0.5vw;\n  box-sizing: border-box;\n  width: 50%;\n}\n\n.app-dashboard[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 2%;\n  width: 40%;\n  box-sizing: border-box;\n  padding: 5px 5px 5px 5px;\n  height: 12%;\n  margin-top: 2%;\n  margin-bottom: 1%;\n  background-color: #c0c0c0;\n  border-radius: 5px;\n}\n\n.hand[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 17%;\n  left: 2%;\n  width: 40%;\n  box-sizing: border-box;\n  height: 80%;\n}\n\n.app-controls[_ngcontent-%COMP%] {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  top: 1vw;\n  right: 1vw;\n  background-color: lightgrey;\n  border-radius: 0.2vw;\n}\n\n.gametime[_ngcontent-%COMP%] {\n  padding: 0.2vw;\n}\n\n.control-button[_ngcontent-%COMP%] {\n  background-color: red;\n}\n\n.control-buttons[_ngcontent-%COMP%] {\n  margin: 0.2vw;\n  border: none;\n  border-radius: 0.2vw;\n  color: white;\n  padding: 0.2vw 0.3vw;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 0.6rem;\n}\n\n.winnings[_ngcontent-%COMP%] {\n  z-index: 200;\n  position: absolute;\n  background-color: lightgrey;\n  border-radius: 0.2vw;\n  bottom: 2vw;\n  right: 2vw;\n}\n\n.winningsRow[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n}\n\n.score-player[_ngcontent-%COMP%] {\n  color: red;\n  padding-left: 1vw;\n  padding-right: 1vw;\n}\n\n.score-score[_ngcontent-%COMP%] {\n  padding-right: 1vw;\n}\n\n.app-register[_ngcontent-%COMP%] {\n\n  color: white;\n  font-size: 2.5rem;\n  width: 100%;\n  height: 100vh;\n  background-color: darkgreen; \n  background-image: url(\"/assets/all-seven-cards.png\");\n  background-position: right bottom; \n  background-repeat: no-repeat; \n  padding-top: 5vw;\n  padding-left: 5vw;\n}\n\n.app-register-panel[_ngcontent-%COMP%] {\n  width: 33vw;\n  background-color: white;\n  font-size: 1.5rem;\n  color: black;\n  border-style: solid;\n  border-color: red;\n  border-width: 5px;\n  border-radius: 10px;\n  padding: 10px 10px 10px 10px\n}\n\n.app-register-panel[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  padding-right: 5px;\n}\n\n.app-register[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  padding-top:7px;\n}\n\n.app-setplayers[_ngcontent-%COMP%] {\n  width: 570px;\n  background-color: #c0c0c0;\n  padding: 5px 5px 5px 15px;\n  display: flex;\n  align-items: flex-start;\n  border-radius: 5px;\n  margin-bottom: 10px;\n}\n\n.app-playerselecter[_ngcontent-%COMP%] {\n  padding-left: 10px;\n  display: flex;\n  width: 90%;\n  justify-content: space-between;\n}\n\n.app-log[_ngcontent-%COMP%] {\n}\n\n.app-winner[_ngcontent-%COMP%] {\n  position: absolute;\n  z-index: 200;\n  padding: 10px 20px 10px 20px;\n  top: 150px;\n  left: 350px;\n  height: 170px;\n  background-color: white;\n  color: black;\n  border-style: solid;\n  border-width: 3px;\n  border-color: red;\n  border-radius: 10px;\n}\n\n.app-winner[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 3px 10px 3px 0px;\n}"]
 });
 
 /***/ }),
