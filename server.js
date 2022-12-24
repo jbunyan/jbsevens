@@ -231,6 +231,10 @@ function sendCard(card,cardsLeft,player) {
       card: card
     }
   )
+
+  if ( cardsLeft == 0 ) [
+    sendKitty()
+  ]
 }
 
 function sendRetractCard(card,player) {
