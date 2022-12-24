@@ -121,7 +121,7 @@ function register(p) {
   players.push(p);
   let messagePart = players.length < 4 ? ` - ${players.length} waiting` : ` 4 players registered! - wait for new game`
 
-  winnings[p]={"won":0, "winnings": 0, "spent": 0, "knocks": 0 }
+  winnings[p]={"won":0, "winnings": 0, "spent": 0, "knocks": 0, "knocksThisGame": 0 }
   broadcast(
     {
       "sequenceNumber": getSequenceNumber(),type: 'message',
@@ -142,8 +142,7 @@ function processWinner(player) {
 
 function updateKitty(player) {
   kitty++
-  let index = players.findIndex(p => p === player)
-  knocks[index]++
+  winnings[player].knocksThisGame++
   winnings[player].knocks++
   winnings[player].spent++
 }
@@ -169,9 +168,9 @@ function newGame() {
   }
 
   kitty = players.length * 2
-  knocks = [0,0,0,0]
 
   players.forEach( (p) => {
+    winnings[p].knocksThisGame = 0
     winnings[p].spent = winnings[p].spent + 2
   })
 
@@ -254,10 +253,6 @@ function sendKitty() {
       "sequenceNumber": getSequenceNumber(),
       type: 'kitty',
       kitty: kitty,
-      knocks: {
-        "players": players,
-        "knocks": knocks
-      },
       winnings: winnings
     }
   )
