@@ -221,6 +221,8 @@ function getNextPlayer(p) {
 function sendCard(card,cardsLeft,player) {
   let nextplayer = getNextPlayer(player)
 
+  console.log(`Card: ${JSON.stringify(card)}, cardsLeft: ${cardsLeft}, player: ${player}`)
+
   if ( cardsLeft == 0 ) [
     sendKitty()
   ]
