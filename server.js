@@ -220,6 +220,11 @@ function getNextPlayer(p) {
 
 function sendCard(card,cardsLeft,player) {
   let nextplayer = getNextPlayer(player)
+
+  if ( cardsLeft == 0 ) [
+    sendKitty()
+  ]
+
   broadcast(
     {
       "sequenceNumber": getSequenceNumber(),
@@ -231,9 +236,6 @@ function sendCard(card,cardsLeft,player) {
     }
   )
 
-  if ( cardsLeft == 0 ) [
-    sendKitty()
-  ]
 }
 
 function sendRetractCard(card,player) {
