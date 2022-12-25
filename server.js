@@ -223,9 +223,9 @@ function sendCard(card,cardsLeft,player) {
 
   console.log(`Card: ${JSON.stringify(card)}, cardsLeft: ${cardsLeft}, player: ${player}`)
 
-  if ( cardsLeft == 0 ) [
+  if ( card.remaining == 0 ) {
     sendKitty()
-  ]
+  }
 
   broadcast(
     {
