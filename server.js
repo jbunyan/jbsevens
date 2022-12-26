@@ -62,7 +62,7 @@ wss.on('connection', (ws) => {
         if ( m.card.remaining == 0 ) {
           processWinner(m.player)
         }
-        sendCard(m.card,m.left,m.player);
+        sendCard(m.card,m.player);
         break;
       case 'retractCard':
         sendRetractCard(m.card,m.player);
@@ -218,10 +218,10 @@ function getNextPlayer(p) {
   return players[index]
 }
 
-function sendCard(card,cardsLeft,player) {
+function sendCard(card,player) {
   let nextplayer = getNextPlayer(player)
 
-  console.log(`Card: ${JSON.stringify(card)}, cardsLeft: ${cardsLeft}, player: ${player}`)
+  console.log(`Card: ${JSON.stringify(card)}, player: ${player}`)
 
   if ( card.remaining == 0 ) {
     sendKitty()
@@ -233,7 +233,6 @@ function sendCard(card,cardsLeft,player) {
       type: 'card',
       player: player,
       nextplayer: nextplayer,
-      left: cardsLeft,
       card: card
     }
   )

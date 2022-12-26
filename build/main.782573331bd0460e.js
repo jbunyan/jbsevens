@@ -1555,7 +1555,6 @@ class WebConnectorService {
     this.connection.next({
       type: 'card',
       player: player,
-      left: card.remaining,
       card: card.card
     });
   }
