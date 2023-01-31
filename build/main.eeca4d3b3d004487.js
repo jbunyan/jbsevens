@@ -238,17 +238,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/utils/card-utils */ 1945);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 4650);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6895);
 
 
-
-function CardComponent_div_1_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "*");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-  }
-}
 class CardComponent {
   constructor() {
     this.selected = false;
@@ -279,7 +270,8 @@ class CardComponent {
     this.cardClassHidden = this.hidden ? " card-hidden" : "";
     this.cardSelected = this.selected && this.playable ? "card-selected" : "";
     this.notPlayable = this.selected && !this.playable ? " card-selected-not-playable bounce" : "";
-    this.cardClasses = "card-card " + this.cardSelected + this.cardClassHidden + this.notPlayable;
+    let showmeClass = this.showme && !this.playable ? " card-not-playable-grey" : "";
+    this.cardClasses = "card-card " + this.cardSelected + this.cardClassHidden + this.notPlayable + showmeClass;
     this.valueClasses = "card-value " + this.colourClass;
     this.suitSymbol = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getSuitSymbol(this.value);
     this.cardValue = src_utils_card_utils__WEBPACK_IMPORTED_MODULE_0__.getCardValue(this.value);
@@ -301,24 +293,19 @@ CardComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["�
     showme: "showme"
   },
   features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]],
-  decls: 6,
-  vars: 9,
-  consts: [["class", "showme", 4, "ngIf"], [1, "showme"]],
+  decls: 5,
+  vars: 8,
   template: function CardComponent_Template(rf, ctx) {
     if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, CardComponent_div_1_Template, 2, 0, "div", 0);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div");
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div")(1, "div");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div");
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
     }
     if (rf & 2) {
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.cardClasses);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.showme && ctx.playable);
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMap"](ctx.valueClasses);
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
@@ -329,7 +316,6 @@ CardComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["�
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.suitSymbol, " ");
     }
   },
-  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf],
   styles: [".card-card[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  width: 15vh;\n  height: 100%;\n  background-color: white;\n  border-radius: 0.6vw;\n  border: solid 0.1vw black;\n  padding: 0.2vw;\n  display: flex;\n  align-items: flex-start;\n  flex-direction: column;\n  transition: top 0.5s;\n}\n\n.showme[_ngcontent-%COMP%] {\n  position: absolute;\n  top: -2.0vw;\n  left: 0.4vw;\n}\n\n.card-symbol[_ngcontent-%COMP%] {\n  font-size: 2.2rem;\n}\n\n.card-selected[_ngcontent-%COMP%] {\n  top: -2vw;\n}\n\n.card-hidden[_ngcontent-%COMP%] {\n  display: none;\n  pointer-events: none;\n}\n\n.card-not-playable[_ngcontent-%COMP%] {\n  opacity: 0.6;\n}\n\n.card-not-playable-grey[_ngcontent-%COMP%] {\n  background-color: #e0e0e0 !important;\n}\n\n.card-selected-not-playable[_ngcontent-%COMP%] {\n  animation-duration: 1s; \n  animation-fill-mode: both; \n}\n\n.card-value[_ngcontent-%COMP%] {\n  font-size: 1.2rem;\n}\n\n.card-red[_ngcontent-%COMP%] {\n  color: red;\n}\n\n.card-black[_ngcontent-%COMP%] {\n  color: black;\n}\n\n@keyframes _ngcontent-%COMP%_bounce { \n  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} \n  40% {transform: translateY(-2vw);} \n  60% {transform: translateY(-1vw);} \n}\n\n.bounce[_ngcontent-%COMP%] { \n  animation-name: _ngcontent-%COMP%_bounce; \n}"]
 });
 
