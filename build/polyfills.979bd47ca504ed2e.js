@@ -688,7 +688,7 @@ function patchPrototype(prototype, fnNames) {
         continue;
       }
       prototype[name] = (delegate => {
-        const patched = function patched() {
+        const patched = function () {
           return delegate.apply(this, bindArguments(arguments, source + '.' + name));
         };
         attachOriginToPatched(patched, delegate);
@@ -716,7 +716,7 @@ const isBrowser = !isNode && !isWebWorker && !!(isWindowExists && internalWindow
 // this code.
 const isMix = typeof _global.process !== 'undefined' && {}.toString.call(_global.process) === '[object process]' && !isWebWorker && !!(isWindowExists && internalWindow['HTMLElement']);
 const zoneSymbolEventNames$1 = {};
-const wrapFn = function wrapFn(event) {
+const wrapFn = function (event) {
   // https://github.com/angular/zone.js/issues/911, in IE, sometimes
   // event will be undefined, so we need to use window.event
   event = event || _global.event;
@@ -1088,7 +1088,7 @@ Zone.__load_patch('ZoneAwarePromise', (global, Zone, api) => {
     };
   }
 
-  const once = function once() {
+  const once = function () {
     let wasCalled = false;
     return function wrapper(wrappedFunction) {
       return function () {
@@ -1240,7 +1240,7 @@ Zone.__load_patch('ZoneAwarePromise', (global, Zone, api) => {
     }, chainPromise);
   }
   const ZONE_AWARE_PROMISE_TO_STRING = 'function ZoneAwarePromise() { [native code] }';
-  const noop = function noop() {};
+  const noop = function () {};
   const AggregateError = global.AggregateError;
   class ZoneAwarePromise {
     static toString() {
@@ -1592,7 +1592,7 @@ function patchEventTarget(_global, api, apis, patchOptions) {
   const ADD_EVENT_LISTENER_SOURCE = '.' + ADD_EVENT_LISTENER + ':';
   const PREPEND_EVENT_LISTENER = 'prependListener';
   const PREPEND_EVENT_LISTENER_SOURCE = '.' + PREPEND_EVENT_LISTENER + ':';
-  const invokeTask = function invokeTask(task, target, event) {
+  const invokeTask = function (task, target, event) {
     // for better performance, check isRemoved which is set
     // by removeEventListener
     if (task.isRemoved) {
@@ -1670,11 +1670,11 @@ function patchEventTarget(_global, api, apis, patchOptions) {
     }
   }
   // global shared zoneAwareCallback to handle all event callback with capture = false
-  const globalZoneAwareCallback = function globalZoneAwareCallback(event) {
+  const globalZoneAwareCallback = function (event) {
     return globalCallback(this, event, false);
   };
   // global shared zoneAwareCallback to handle all event callback with capture = true
-  const globalZoneAwareCaptureCallback = function globalZoneAwareCaptureCallback(event) {
+  const globalZoneAwareCaptureCallback = function (event) {
     return globalCallback(this, event, true);
   };
   function patchEventTargetMethods(obj, patchOptions) {
@@ -1752,7 +1752,7 @@ function patchEventTarget(_global, api, apis, patchOptions) {
       }
       return options;
     }
-    const customScheduleGlobal = function customScheduleGlobal(task) {
+    const customScheduleGlobal = function (task) {
       // if there is already a task for the eventName + capture,
       // just return, because we use the shared globalZoneAwareCallback here.
       if (taskData.isExisting) {
@@ -1760,7 +1760,7 @@ function patchEventTarget(_global, api, apis, patchOptions) {
       }
       return nativeAddEventListener.call(taskData.target, taskData.eventName, taskData.capture ? globalZoneAwareCaptureCallback : globalZoneAwareCallback, taskData.options);
     };
-    const customCancelGlobal = function customCancelGlobal(task) {
+    const customCancelGlobal = function (task) {
       // if task is not marked as isRemoved, this call is directly
       // from Zone.prototype.cancelTask, we should remove the task
       // from tasksList of target first
@@ -1797,25 +1797,25 @@ function patchEventTarget(_global, api, apis, patchOptions) {
       }
       return nativeRemoveEventListener.call(task.target, task.eventName, task.capture ? globalZoneAwareCaptureCallback : globalZoneAwareCallback, task.options);
     };
-    const customScheduleNonGlobal = function customScheduleNonGlobal(task) {
+    const customScheduleNonGlobal = function (task) {
       return nativeAddEventListener.call(taskData.target, taskData.eventName, task.invoke, taskData.options);
     };
-    const customSchedulePrepend = function customSchedulePrepend(task) {
+    const customSchedulePrepend = function (task) {
       return nativePrependEventListener.call(taskData.target, taskData.eventName, task.invoke, taskData.options);
     };
-    const customCancelNonGlobal = function customCancelNonGlobal(task) {
+    const customCancelNonGlobal = function (task) {
       return nativeRemoveEventListener.call(task.target, task.eventName, task.invoke, task.options);
     };
     const customSchedule = useGlobalCallback ? customScheduleGlobal : customScheduleNonGlobal;
     const customCancel = useGlobalCallback ? customCancelGlobal : customCancelNonGlobal;
-    const compareTaskCallbackVsDelegate = function compareTaskCallbackVsDelegate(task, delegate) {
+    const compareTaskCallbackVsDelegate = function (task, delegate) {
       const typeOfDelegate = typeof delegate;
       return typeOfDelegate === 'function' && task.callback === delegate || typeOfDelegate === 'object' && task.originalDelegate === delegate;
     };
     const compare = patchOptions && patchOptions.diff ? patchOptions.diff : compareTaskCallbackVsDelegate;
     const unpatchedEvents = Zone[zoneSymbol('UNPATCHED_EVENTS')];
     const passiveEvents = _global[zoneSymbol('PASSIVE_EVENTS')];
-    const makeAddListener = function makeAddListener(nativeListener, addSource, customScheduleFn, customCancelFn, returnTarget = false, prepend = false) {
+    const makeAddListener = function (nativeListener, addSource, customScheduleFn, customCancelFn, returnTarget = false, prepend = false) {
       return function () {
         const target = this || _global;
         let eventName = arguments[0];
