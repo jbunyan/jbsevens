@@ -3,8 +3,8 @@
   \**********************************************************************************************************************************************************************************************************************/
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --screen-width: 90vw;
-  --screen-height: 90vh;
+  --screen-width: 95vw;
+  --screen-height: 95vh;
   --screen-width-units: calc(var(--screen-width) / 100);
   --screen-height-units: calc(var(--screen-height) / 100);
 }
