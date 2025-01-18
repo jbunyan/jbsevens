@@ -17,6 +17,7 @@ let players = [];
 let kitty = 0;
 let knocks = [];
 let winnings = {};
+let history = [];
 
 let sequenceNumber = 0;
 
@@ -73,6 +74,9 @@ wss.on('connection', (ws) => {
         break;
       case 'kitty':
         sendKitty();
+        break;
+      case 'history':
+        sendHistory();
         break;
       case 'hand':
         sendHand(ws, m.player);
@@ -138,6 +142,17 @@ function processWinner(player) {
   winnings[player].winnings = winnings[player].winnings + kitty
   winnings[player].won++
   console.log(`Processing winnner, player: ${player}, winnings: ${JSON.stringify(winnings[player])}`)
+
+  // create history entry
+
+  let snapshot = {}
+  players.forEach(p => {
+    snapshot[p] = winnings[p].winnings - winnings[p].spent
+  })
+
+  history.push(snapshot)
+
+  console.log(JSON.stringify(history))
 }
 
 function updateKitty(player) {
@@ -225,6 +240,7 @@ function sendCard(card,player) {
 
   if ( card.remaining == 0 ) {
     sendKitty()
+    sendHistory()
   }
 
   broadcast(
@@ -257,6 +273,16 @@ function sendKitty() {
       type: 'kitty',
       kitty: kitty,
       winnings: winnings
+    }
+  )
+}
+
+function sendHistory() {
+  broadcast(
+    {
+      "sequenceNumber": getSequenceNumber(),
+      type: 'history',
+      history: history
     }
   )
 }
