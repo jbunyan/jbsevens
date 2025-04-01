@@ -50,6 +50,36 @@ function storeConnection(c) {
 const mongoUrl = process.env.MONGO_URL;
 console.log(`MONGO DB URL: ${mongoUrl}`)
 
+async function connectToDatabase() {
+  try {
+    // Create a new MongoClient instance
+    const client = new MongoClient(mongoUrl);
+
+    // Connect to MongoDB server
+    await client.connect();
+
+    console.log('Connected to MongoDB');
+
+    // Access a specific database
+    const database = client.db('sevens'); // Replace 'myDatabase' with your DB name
+
+    // You can now perform operations on the database, such as finding collections
+    const collection = database.collection('scores'); // Replace 'myCollection' with your collection name
+
+    // Example: Find all documents in the collection
+    const documents = await collection.find({}).toArray();
+    console.log(documents);
+
+    // Close the connection after operations
+    await client.close();
+  } catch (error) {
+    console.error('Error connecting to MongoDB', error);
+  }
+}
+
+connectToDatabase();
+
+
 newGame();
 
 wss.on('connection', (ws) => {
