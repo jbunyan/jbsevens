@@ -2,6 +2,7 @@
 
 const express = require('express');
 const WebSocket = require('ws');
+const mongoDB = require('mongodb');
 
 const cards = [
   "AH","2H","3H","4H","5H","6H","7H","8H","9H","10H","JH","QH","KH",
@@ -45,6 +46,9 @@ function storeConnection(c) {
     connections.push(c)
   }
 }
+
+const mongoUri = process.env.MONGO_URI;
+console.log(`MONGO DB URL: ${mongouri}`)
 
 newGame();
 
