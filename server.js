@@ -47,8 +47,8 @@ function storeConnection(c) {
   }
 }
 
-const mongoUri = process.env.MONGO_URI;
-console.log(`MONGO DB URL: ${mongoUri}`)
+const mongoUrl = process.env.MONGO_URL;
+console.log(`MONGO DB URL: ${mongoUrl}`)
 
 newGame();
 
