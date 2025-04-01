@@ -48,7 +48,16 @@ function storeConnection(c) {
 }
 
 const mongoUrl = process.env.MONGO_URL;
-console.log(`MONGO DB URL: ${mongoUrl}`)
+console.log(`MONGO DB URL: ${mongoUrl}`);
+
+const mongoUser = process.env.MONGOUSER;
+console.log(`MongoUser: ${mongoUser}`);
+
+const mongoPassword = process.env.MONGOPASSWORD;
+console.log(`Mongo Password: ${monogPassword}`)
+
+const mongoHost = process.env.MONGOHOST;
+console.log(`Mongo Host: ${monogHost}`)
 
 async function connectToDatabase() {
   try {
