@@ -54,10 +54,10 @@ const mongoUser = process.env.MONGOUSER;
 console.log(`MongoUser: ${mongoUser}`);
 
 const mongoPassword = process.env.MONGOPASSWORD;
-console.log(`Mongo Password: ${monogPassword}`)
+console.log(`Mongo Password: ${mongoPassword}`)
 
 const mongoHost = process.env.MONGOHOST;
-console.log(`Mongo Host: ${monogHost}`)
+console.log(`Mongo Host: ${mongoHost}`)
 
 async function connectToDatabase() {
   try {
