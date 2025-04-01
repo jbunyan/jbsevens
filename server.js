@@ -61,8 +61,10 @@ console.log(`Mongo Host: ${mongoHost}`)
 
 async function connectToDatabase() {
   try {
+
+    const url = `mongodb://mongo:kmVZfDQAZdJNNCxmAtQdFUfKzNCisNim@MongoDB:27017`
     // Create a new MongoClient instance
-    const client = new MongoClient(mongoUrl);
+    const client = new MongoClient(url);
 
     // Connect to MongoDB server
     await client.connect();
