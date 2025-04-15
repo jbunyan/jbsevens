@@ -256,7 +256,7 @@ async function updateDB() {
   } else {
     await collection.updateOne(
       { _id: currentDocumentID },
-      document
+      { $set: document }
     )
     console.log(`updated document`)
   }
