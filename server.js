@@ -252,7 +252,7 @@ async function updateDB() {
   if (currentDocumentID === null) {
     let insertedDocument = await collection.insertOne(document)
     currentDocumentID = insertedDocument._id
-    console.log(`Inserted document ID = ${_id}`)
+    console.log(`Inserted document ID = ${currentDocumentID}`)
   } else {
     await collection.updateOne(
       { _id: currentDocumentID },
