@@ -59,12 +59,19 @@ console.log(`Mongo Password: ${mongoPassword}`)
 const mongoHost = process.env.MONGOHOST;
 console.log(`Mongo Host: ${mongoHost}`)
 
+// MongoDB variables
+
+let client;
+let collection;
+let currentDocumentID = null;
+let formattedDate = ""
+
 async function connectToDatabase() {
   try {
 
     const url = `mongodb://mongo:kmVZfDQAZdJNNCxmAtQdFUfKzNCisNim@MongoDB:27017`
     // Create a new MongoClient instance
-    const client = new MongoClient(mongoUrl);
+    client = new MongoClient(mongoUrl);
 
     // Connect to MongoDB server
     await client.connect();
@@ -75,17 +82,31 @@ async function connectToDatabase() {
     const database = client.db('sevens'); // Replace 'myDatabase' with your DB name
 
     // You can now perform operations on the database, such as finding collections
-    const collection = database.collection('scores'); // Replace 'myCollection' with your collection name
+    collection = database.collection('scores'); // Replace 'myCollection' with your collection name
 
     // Example: Find all documents in the collection
     const documents = await collection.find({}).toArray();
     console.log(documents);
 
+    // set up date
+
+    const date = new Date();
+
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const year = date.getFullYear();
+
+    formattedDate = `${day}_${month}_${year}`; 
+
     // Close the connection after operations
-    await client.close();
+    // await client.close();
   } catch (error) {
     console.error('Error connecting to MongoDB', error);
   }
+}
+
+async function closeDB() {
+  await client.close()
 }
 
 connectToDatabase();
@@ -103,6 +124,9 @@ wss.on('connection', (ws) => {
     switch(m.type) {
       case 'reset':
         reset();
+        break;
+      case 'close':
+        closeDown();
         break;
       case 'card':
         if ( m.card.remaining == 0 ) {
@@ -138,6 +162,10 @@ wss.on('connection', (ws) => {
     }
   });
 });
+
+async function closeDown() {
+  await closeDB()
+}
 
 function getSequenceNumber() {
   const wrapValue = 10000
@@ -197,7 +225,42 @@ function processWinner(player) {
 
   history.push(snapshot)
 
+  updateDB()
+
   console.log(JSON.stringify(history))
+}
+
+async function updateDB() {
+
+  let document = {
+    "date": formattedDate,
+    "players": {}
+  }
+
+  players.forEach(player => {
+    document.players[player] = {
+      "games_won": winnings[player].won,
+      "total_knocks": winnings[player].knocks,
+      "winnings": winnings[player].winnings,
+      "spent": winnings[player].spent,
+      "win_loss": winnings[player].winnings - winnings[player].spent     
+    }
+  })
+
+  // need to know if we are updating a document, or inserting one
+
+  if (currentDocumentID === null) {
+    let insertedDocument = await collection.insertOne(document)
+    currentDocumentID = insertedDocument._id
+    console.log(`Inserted document ID = ${_id}`)
+  } else {
+    await collection.updateOne(
+      { _id: currentDocumentID },
+      document
+    )
+    console.log(`updated document`)
+  }
+
 }
 
 function updateKitty(player) {
@@ -344,8 +407,9 @@ function sendKnock(player) {
   )
 }
 
-function handle(signal) {
+async function handle(signal) {
   console.log(`Received ${signal}`);
+  await closeDB();
   process.exit();
 }
 
